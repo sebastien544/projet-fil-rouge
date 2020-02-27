@@ -1,8 +1,8 @@
-
-
 .row{
-  margin-top: 12%;
-  margin-left: 2%;
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-bottom: 5%;
+  margin-right: 10%;
 }
 html,
 body,
@@ -49,4 +49,11 @@ header,
 
 h6 {
   line-height: 1.7;
+}
+.nav-link:hover {
+  color: black !important;
+  
+}
+.navbar-brand:hover {
+  color: black !important;
 }
