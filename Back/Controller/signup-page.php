@@ -1,3 +1,9 @@
+<?php
+
+  session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -91,14 +97,14 @@
           </a>
           <div class="dropdown-menu dropdown-menu-lg-right dropdown-menu-sm-left dropdown-default"
             aria-labelledby="navbarDropdownMenuLink-333">
-            <form class="text-center border border-light p-5" action="#!">
+            <form class="text-center border border-light p-5" action="authentification.php" method="POST">
               <p class="h4 mb-4">Sign in</p>
           
         
-              <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+              <input type="email"  class="form-control mb-4" placeholder="E-mail" name="mail">
           
               <!-- Password -->
-              <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+              <input type="password" class="form-control mb-4" placeholder="Password" name="password" >
           
               <div class="d-flex justify-content-around">
                   <div>
@@ -115,7 +121,7 @@
               </div>
           
               <!-- Sign in button -->
-              <button class="btn btn-info btn-block my-4 btn btn-blue-grey" type="submit">Sign in</button>
+              <button class="btn btn-info btn-block my-4 btn btn-blue-grey" type="submit" name="valider" >Sign in</button>
           
               <!-- Register -->
               <p>Not a member?
@@ -142,21 +148,30 @@
           <h1 class="mb-3 " style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 75px;" >He will never forget you</h1>
         </div></div>
       <div class="col-6" style="background-color: rgb(214, 131, 36);">
-        <form class="col-8 offset-2 mt-5">
+        <form class="col-8 offset-2 mt-5" method="POST" action="authentification.php">
           <h1 class="text-center" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Sign up</h1>
           <div class="md-form">
-            <input type="email" id="materialLoginFormEmail" class="form-control ">
-            <label for="materialLoginFormEmail" class="text-white">Name</label>
+            <input type="text" id="materialLoginFormEmail" class="form-control" name="firstName">
+            <label for="materialLoginFormEmail" class="text-white">First Name</label>
           </div>
           <div class="md-form">
-            <input type="email" id="materialLoginFormEmail" class="form-control">
+            <input type="text" id="materialLoginFormEmail" class="form-control" name="lastName">
+            <label for="materialLoginFormEmail" class="text-white">Last Name</label>
+          </div>
+          <div class="md-form">
+            <input type="email" id="materialLoginFormEmail" class="form-control" name="mail">
             <label for="materialLoginFormEmail" class="text-white">E-mail</label>
           </div>
           <div class="md-form">
-            <input type="email" id="materialLoginFormEmail" class="form-control">
+            <input type="password" id="materialLoginFormEmail" class="form-control" name="password">
             <label for="materialLoginFormEmail" class="text-white">Password</label>
           </div>
-          <button class="btn btn-black rounded" style="margin-left: 180px;" type="submit">Sign in</button>
+
+          <div class="md-form">
+            <input type="password" id="materialLoginFormEmail" class="form-control" name="password_verification">
+            <label for="materialLoginFormEmail" class="text-white">Verification Password</label>
+          </div>
+          <button class="btn btn-black rounded" style="margin-left: 180px;" type="submit" name="validation" >Sign up</button>
           </form>
       </div>
     </div>
