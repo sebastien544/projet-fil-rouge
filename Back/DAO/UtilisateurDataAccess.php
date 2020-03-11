@@ -19,7 +19,7 @@ class UtilisateurDataAccess extends ConnexionDDB {
     function inscription($newMail, $newPwd, $newFirstName, $newLastName ){
         $db = $this->connectDatabase();
         $newPwd = password_hash("$newPwd", PASSWORD_DEFAULT);
-        mysqli_query($db, "INSERT INTO utilisateur VALUES (null,'$newMail', '$newPwd', '$newFirstName', '$newLastName', null, null)");
+        mysqli_query($db, "INSERT INTO utilisateur VALUES (null,'$newFirstName','$newMail', '$newPwd',  '$newLastName', null, null)");
         mysqli_close($db);
     } 
     // Déconnexion
