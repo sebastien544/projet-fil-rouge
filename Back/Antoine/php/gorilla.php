@@ -1,3 +1,19 @@
+<?php
+
+session_start();
+
+	if (isset($_GET['action']) && $_GET['action']== 'logout'){
+		
+
+		session_destroy();
+
+		header('location:../../Controller/connexion-objet.php');
+		
+
+	}
+
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -45,7 +61,11 @@
 			</li>
 		  </ul>
 	   
-				<button type="button" class="btn btn-blue-grey" data-toggle="modal" data-target="#modalCart"><i class="fas fa-shopping-cart"></i></button>
+				
+				
+			
+		  <ul class="navbar-nav ml-auto nav-flex-icons">
+		  <a class="btn-floating btn-lg"  data-toggle="modal" data-target="#modalCart"><span style="color: white"><i class="fas fa-shopping-cart"></i></span></a>
 	  
 				  <!-- Modal: modalCart -->
 				  <div class="modal fade" id="modalCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -114,10 +134,8 @@
 					  </div>
 					</div>
 				  </div>
-				  <!-- Modal: modalCart -->
-			
-		  <ul class="navbar-nav ml-auto nav-flex-icons">
-		 
+
+		  <a class="btn-floating btn-lg " href="../../Controller/connexion-objet.php?action=logout"><span style="color: white"><i class="fas fa-sign-out-alt"></i></span></a>
 			<li class="nav-item dropdown">
 			  <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
 				aria-haspopup="true" aria-expanded="false">

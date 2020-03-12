@@ -4,7 +4,7 @@ class ConnexionDDB {
 
 
     function connectDatabase(){
-        $db = new mysqli( 'localhost', 'Antoine', '200386', 'save_them');
+        $db = new mysqli( 'localhost', 'root', '', 'save_them');
         return $db;
     }
 }
