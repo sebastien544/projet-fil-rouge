@@ -1,4 +1,24 @@
+<?php
 
+
+/* include_once("../Service/UtilisateurService.php");
+  
+  if(isset($_POST["valider"]) && $_POST["valider"]=="connecter"){
+        $userServ = new UtilisateurService();
+        $data = $userServ->rechercheUser($_POST["mail"]);
+        if($data){
+            $bool = $userServ->checkUserNameAndPassword($data[0]["mail"], $data[0]["password"], $_POST);
+            if($bool == TRUE){
+                header('Location: personal-space.html');
+            }else{
+                echo "wrong mail or password";
+            }
+        }else{
+            echo "user not found";
+        }
+        
+   } */
+?>
 
 <!Doctype html>
 <html>
@@ -8,17 +28,17 @@
     <body>
         <div class="container">
             <h1 class="mt-5 text-center">Connexion</h1>
-            <form class="col-6 mt-5" style="margin-left: 250px"  method=POST action="test-objet.php" >
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Username</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" name="username" required>
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputEmail1" name="password" aria-describedby="emailHelp" required>
-                </div>
-                <input type="hidden" class="form-control" id="exampleInputEmail1" name="action" value="connecter">
-                <button type="submit" class="btn btn-primary mx-2" action="test-objet.php">Connexion</button><a class="btn btn-primary" href="ajout-objet.php">Inscription</a>
+            <form class="col-6 mt-5" style="margin-left: 250px"  method=POST action="authentification.php" >
+            <div class="form-group">
+                <label for="username">Mail</label>
+                <input type="mail" class="form-control" id="user" name="mail">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="pass" name="password">
+            </div>
+            <input type="submit" class="btn btn-primary" value="Connexion" name="validation">
+            <a class="btn btn-primary" href="ajout-objet.php">Inscription</a>
             </form>  
         </div>
 

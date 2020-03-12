@@ -2,12 +2,12 @@
 include_once (__DIR__ . "/../Service/UtilisateurService.php");
 
 
-        if(isset($_POST["valider"])){
+        if(isset($_POST["validation"])){
                 $service = new UtilisateurService();
                 $data = $service->rechercheUser($_POST["mail"]);
                 
-                if($data && $service->checkUserNameAndPassword($data['mail'], $data['password'], /*$data['role'],*/ $_POST)){
-                        header("location:home.php?role=");
+                if($data && $service->checkUserNameAndPassword($data["mail"], $data['password'], /*$data['role'],*/ $_POST)){
+                        header("location:../Antoine/php/gorilla.php");
                 }
                 else {
                         header("location:connexion-objet.php?role=error");

@@ -11,7 +11,7 @@ class UtilisateurDataAccess extends ConnexionDDB {
         var_dump($req);
         $db = $this->connectDatabase();
         $rs = mysqli_query($db, "SELECT * FROM utilisateur WHERE mail = '$mail'");
-        $data = mysqli_fetch_all($rs, MYSQLI_ASSOC);
+        $data = mysqli_fetch_assoc($rs);
         mysqli_close($db);
         return $data;
     }
