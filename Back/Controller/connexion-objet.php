@@ -37,7 +37,7 @@
                 <label for="password">Password</label>
                 <input type="password" class="form-control" id="pass" name="password">
             </div>
-            <input type="submit" class="btn btn-primary" value="Connexion" name="validation">
+            <input type="submit" class="btn btn-primary" value="Connexion" type="submit" name="validation">
             <a class="btn btn-primary" href="ajout-objet.php">Inscription</a>
             </form>  
         </div>

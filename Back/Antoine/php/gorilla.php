@@ -33,7 +33,7 @@ session_start();
 <body class="grey lighten-3">
 
 	<nav class="mb-1 navbar navbar-expand-lg navbar-dark blue-grey">
-		<a class="navbar-brand" href="#">Save-Them.com</a>
+		<a class="navbar-brand" href="http://localhost/projet-fil-rouge/Back/Antoine/php/gorilla.php">Save-Them.com</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
 		  aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
 		  <span class="navbar-toggler-icon"></span>
@@ -46,16 +46,16 @@ session_start();
 			  </a>
 			</li>
 			<li class="nav-item">
-			  <a class="nav-link" href="#">Donate</a>
+			  <a class="nav-link" href="/projet-fil-rouge/Back/Controller/donation-page.php">Donate</a>
 			</li>
 			<li class="nav-item">
 			  <a class="nav-link" href="#">Petition</a>
 			</li>
 			<li class="nav-item">
-			  <a class="nav-link" href="#">Shop</a>
+			  <a class="nav-link" href="/projet-fil-rouge/Back/Antoine/php/shop_01.php">Shop</a>
 			</li>
 			<li class="nav-item">
-			  <a class="nav-link" href="#">About us</a>
+			  <a class="nav-link" href="/projet-fil-rouge/Back/Antoine/php/contactus.php">About us</a>
 			</li>
 			<li class="nav-item">
 			</li>
@@ -136,7 +136,29 @@ session_start();
 				  </div>
 
 		  <a class="btn-floating btn-lg " href="../../Controller/connexion-objet.php?action=logout"><span style="color: white"><i class="fas fa-sign-out-alt"></i></span></a>
-			<li class="nav-item dropdown">
+			<!--Dropdown primary-->
+			<li class="nav-item dropdown dropdown-menu-lg-right dropdown-menu-sm-left dropdown-default">
+				<div class="dropdown ">
+
+				<!--Trigger-->
+				<a class="nav-link dropdown-toggle"  id="dropdownMenu1" data-toggle="dropdown"
+				aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i></a>
+				
+				
+
+							<!--Menu-->
+							<div class="dropdown-menu dropdown-primary">
+							<a class="dropdown-item" href="#">Action</a>
+							<a class="dropdown-item" href="#">Another action</a>
+							<a class="dropdown-item" href="#">Something else here</a>
+							<a class="dropdown-item" href="#">Something else here</a>
+							</div>
+							
+						
+					</div>	
+			</li>
+				<!--/Dropdown primary-->
+		  <li class="nav-item dropdown">
 			  <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
 				aria-haspopup="true" aria-expanded="false">
 				<i class="fas fa-user"></i>
@@ -172,7 +194,7 @@ session_start();
 			  
 				  <!-- Register -->
 				  <p>Not a member?
-					 <br> <a href="">Register</a>
+					 <br> <a href="/../../projet-fil-rouge/Back/Controller/signup-page.php">Register</a>
 				  </p>
 			  
 			  </form>
