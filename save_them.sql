@@ -1,7 +1,7 @@
 #------------------------------------------------------------
 #        Script MySQL.
 #------------------------------------------------------------
-
+CREATE DATABASE save_them;
 
 #------------------------------------------------------------
 # Table: role
@@ -78,7 +78,7 @@ CREATE TABLE Produit(
 #------------------------------------------------------------
 
 CREATE TABLE don(
-        id_don    Int NOT NULL ,
+        id_don    Int AUTO_INCREMENT NULL ,
         id_animal Int NOT NULL
 	,CONSTRAINT don_PK PRIMARY KEY (id_don)
 )ENGINE=InnoDB;
@@ -102,17 +102,17 @@ CREATE TABLE Client(
 
 
 #------------------------------------------------------------
-# Table: utlisateur
+# Table: utilisateur
 #------------------------------------------------------------
 
-CREATE TABLE utlisateur(
-        id_utilisateur Int  Auto_increment  NOT NULL ,
+CREATE TABLE utilisateur(
+        id_utilisateur Int  Auto_increment NULL,
         prenom         Varchar (50) NOT NULL ,
+	nom            Varchar (50) NOT NULL ,
         mail           Varchar (50) NOT NULL ,
-        password       Varchar (50) NOT NULL ,
-        nom            Varchar (50) NOT NULL ,
-        id_role        Int NOT NULL ,
-        id_compte      Int NOT NULL
+        password       Varchar (250) NOT NULL ,
+        id_role        Int  NULL ,
+        id_compte      Int  NULL
 	,CONSTRAINT utlisateur_PK PRIMARY KEY (id_utilisateur)
 )ENGINE=InnoDB;
 
@@ -177,9 +177,9 @@ CREATE TABLE Signe(
 CREATE TABLE Effectuer(
         id_don         Int NOT NULL ,
         id_utilisateur Int NOT NULL ,
-        montant        Varchar (50) NOT NULL ,
         date           Date NOT NULL ,
-        montant_don    Int NOT NULL
+        montant_don    Int NOT NULL,
+        frequency_don  VARCHAR(50)
 	,CONSTRAINT Effectuer_PK PRIMARY KEY (id_don,id_utilisateur)
 )ENGINE=InnoDB;
 
@@ -284,3 +284,5 @@ ALTER TABLE Panier
 	ADD CONSTRAINT Panier_Produit1_FK
 	FOREIGN KEY (id_produit)
 	REFERENCES Produit(id_produit);
+
+INSERT INTO animal VALUES (1,"gorilla"),(2,"elephant"),(3,"tiger"),(4, "chimpanze"),(5, "giraffe");

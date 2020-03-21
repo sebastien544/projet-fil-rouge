@@ -1,4 +1,5 @@
 <?php
+include("../Service/UtilisateurService.php");
 
 session_start();
 
@@ -10,7 +11,12 @@ session_start();
 		header('location:../../Controller/connexion-objet.php');
 		
 
-	}
+  }
+  
+  if($_POST){
+      $userServ = new UtilisateurService;
+      $userServ->ajout_don($_POST, $_SESSION['mail']);
+  }
 
 ?>
 <!DOCTYPE html>
@@ -131,7 +137,7 @@ session_start();
           <h1 class="mb-3" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >HELP US TO HELP THEM</h1>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam ut cupiditate asperiores voluptate id praesentium libero porro inventore laborum sunt maiores, exercitationem animi. Consectetur quasi non voluptatibus iste magnam blanditiis.</p>
         </div>
-        <form class="bg-white col-3 offset-1 rounded p-4" style="margin-top: 100px;">
+        <form class="bg-white col-3 offset-1 rounded p-4" style="margin-top: 100px;" method="POST" action="donation-page.php">
           <h6 class="text-center">your donation</h6>
           <h3 class="text-center">150p</h3>
           <h6 class="mt-4">Select donation amount</h6>
@@ -139,15 +145,18 @@ session_start();
           <button class="btn btn-blue-grey btn-sm" style="width: 70px; height: 40px;" type="button">50</button>
           <button class="btn btn-blue-grey btn-sm" style="width: 70px; height: 40px;" type="button">150</button>
           <button class="btn btn-blue-grey btn-sm" style="width: 70px; height: 40px;" type="button">500</button>
-          <input class="form-control font-weight-bold" type=text placeholder="Amount">
+          <input class="form-control font-weight-bold" type=text placeholder="Amount" name="amount">
           <h6 class="mt-4">Frequency</h6>
-          <select class="form-control mb-4 font-weight-bold">
+          <select class="form-control mb-4 font-weight-bold" name="frequency">
             <option>One time</option>
             <option>Monthly</option>
           </select>
           <h6 class="mt-4">Animal</h6>
-          <select class="form-control mb-4 font-weight-bold">
+          <select class="form-control mb-4 font-weight-bold" name="animal">
             <option>Gorilla</option>
+            <option>Elephant</option>
+            <option>Chimpanze</option>
+            <option>Giraffe</option>
             <option>Tiger</option>
           </select>
           <input class=" btn-block btn-blue-grey" type="submit" placeholder="Submit">

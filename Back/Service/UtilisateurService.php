@@ -32,5 +32,9 @@ class UtilisateurService {
         }
         
     }
+
+    function ajout_don($tab, $mail){
+        $this->dao->ajout_don($tab, $mail);
+    }
 }
 ?>

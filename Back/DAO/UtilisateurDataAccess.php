@@ -19,7 +19,7 @@ class UtilisateurDataAccess extends ConnexionDDB {
     function inscription($newMail, $newPwd, $newFirstName, $newLastName ){
         $db = $this->connectDatabase();
         $newPwd = password_hash("$newPwd", PASSWORD_DEFAULT);
-        mysqli_query($db, "INSERT INTO utilisateur VALUES (null,'$newFirstName','$newMail', '$newPwd',  '$newLastName', null, null)");
+        mysqli_query($db, "INSERT INTO utilisateur VALUES (null,'$newFirstName','$newLastName','$newMail', '$newPwd', null, null)");
         mysqli_close($db);
     } 
     // Déconnexion
@@ -28,6 +28,13 @@ class UtilisateurDataAccess extends ConnexionDDB {
         session_start();
         session_unset();
         header("location:connexion-objet.php"); // modifier le lien du header 
+    }
+
+    function ajout_don($tab, $mail){
+        $db = $this->connectDatabase();
+        mysqli_query($db, 'INSERT INTO don VALUES (null,(SELECT id_animal FROM animal WHERE type_animal = "'.$tab['animal'].'"))');
+        mysqli_query($db, 'INSERT INTO effectuer VALUES ((SELECT MAX(id_don) FROM don),(SELECT id_utilisateur FROM utilisateur WHERE mail = "'.$mail.'"),SYSDATE(),'.$tab['amount'].',"'.$tab['frequency'].'")');
+        mysqli_close($db);
     }
 }
 ?>

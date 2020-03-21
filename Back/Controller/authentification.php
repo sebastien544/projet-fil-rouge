@@ -1,6 +1,6 @@
 <?php 
 include_once (__DIR__ . "/../Service/UtilisateurService.php");
-
+session_start();
 
         if(isset($_POST["validation"])){
                 $service = new UtilisateurService();
@@ -8,6 +8,7 @@ include_once (__DIR__ . "/../Service/UtilisateurService.php");
                 
                 if($data && $service->checkUserNameAndPassword($data["mail"], $data['password'], /*$data['role'],*/ $_POST)){
                         header("location:../Antoine/php/gorilla.php");
+                        $_SESSION['mail'] = $data["mail"];
                 }
                 else {
                         header("location:connexion-objet.php?role=error");
