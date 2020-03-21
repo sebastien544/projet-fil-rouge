@@ -57,7 +57,7 @@ session_start();
 			  <a class="nav-link" href="#">Petition</a>
 			</li>
 			<li class="nav-item">
-			  <a class="nav-link" href="shop_03.php">Shop</a>
+			  <a class="nav-link" href="shop_01.php">Shop</a>
 			</li>
 			<li class="nav-item">
 			  <a class="nav-link" href="contactus.php">About us</a>

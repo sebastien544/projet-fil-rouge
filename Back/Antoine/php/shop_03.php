@@ -146,15 +146,15 @@ session_start();
 			  </a>
 			  <div class="dropdown-menu dropdown-menu-lg-right dropdown-menu-sm-left dropdown-default"
 				aria-labelledby="navbarDropdownMenuLink-333">
-				<form class="text-center border border-light p-5" action="#!">
+				<form class="text-center border border-light p-5" method="POST" action="/projet-fil-rouge/Back/Controller/authentification.php">
 	  
 				  <p class="h4 mb-4">Sign in</p>
 			  
 				  <!-- Email -->
-				  <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+				  <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail" name="mail">
 			  
 				  <!-- Password -->
-				  <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
+				  <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password" name="password">
 			  
 				  <div class="d-flex justify-content-around">
 					  <div>
@@ -171,11 +171,11 @@ session_start();
 				  </div>
 			  
 				  <!-- Sign in button -->
-				  <button class="btn btn-info btn-block my-4 btn btn-blue-grey" type="submit">Sign in</button>
+				  <button class="btn btn-info btn-block my-4 btn btn-blue-grey" type="submit" name="validation">Sign in</button>
 			  
 				  <!-- Register -->
 				  <p>Not a member?
-					 <br> <a href="">Register</a>
+					 <br> <a href="/../../projet-fil-rouge/Back/Controller/signup-page.php">Register</a>
 				  </p>
 			  
 			  </form>

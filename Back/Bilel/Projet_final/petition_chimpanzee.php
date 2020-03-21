@@ -219,7 +219,7 @@
     <div class="card-body px-lg-5 pt-0">
 
         <!-- Form -->
-        <form class="text-center" style="color: #757575;" action="#!">
+        <form class="text-center" style="color: #757575;" action="" method="POST">
 
             <div class="form-row">
                 <div class="col">
