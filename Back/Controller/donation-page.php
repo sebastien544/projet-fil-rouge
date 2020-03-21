@@ -53,16 +53,16 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Donate</a>
+            <a class="nav-link" href="donation-page.php">Donate</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Petition</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Shop</a>
+            <a class="nav-link" href="../Antoine/php/shop_03.php">Shop</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About us</a>
+            <a class="nav-link" href="../Antoine/php/contactus.php">About us</a>
           </li>
           <li class="nav-item">
           </li>

@@ -55,16 +55,16 @@
 			  </a>
 			</li>
 			<li class="nav-item">
-			  <a class="nav-link" href="/projet-fil-rouge/Back/Controller/donation-page.php">Donate</a>
+			  <a class="nav-link" href="../../Controller/donation-page.php">Donate</a>
 			</li>
 			<li class="nav-item">
 			  <a class="nav-link" href="#">Petition</a>
 			</li>
 			<li class="nav-item">
-			  <a class="nav-link" href="/projet-fil-rouge/Back/Antoine/php/shop_01.php">Shop</a>
+			  <a class="nav-link" href="../../Antoine/php/shop_03.php">Shop</a>
 			</li>
 			<li class="nav-item">
-			  <a class="nav-link" href="/projet-fil-rouge/Back/Antoine/php/contactus.php">About us</a>
+			  <a class="nav-link" href="../../Antoine/php/contactus.php">About us</a>
 			</li>
 			<li class="nav-item">
 			</li>
