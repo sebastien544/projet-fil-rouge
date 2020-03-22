@@ -285,4 +285,4 @@ ALTER TABLE Panier
 	FOREIGN KEY (id_produit)
 	REFERENCES Produit(id_produit);
 
-INSERT INTO animal VALUES (1,"gorilla"),(2,"elephant"),(3,"tiger"),(4, "chimpanze"),(5, "giraffe");
+INSERT INTO Animal VALUES (1,"gorilla"),(2,"elephant"),(3,"tiger"),(4, "chimpanze"),(5, "giraffe");
