@@ -36,5 +36,18 @@ class UtilisateurService {
     function ajout_don($tab, $mail){
         $this->dao->ajout_don($tab, $mail);
     }
+
+    function afficherDon($mail){
+        return $this->dao->afficherDon($mail);
+    }
+
+    function afficherpet($mail){
+        return $this->dao->afficherPet($mail);
+    }
+
+    function afficherInfo($mail){
+        return $this->dao->afficherPet($mail);
+    }
+
 }
 ?>

@@ -124,7 +124,6 @@ CREATE TABLE utilisateur(
 CREATE TABLE compte(
         id_compte      Int  Auto_increment  NOT NULL ,
         quantite_point Varchar (50) NOT NULL ,
-        id_utilisateur Int NOT NULL
 	,CONSTRAINT compte_PK PRIMARY KEY (id_compte)
 )ENGINE=InnoDB;
 
@@ -285,4 +284,4 @@ ALTER TABLE Panier
 	FOREIGN KEY (id_produit)
 	REFERENCES Produit(id_produit);
 
-INSERT INTO animal VALUES (1,"gorilla"),(2,"elephant"),(3,"tiger"),(4, "chimpanze"),(5, "giraffe");
+INSERT INTO Animal VALUES (1,"gorilla"),(2,"elephant"),(3,"tiger"),(4, "chimpanze"),(5, "giraffe");
