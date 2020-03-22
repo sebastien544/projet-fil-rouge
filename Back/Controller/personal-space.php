@@ -186,129 +186,92 @@ session_start();
   
   <main>
     <div class="container">
-           <h1 class="text-center mt-5"> PERSONAL SPACE</h1>
-      <!--Section: Main info-->
+      <h1 class="text-center mt-5"> PERSONAL SPACE</h1>
       <section class="mt-5 wow  fadeIn">
-      
-        <!--Grid row-->
         <div class="row">
-
-            <div class="col-md-5 ">
-                <p class="text-center h4 ">Donation history</p>
-                <table class="table table-bordered mb-5">
-                    <thead>
-                      <tr>
-                        <th scope="col">Number Donation</th>
-                        <th scope="col">Date</th>
-                        <th scope="col">Amount</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>XXXX-XX-XX</td>
-                        <td>0000</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>XXXX-XX-XX</td>
-                        <td>0000</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td >XXXX-XX-XX</td>
-                        <td >0000</td>
-                      </tr>
-                    </tbody>
-                  </table>
-
-                  <p class="text-center h4 mt-5">Petition history</p>
-                  <table class="table table-bordered">
-                    <thead>
-                      <tr>
-                        <th scope="col">Name Petiton</th>
-                        <th scope="col">Date</th>
-                        <th scope="col">Modify</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>XXXX-XX-XX</td>
-                        <td><button>Delete</button></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>XXXX-XX-XX</td>
-                        <td><button>Delete</button></td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td >XXXX-XX-XX</td>
-                        <td ><button>Delete</button></td>
-                      </tr>
-                    </tbody>
-                  </table>
-            </div>
-          
-          
-          
-          
-          
-          <div class="col-md-5  offset-2 mb-4 ">
-            
-            
-        <!-- Default form register -->
-      <form class="text-center border border-light p-5" action="#!">
-        <p class="h4 mb-4">Personal informations</p>
-        <div class="form-row mb-4">
-            <div class="col">
-                <!-- First name -->
-                <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name">
-            </div>
-            <div class="col">
-                <!-- Last name -->
-                <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Last name">
-            </div>
-        </div>
-
-        <!-- E-mail -->
-        <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail">
-
-        <!-- Password -->
-        <input type="password" id="defaultRegisterFormPassword" class="form-control mb-4" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
-        
-        
-      
-
-        <!-- Phone number -->
-        <input type="text" id="defaultRegisterPhonePassword" class="form-control mb-4" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock">
-        
-        <input type="text" id="defaultRegisterFormLastName" class="form-control mb-1" placeholder="Address">
-        <input type="text" id="defaultRegisterFormLastName" class="form-control mb-4" placeholder="">
-        <input type="text" id="defaultRegisterFormLastName" class="form-control mb-4" placeholder="Zip code">
-        <input type="text" id="defaultRegisterFormLastName" class="form-control " placeholder="Country">
-      
-        <!-- Sign up button -->
-        <button class="btn btn-blue-grey my-4 btn-block" style="width: 125px;" type="submit">MODIFY</button>
-      </form>
-<!-- Default form register -->
-<!-- Default form login -->
-
+          <div class="col-md-5 ">
+            <p class="text-center h4 ">Donation history</p>
+            <table class="table table-bordered mb-5">
+              <thead>
+                <tr>
+                  <th scope="col">Number Donation</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Amount</th>
+                  <th scope="col">Animal</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                include("../Service/UtilisateurService.php");
+                  $userServ = new UtilisateurService;
+                  $data = $userServ->afficherDon($_SESSION['mail']);
+                  for($i=0; $i < sizeof($data); $i++){
+                    echo '<tr>
+                          <th scope="row">'.($i+1).'</th>
+                          <td>'.$data[$i]['date'].'</td>
+                          <td>'.$data[$i]['montant_don'].'</td>
+                          <td>'.$data[$i]['type_animal'].'</td>
+                          </tr>';
+                  }
+                ?>
+              </tbody>
+            </table>
+            <p class="text-center h4 mt-5">Petition history</p>
+            <table class="table table-bordered mb-5">
+              <thead>
+                <tr>
+                  <th scope="col">Number Petition</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Animal</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                  $userServ = new UtilisateurService;
+                  $data = $userServ->afficherPet($_SESSION['mail']);
+                  for($i=0; $i < sizeof($data); $i++){
+                    echo '<tr>
+                          <th scope="row">'.($i+1).'</th>
+                          <td>'.$data[$i]['date_signature'].'</td>
+                          <td>'.$data[$i]['animaux'].'</td>
+                          </tr>';
+                  }
+                ?>
+              </tbody>
+            </table>
           </div>
-          <!--Grid column-->
-
+          <div class="col-md-5  offset-2 mb-4 ">
+          <?php
+            $userServ = new UtilisateurService;
+            $data = $userServ->rechercheUser($_SESSION['mail']);
+            echo  '<form class="text-center border border-light p-5" action="#!">
+                    <p class="h4 mb-4">Personal informations</p>
+                    <div class="form-row mb-4">
+                      <div class="col">
+                        <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name" value="'.$data['prenom'].'" disabled="disabled">
+                      </div>
+                    <div class="col">
+                        <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Last name" value="'.$data['nom'].'" disabled="disabled">
+                      </div>
+                    </div>
+                    <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail" value="'.$data['mail'].'" disabled="disabled">
+                    <input type="password" id="defaultRegisterFormPassword" class="form-control mb-4" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+                    <input type="text" id="defaultRegisterPhonePassword" class="form-control mb-4" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock">
+                    <input type="text" id="defaultRegisterFormLastName" class="form-control mb-1" placeholder="Address">
+                    <input type="text" id="defaultRegisterFormLastName" class="form-control mb-4" placeholder="">
+                    <input type="text" id="defaultRegisterFormLastName" class="form-control mb-4" placeholder="Zip code">
+                    <input type="text" id="defaultRegisterFormLastName" class="form-control " placeholder="Country">
+                    <button class="btn btn-blue-grey my-4 btn-block" style="width: 125px;" type="submit">MODIFY</button>
+                  </form>';
+          ?>
+           </div>
         </div>
-        <!--Grid row-->
-
       </section>
-   
-
     </div>
   </main>
-  <!--Main layout-->
 
-  <!--Footer-->
+
+  
   <footer class="page-footer font-small blue-grey pt-4">
     <!-- Footer Elements -->
     <div class="container">
