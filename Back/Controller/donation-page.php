@@ -133,13 +133,13 @@ session_start();
     
     <div class="container-fluid" style="background-image: url(img/gorilla.jpeg);background-size: cover; height: 100%;background-position: center;">
       <div class="row">
-        <div class="offset-2 col-4 text-white" style="margin-top: 200px;">
+        <div class="offset-md-2 col-12-sm col-md-4 text-white" style="margin-top: 200px;">
           <h1 class="mb-3" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >HELP US TO HELP THEM</h1>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam ut cupiditate asperiores voluptate id praesentium libero porro inventore laborum sunt maiores, exercitationem animi. Consectetur quasi non voluptatibus iste magnam blanditiis.</p>
         </div>
-        <form class="bg-white col-3 offset-1 rounded p-4" style="margin-top: 100px;" method="POST" action="donation-page.php">
+        <form class="bg-white col-md-3 col-sm-12 offset-md-1 rounded p-4" style="margin-top: 100px;" method="POST" action="donation-page.php">
           <h6 class="text-center">your donation</h6>
-          <h3 class="text-center">150p</h3>
+          <h3 id="displayDon" class="text-center"></h3>
           <h6 class="mt-4">Select donation amount</h6>
          <button class="btn btn-blue-grey btn-sm" style="width: 70px; height: 40px;" type="button">25</button>
           <button class="btn btn-blue-grey btn-sm" style="width: 70px; height: 40px;" type="button">50</button>
@@ -210,6 +210,11 @@ session_start();
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <script type="text/javascript">
     new WOW().init();
+    $("button").click(function(e){
+        $("#displayDon").html(this.textContent);
+    });
     </script>
+     
   </body>
+ 
 </html>
