@@ -33,7 +33,7 @@ session_start();
 <body class="grey lighten-3">
 
 	<nav class="mb-1 navbar navbar-expand-lg navbar-dark blue-grey">
-		<a class="navbar-brand" href="http://localhost/projet-fil-rouge/Back/Antoine/php/gorilla.php">Save-Them.com</a>
+		<a class="navbar-brand" href="/projet-fil-rouge/Back/Antoine/php/gorilla.php">Save-Them.com</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
 		  aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
 		  <span class="navbar-toggler-icon"></span>
@@ -137,28 +137,23 @@ session_start();
 
 		  <a class="btn-floating btn-lg " href="../../Controller/connexion-objet.php?action=logout"><span style="color: white"><i class="fas fa-sign-out-alt"></i></span></a>
 			<!--Dropdown primary-->
-			<li class="nav-item dropdown dropdown-menu-lg-right dropdown-menu-sm-left dropdown-default">
-				<div class="dropdown ">
-
+			<li class="nav-item dropdown" id="menuDiv">
 				<!--Trigger-->
 				<a class="nav-link dropdown-toggle"  id="dropdownMenu1" data-toggle="dropdown"
 				aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i></a>
-				
-				
+				<div class="dropdown-menu dropdown-menu-lg-right dropdown-menu-sm-left dropdown-default">
 
 							<!--Menu-->
-							<div class="dropdown-menu dropdown-primary">
-							<a class="dropdown-item" href="#">Action</a>
-							<a class="dropdown-item" href="#">Another action</a>
-							<a class="dropdown-item" href="#">Something else here</a>
-							<a class="dropdown-item" href="#">Something else here</a>
-							</div>
 							
+							<a class="dropdown-item" href="/projet-fil-rouge/Back/Controller/personal-space.php">Donation History</a>
+							<a class="dropdown-item" href="/projet-fil-rouge/Back/Controller/personal-space.php">Petition History</a>
+							<a class="dropdown-item" href="/projet-fil-rouge/Back/Controller/personal-space.php">Personal Informations</a>
+						
 						
 					</div>	
 			</li>
 				<!--/Dropdown primary-->
-		  <li class="nav-item dropdown">
+		  <li class="nav-item dropdown" id="loginDiv" >
 			  <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
 				aria-haspopup="true" aria-expanded="false">
 				<i class="fas fa-user"></i>
@@ -190,7 +185,7 @@ session_start();
 				  </div>
 			  
 				  <!-- Sign in button -->
-				  <button class="btn btn-info btn-block my-4 btn btn-blue-grey" type="submit" name="validation">Sign in</button>
+				  <button class="btn btn-info btn-block my-4 btn btn-blue-grey" type="submit" name="validation" id="jquery-toggle" id="clicked">Sign in</button>
 			  
 				  <!-- Register -->
 				  <p>Not a member?
@@ -297,6 +292,10 @@ session_start();
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="../js/mdb.min.js"></script>
   <!-- Your custom scripts (optional) -->
-  <script type="text/javascript"></script>
+  <script type="text/javascript" src="../js/script.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.slim.js"
+  integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
+  crossorigin="anonymous"></script>
 </body>
 </html>

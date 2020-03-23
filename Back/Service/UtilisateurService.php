@@ -1,5 +1,5 @@
 <?php 
-include_once (__DIR__ . "/../model/Utilisateur.php");
+include_once (__DIR__ . "/../Model/Utilisateur.php");
 include_once (__DIR__. "/../DAO/UtilisateurDataAccess.php"); 
 
 
