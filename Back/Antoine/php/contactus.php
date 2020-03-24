@@ -46,7 +46,7 @@ session_start();
 		<div class="collapse navbar-collapse" id="navbarSupportedContent-333">
 		  <ul class="navbar-nav mr-auto">
 			<li class="nav-item ">
-			  <a class="nav-link" href="#">Home
+			  <a class="nav-link" href="/projet-fil-rouge/Back/Home/Home.php">Home
 				<span class="sr-only">(current)</span>
 			  </a>
 			</li>

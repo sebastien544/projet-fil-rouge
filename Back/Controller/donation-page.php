@@ -5,6 +5,7 @@ session_start();
 
 	if (isset($_GET['action']) && $_GET['action']== 'logout'){
 		
+    session_unset();
 
 		session_destroy();
 
@@ -14,8 +15,10 @@ session_start();
   }
   
   if($_POST){
+    if($_SESSION){
       $userServ = new UtilisateurService;
       $userServ->ajout_don($_POST, $_SESSION['mail']);
+    }
   }
 
 ?>
@@ -69,7 +72,7 @@ session_start();
       <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home
+            <a class="nav-link" href="/projet-fil-rouge/Back/Home/Home.php">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
@@ -94,7 +97,7 @@ session_start();
               aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-user"></i>
             </a>
-            <div class="dropdown-menu dropdown-menu-lg-right dropdown-menu-sm-left dropdown-default"
+            <div id="myModal"  class="dropdown-menu dropdown-menu-lg-right dropdown-menu-sm-left dropdown-default"
               aria-labelledby="navbarDropdownMenuLink-333">
               <form class="text-center border border-light p-5" method="POST" action="/projet-fil-rouge/Back/Controller/authentification.php">
                 <p class="h4 mb-4">Sign in</p>
@@ -120,6 +123,7 @@ session_start();
           </li>
         </ul>
       </div>
+      <a class="btn-floating btn-lg " href="/projet-fil-rouge/Back/Home/Home.php"><span style="color: white"><i class="fas fa-sign-out-alt"></i></span></a>
     </nav>
     
     
@@ -159,7 +163,7 @@ session_start();
             <option>Giraffe</option>
             <option>Tiger</option>
           </select>
-          <input class=" btn-block btn-blue-grey" type="submit" placeholder="Submit">
+          <input id="submit" class=" btn-block btn-blue-grey" type="submit" placeholder="Submit">
         </form>
       </div>
     </div>
@@ -213,6 +217,10 @@ session_start();
     $("button").click(function(e){
         $("#displayDon").html(this.textContent);
     });
+    $("#submit").click(function(e){
+        $("#myModal").show("slow");
+    });
+   
     </script>
      
   </body>
