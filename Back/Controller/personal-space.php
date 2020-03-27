@@ -8,7 +8,7 @@ session_start();
 
 		session_destroy();
 
-		header('location:../../Controller/connexion-objet.php');
+		header('location:connexion-objet.php');
 		
 
 	}
@@ -67,7 +67,7 @@ session_start();
 
 <body>
   <nav class="mb-1 navbar navbar-expand-lg navbar-dark blue-grey">
-    <a class="navbar-brand" href="#">Save-Them.com</a>
+    <a class="navbar-brand" href="gorilla.php">Save-Them.com</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
       aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -75,7 +75,7 @@ session_start();
     <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home
+          <a class="nav-link" href="home.php">Home
             <span class="sr-only">(current)</span>
           </a>
         </li>
@@ -83,13 +83,13 @@ session_start();
             <a class="nav-link" href="donation-page.php">Donate</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Petition</a>
+            <a class="nav-link" href="petition.php">Petition</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../Antoine/php/shop_03.php">Shop</a>
+            <a class="nav-link" href="shop_03.php">Shop</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../Antoine/php/contactus.php">About us</a>
+            <a class="nav-link" href="contactus.php">About us</a>
           </li>
         <li class="nav-item">
           
@@ -133,7 +133,7 @@ session_start();
           
               <!-- Register -->
               <p>Not a member?
-                 <br> <a href="/../../projet-fil-rouge/Back/Controller/signup-page.php">Register</a>
+                 <br> <a href="signup-page.php">Register</a>
               </p>
           
           </form>

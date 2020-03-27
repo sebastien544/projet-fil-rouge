@@ -62,7 +62,7 @@
   <body class="grey lighten-3">
 
 	<nav class="mb-1 navbar navbar-expand-lg navbar-dark blue-grey">
-		<a class="navbar-brand" href="http://localhost/projet-fil-rouge/Back/Antoine/php/gorilla.php">Save-Them.com</a>
+		<a class="navbar-brand" href="gorilla.php">Save-Them.com</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
 		  aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
 		  <span class="navbar-toggler-icon"></span>
@@ -70,21 +70,21 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent-333">
 		  <ul class="navbar-nav mr-auto">
 			<li class="nav-item ">
-			  <a class="nav-link" href="/projet-fil-rouge/Back/Home/Home.php">Home
+			  <a class="nav-link" href="Home.php">Home
 				<span class="sr-only">(current)</span>
 			  </a>
 			</li>
 			<li class="nav-item">
-			  <a class="nav-link" href="/projet-fil-rouge/Back/Controller/donation-page.php">Donate</a>
+			  <a class="nav-link" href="donation-page.php">Donate</a>
 			</li>
 			<li class="nav-item">
-			  <a class="nav-link" href="#">Petition</a>
+			  <a class="nav-link" href="petition.php">Petition</a>
 			</li>
 			<li class="nav-item">
-			  <a class="nav-link" href="/projet-fil-rouge/Back/Antoine/php/shop_01.php">Shop</a>
+			  <a class="nav-link" href="shop_01.php">Shop</a>
 			</li>
 			<li class="nav-item">
-			  <a class="nav-link" href="/projet-fil-rouge/Back/Antoine/php/contactus.php">About us</a>
+			  <a class="nav-link" href="contactus.php">About us</a>
 			</li>
 			<li class="nav-item">
 			</li>
@@ -200,7 +200,7 @@
 			  
 				  <!-- Register -->
 				  <p>Not a member?
-					 <br> <a href="/../../projet-fil-rouge/Back/Controller/signup-page.php">Register</a>
+					 <br> <a href="signup-page.php">Register</a>
 				  </p>
 			  
 			  </form>

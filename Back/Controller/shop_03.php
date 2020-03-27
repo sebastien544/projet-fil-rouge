@@ -7,7 +7,7 @@ session_start();
 
 		session_destroy();
 
-		header('location:../../Controller/connexion-objet.php');
+		header('location:connexion-objet.php');
 		
 
 	}
@@ -27,16 +27,16 @@ session_start();
   <!-- Google Fonts Roboto -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- Material Design Bootstrap -->
-  <link rel="stylesheet" href="../css/mdb.min.css">
+  <link rel="stylesheet" href="css/mdb.min.css">
   <!-- Your custom styles (optional) -->
-  <link rel="stylesheet" href="../css/shop.css">
+  <link rel="stylesheet" href="css/shop.css">
 </head>
 <body>
   <!--Navbar -->
   <nav class="mb-1 navbar navbar-expand-lg navbar-dark blue-grey">
-		<a class="navbar-brand" href="http://localhost/projet-fil-rouge/Back/Antoine/php/gorilla.php">Save-Them.com</a>
+		<a class="navbar-brand" href="gorilla.php">Save-Them.com</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
 		  aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
 		  <span class="navbar-toggler-icon"></span>
@@ -44,15 +44,15 @@ session_start();
 		<div class="collapse navbar-collapse" id="navbarSupportedContent-333">
 		  <ul class="navbar-nav mr-auto">
 			<li class="nav-item ">
-			  <a class="nav-link" href="/projet-fil-rouge/Back/Home/Home.php">Home
+			  <a class="nav-link" href="Home.php">Home
 				<span class="sr-only">(current)</span>
 			  </a>
 			</li>
 			<li class="nav-item">
-			  <a class="nav-link" href="../../Controller/donation-page.php">Donate</a>
+			  <a class="nav-link" href="donation-page.php">Donate</a>
 			</li>
 			<li class="nav-item">
-			  <a class="nav-link" href="#">Petition</a>
+			  <a class="nav-link" href="petition.php">Petition</a>
 			</li>
 			<li class="nav-item">
 			  <a class="nav-link" href="shop_03.php">Shop</a>
@@ -138,7 +138,7 @@ session_start();
 					</div>
 				  </div>
 
-		  <a class="btn-floating btn-lg " href="../../Controller/connexion-objet.php?action=logout"><span style="color: white"><i class="fas fa-sign-out-alt"></i></span></a>
+		  <a class="btn-floating btn-lg " href="connexion-objet.php?action=logout"><span style="color: white"><i class="fas fa-sign-out-alt"></i></span></a>
 			<li class="nav-item dropdown">
 			  <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
 				aria-haspopup="true" aria-expanded="false">
@@ -146,7 +146,7 @@ session_start();
 			  </a>
 			  <div class="dropdown-menu dropdown-menu-lg-right dropdown-menu-sm-left dropdown-default"
 				aria-labelledby="navbarDropdownMenuLink-333">
-				<form class="text-center border border-light p-5" method="POST" action="/projet-fil-rouge/Back/Controller/authentification.php">
+				<form class="text-center border border-light p-5" method="POST" action="authentification.php">
 	  
 				  <p class="h4 mb-4">Sign in</p>
 			  
@@ -166,7 +166,7 @@ session_start();
 					  </div>
 					  <div>
 						  <!-- Forgot password -->
-						  <a href="/../../projet-fil-rouge/Back/Controller/signup-page.php">Forgot password?</a>
+						  <a href="signup-page.php">Forgot password?</a>
 					  </div>
 				  </div>
 			  
@@ -175,7 +175,7 @@ session_start();
 			  
 				  <!-- Register -->
 				  <p>Not a member?
-					 <br> <a href="/../../projet-fil-rouge/Back/Controller/signup-page.php">Register</a>
+					 <br> <a href="signup-page.php">Register</a>
 				  </p>
 			  
 			  </form>
@@ -414,15 +414,16 @@ session_start();
   <!-- Copyright -->
 
 </footer>
-<!-- Footer -->
-<script type="text/javascript" src="../js/jquery.min.js"></script>
-<!-- Bootstrap tooltips -->
-<script type="text/javascript" src="../js/popper.min.js"></script>
-<!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="../js/bootstrap.min.js"></script>
-<!-- MDB core JavaScript -->
-<script type="text/javascript" src="../js/mdb.min.js"></script>
-<!-- Your custom scripts (optional) -->
-<script type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.js"
+	integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
+	crossorigin="anonymous"></script>
+
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

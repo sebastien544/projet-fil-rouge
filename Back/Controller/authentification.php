@@ -7,7 +7,7 @@ session_start();
                 $data = $service->rechercheUser($_POST["mail"]);
                 
                 if($data && $service->checkUserNameAndPassword($data["mail"], $data['password'], /*$data['role'],*/ $_POST)){
-                        header("location:../Antoine/php/gorilla.php");
+                        header("location:gorilla.php");
                         $_SESSION['mail'] = $data["mail"];
                 }
                 else {

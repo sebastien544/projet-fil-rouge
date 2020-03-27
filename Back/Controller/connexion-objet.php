@@ -1,8 +1,8 @@
 <?php
 
 
-/* include_once("../Service/UtilisateurService.php");
-  
+include_once("../Service/UtilisateurService.php");
+ /* 
   if(isset($_POST["valider"]) && $_POST["valider"]=="connecter"){
         $userServ = new UtilisateurService();
         $data = $userServ->rechercheUser($_POST["mail"]);
@@ -38,7 +38,7 @@
                 <input type="password" class="form-control" id="pass" name="password">
             </div>
             <input type="submit" class="btn btn-primary" value="Connexion" type="submit" name="validation">
-            <a class="btn btn-primary" href="ajout-objet.php">Inscription</a>
+            <a class="btn btn-primary" href="signup-page.php">Inscription</a>
             </form>  
         </div>
 

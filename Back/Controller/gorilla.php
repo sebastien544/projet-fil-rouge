@@ -39,7 +39,7 @@ session_start();
 <body class="grey lighten-3">
 
 	<nav class="mb-1 navbar navbar-expand-lg navbar-dark blue-grey">
-		<a class="navbar-brand" href="/projet-fil-rouge/Back/Controller/gorilla.php">Save-Them.com</a>
+		<a class="navbar-brand" href="gorilla.php">Save-Them.com</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
 		  aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
 		  <span class="navbar-toggler-icon"></span>
@@ -55,7 +55,7 @@ session_start();
 			  <a class="nav-link" href="donation-page.php">Donate</a>
 			</li>
 			<li class="nav-item">
-			  <a class="nav-link" href="#">Petition</a>
+			  <a class="nav-link" href="petition.php">Petition</a>
 			</li>
 			<li class="nav-item">
 			  <a class="nav-link" href="shop_01.php">Shop</a>
