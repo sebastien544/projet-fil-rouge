@@ -7,7 +7,7 @@ session_start();
 
 		session_destroy();
 
-		header('location:../../Controller/connexion-objet.php');
+		header('location:connexion-objet.php');
 		
 
 	}
@@ -16,7 +16,7 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="en">
-
+ok
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -25,18 +25,18 @@ session_start();
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <!-- Bootstrap core CSS -->
-  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- Material Design Bootstrap -->
-  <link href="../css/mdb.min.css" rel="stylesheet">
+  <link href="css/mdb.min.css" rel="stylesheet">
   <!-- Your custom styles (optional) -->
-  <link href="../css/style.min.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body class="grey lighten-3">
 
 <!--Navbar -->
 <nav class="mb-1 navbar navbar-expand-lg navbar-dark blue-grey">
-		<a class="navbar-brand" href="http://localhost/projet-fil-rouge/Back/Antoine/php/gorilla.php">Save-Them.com</a>
+		<a class="navbar-brand" href="gorilla.php">Save-Them.com</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
 		  aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
 		  <span class="navbar-toggler-icon"></span>
@@ -44,21 +44,21 @@ session_start();
 		<div class="collapse navbar-collapse" id="navbarSupportedContent-333">
 		  <ul class="navbar-nav mr-auto">
 			<li class="nav-item ">
-			  <a class="nav-link" href="#">Home
+			  <a class="nav-link" href="home.php">Home
 				<span class="sr-only">(current)</span>
 			  </a>
 			</li>
 			<li class="nav-item">
-			  <a class="nav-link" href="/projet-fil-rouge/Back/Controller/donation-page.php">Donate</a>
+			  <a class="nav-link" href="donation-page.php">Donate</a>
 			</li>
 			<li class="nav-item">
-			  <a class="nav-link" href="#">Petition</a>
+			  <a class="nav-link" href="petition.php">Petition</a>
 			</li>
 			<li class="nav-item">
-			  <a class="nav-link" href="/projet-fil-rouge/Back/Antoine/php/shop_01.php">Shop</a>
+			  <a class="nav-link" href="shop_01.php">Shop</a>
 			</li>
 			<li class="nav-item">
-			  <a class="nav-link" href="/projet-fil-rouge/Back/Antoine/php/contactus.php">About us</a>
+			  <a class="nav-link" href="contactus.php">About us</a>
 			</li>
 			<li class="nav-item">
 			</li>
@@ -138,7 +138,7 @@ session_start();
 					</div>
 				  </div>
 
-		  <a class="btn-floating btn-lg " href="../../Controller/connexion-objet.php?action=logout"><span style="color: white"><i class="fas fa-sign-out-alt"></i></span></a>
+		  <a class="btn-floating btn-lg " href="connexion-objet.php?action=logout"><span style="color: white"><i class="fas fa-sign-out-alt"></i></span></a>
 			<li class="nav-item dropdown">
 			  <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
 				aria-haspopup="true" aria-expanded="false">
@@ -146,7 +146,7 @@ session_start();
 			  </a>
 			  <div class="dropdown-menu dropdown-menu-lg-right dropdown-menu-sm-left dropdown-default"
 				aria-labelledby="navbarDropdownMenuLink-333">
-				<form class="text-center border border-light p-5" method="POST" action="/projet-fil-rouge/Back/Controller/authentification.php">
+				<form class="text-center border border-light p-5" method="POST" action="authentification.php">
 	  
 				  <p class="h4 mb-4">Sign in</p>
 			  
@@ -175,7 +175,7 @@ session_start();
 			  
 				  <!-- Register -->
 				  <p>Not a member?
-					 <br> <a href="/../../projet-fil-rouge/Back/Controller/signup-page.php">Register</a>
+					 <br> <a href="signup-page.php">Register</a>
 				  </p>
 			  
 			  </form>
@@ -474,13 +474,13 @@ session_start();
 
 </footer>
 <!-- Footer -->
-<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
 <!-- Bootstrap tooltips -->
-<script type="text/javascript" src="../js/popper.min.js"></script>
+<script type="text/javascript" src="js/popper.min.js"></script>
 <!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
-<script type="text/javascript" src="../js/mdb.min.js"></script>
+<script type="text/javascript" src="js/mdb.min.js"></script>
 <!-- Your custom scripts (optional) -->
 <script type="text/javascript"></script>
 </body>
