@@ -66,7 +66,7 @@ CREATE TABLE categorie(
 CREATE TABLE Produit(
         id_produit   Int  Auto_increment  NOT NULL ,
         designation  Varchar (50) NOT NULL ,
-        prix         DECIMAL (15,3)  NOT NULL ,
+        prix         DECIMAL (15,2)  NOT NULL ,
         id_stock     Int NOT NULL ,
         id_categorie Int NOT NULL
 	,CONSTRAINT Produit_PK PRIMARY KEY (id_produit)
@@ -123,7 +123,7 @@ CREATE TABLE utilisateur(
 
 CREATE TABLE compte(
         id_compte      Int  Auto_increment  NOT NULL ,
-        quantite_point Varchar (50) NOT NULL ,
+        quantite_point Varchar (50) NOT NULL 
 	,CONSTRAINT compte_PK PRIMARY KEY (id_compte)
 )ENGINE=InnoDB;
 
