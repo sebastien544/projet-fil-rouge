@@ -17,7 +17,9 @@ class UtilisateurDataAccess extends ConnexionDDB {
         $db = $this->connectDatabase();
         $newPwd = password_hash("$newPwd", PASSWORD_DEFAULT);
         mysqli_query($db, 'INSERT INTO  compte VALUES (null,10000)');
-        mysqli_query($db, "INSERT INTO utilisateur VALUES (null,'$newFirstName','$newLastName','$newMail', '$newPwd', null, (SELECT MAX(id_compte) FROM compte))");
+        $query ="INSERT INTO utilisateur VALUES (null,'$newFirstName','$newLastName','$newMail', '$newPwd', null, (SELECT MAX(id_compte) FROM compte))";
+        var_dump($query);
+        mysqli_query($db,$query );
         mysqli_close($db);
     } 
     // Déconnexion
@@ -35,6 +37,16 @@ class UtilisateurDataAccess extends ConnexionDDB {
         mysqli_close($db);
     }
 
+    function ajout_petition($var, $mail){
+        $db =$this->connectDatabase();
+       
+        $query='INSERT INTO Signe VALUES ('.$var.',(SELECT id_utilisateur FROM utilisateur WHERE mail = "'.$mail.'"),SYSDATE())';
+      
+        mysqli_query($db, $query);
+        mysqli_close($db);
+
+    }
+
     function afficherDon($mail){
         $db = $this->connectDatabase();
         $rs = mysqli_query($db, 'SELECT e.date, e.montant_don, a.type_animal FROM utilisateur as u INNER JOIN effectuer as e on u.id_utilisateur = e.id_utilisateur INNER JOIN don as d on e.id_don = d.id_don INNER JOIN animal as a on d.id_animal = a.id_animal WHERE u.mail = "'.$mail.'"');
@@ -45,7 +57,9 @@ class UtilisateurDataAccess extends ConnexionDDB {
 
     function afficherPet($mail){
         $db = $this->connectDatabase();
-        $rs = mysqli_query($db, 'SELECT s.date_signature, p.animaux FROM signe as s INNER JOIN utilisateur as u on s.id_utilisateur = u.id_utilisateur INNER JOIN petition as p on s.id_petition = p.id_petition WHERE u.mail = "'.$mail.'"');
+        $query=('SELECT s.date_signature, a.type_animal FROM Signe as s INNER JOIN utilisateur as u on s.id_utilisateur = u.id_utilisateur INNER JOIN petition as p on s.id_petition = p.id_petition INNER JOIN animal as a on p.id_animal = a.id_animal WHERE u.mail = "'.$mail.'"');
+       
+        $rs = mysqli_query($db, $query );
         $data = mysqli_fetch_all($rs, MYSQLI_ASSOC);
         mysqli_close($db);
         return $data;

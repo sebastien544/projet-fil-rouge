@@ -233,7 +233,7 @@ session_start();
                     echo '<tr>
                           <th scope="row">'.($i+1).'</th>
                           <td>'.$data[$i]['date_signature'].'</td>
-                          <td>'.$data[$i]['animaux'].'</td>
+                          <td>'.$data[$i]['type_animal'].'</td>
                           </tr>';
                   }
                 ?>

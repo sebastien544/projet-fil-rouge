@@ -49,5 +49,9 @@ class UtilisateurService {
         return $this->dao->afficherPet($mail);
     }
 
+    function ajout_petition ($var,$mail){
+        $this->dao->ajout_petition($var,$mail);
+    }
+
 }
 ?>

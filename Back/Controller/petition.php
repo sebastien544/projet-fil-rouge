@@ -218,14 +218,16 @@
                     <!--/.Card image-->
 
                     <!--Card content-->
-                    <form action="formulaire_petition.php?animal=gorilla" method="POST">
+                    <form action="formulaire_petition.php" method="POST">
                       <div class="card-body card-body-cascade">
                         <!--Title-->
                         <h4 class="card-title">Gorilla</h4>
                         <!--Text-->
-                        <p class="card-text">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
+                        <p class="card-text" >Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
                         laboriosam, nisi ut aliquid ex ea commodi.</p>
-                        <input type="submit" value="SIGN" name="validation_petition" class="btn btn-unique">
+                        <input type="hidden" value="1" name="idPetition">
+                        <input type="hidden" value="SIGN" name="validation_petition">
+                        <input type="submit"  class="btn btn-unique btn btn-blue-grey">
                       </div>
                     </form>
                     <!--/.Card content-->
@@ -251,14 +253,16 @@
                     <!--/.Card image-->
 
                     <!--Card content-->
-                    <form action="formulaire_petition.php?animal=giraffe" method="POST">
+                    <form action="formulaire_petition.php" method="POST">
                       <div class="card-body card-body-cascade">
                           <!--Title-->
                           <h4 class="card-title">Giraffe</h4>
                           <!--Text-->
                           <p class="card-text">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
                           laboriosam, nisi ut aliquid ex ea commodi.</p>
-                          <input type="submit" value="SIGN" name="validation_petition" class="btn btn-unique">
+                          <input type="hidden" value="2" name="idPetition">
+                          <input type="hidden" value="SIGN" name="validation_petition">
+                          <input type="submit"  class="btn btn-unique btn btn-blue-grey">
                       </div>
                     </form>
                     <!--/.Card content-->
@@ -284,14 +288,16 @@
                     <!--/.Card image-->
 
                     <!--Card content-->
-                    <form action="formulaire_petition.php?animal=chimpanze" method="POST">
+                    <form action="formulaire_petition.php" method="POST">
                       <div class="card-body card-body-cascade">
                           <!--Title-->
                           <h4 class="card-title">Chimpanzee</h4>
                           <!--Text-->
                           <p class="card-text">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
                           laboriosam, nisi ut aliquid ex ea commodi.</p>
-                          <input type="submit" value="SIGN" name="validation_petition" class="btn btn-unique">
+                          <input type="hidden" value="3" name="idPetition">
+                          <input type="hidden" value="SIGN" name="validation_petition">
+                          <input type="submit"  class="btn btn-unique btn btn-blue-grey">
                       </div>
                     </form>
                     <!--/.Card content-->

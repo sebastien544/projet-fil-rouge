@@ -42,7 +42,8 @@ CREATE TABLE Animal(
 
 CREATE TABLE stock(
         id_stock      Int  Auto_increment  NOT NULL ,
-        stock_produit Varchar (50) NOT NULL
+        stock_produit Varchar (50) NOT NULL,
+         date_stock   Date NOT NULL 
 	,CONSTRAINT stock_PK PRIMARY KEY (id_stock)
 )ENGINE=InnoDB;
 
@@ -66,7 +67,6 @@ CREATE TABLE Produit(
         id_produit   Int  Auto_increment  NOT NULL ,
         designation  Varchar (50) NOT NULL ,
         prix         DECIMAL (15,3)  NOT NULL ,
-        date_stock   Date NOT NULL ,
         id_stock     Int NOT NULL ,
         id_categorie Int NOT NULL
 	,CONSTRAINT Produit_PK PRIMARY KEY (id_produit)
@@ -285,3 +285,10 @@ ALTER TABLE Panier
 	REFERENCES Produit(id_produit);
 
 INSERT INTO Animal VALUES (1,"gorilla"),(2,"elephant"),(3,"tiger"),(4, "chimpanze"),(5, "giraffe");
+
+INSERT INTO categorie VALUES (1, "goodies"),( 2, "stuffed_toys");
+
+INSERT INTO stock values (1, 99, sysdate()),(2, 99, sysdate()),(3, 99, sysdate()),(4, 99, sysdate()),(5, 99, sysdate()),(6, 99, sysdate()),(7, 99, sysdate()),(8, 99, sysdate()),(9, 99, sysdate()),(10, 99, sysdate()),(11, 99, sysdate()),(12, 99, sysdate());
+
+
+INSERT INTO produit VALUES (1, "stuffed_toys_giraffe", 45.99, 1, 2), (2, "stuffed_toys_small_chimpanzee", 29.99, 2, 2),(3, "stuffed_toys_robert", 24.99, 3, 2),(4, "stuffed_toys_hedgehog", 19.99, 4, 2),(5, "stuffed_toys_monkey", 24.99, 5, 2),(6, "stuffed_toys_dog", 29.99, 6, 2),(7, "goodies_mug", 12.99, 7, 1),(8, "goodies_bloc_note", 19.99, 8, 1),(9, "goodies_toothbrush", 4.99, 9, 1),(10, "goodies_wood_map", 45.99, 10 , 1),(11, "goodies_anti_stress_cube", 12.99, 11, 1),(12, "goodies_tote_bag", 9.99, 12, 1);
