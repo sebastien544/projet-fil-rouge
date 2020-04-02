@@ -90,39 +90,16 @@ session_start();
 							  <tr>
 								<th>#</th>
 								<th>Product name</th>
-								<th>Price</th>
+                <th>Price</th>
+                <th>Quantity</th>
 								<th>Remove</th>
 							  </tr>
 							</thead>
-							<tbody>
-							  <tr>
-								<th scope="row">1</th>
-								<td>Product 1</td>
-								<td>100$</td>
-								<td><a><i class="fas fa-times"></i></a></td>
-							  </tr>
-							  <tr>
-								<th scope="row">2</th>
-								<td>Product 2</td>
-								<td>100$</td>
-								<td><a><i class="fas fa-times"></i></a></td>
-							  </tr>
-							  <tr>
-								<th scope="row">3</th>
-								<td>Product 3</td>
-								<td>100$</td>
-								<td><a><i class="fas fa-times"></i></a></td>
-							  </tr>
-							  <tr>
-								<th scope="row">4</th>
-								<td>Product 4</td>
-								<td>100$</td>
-								<td><a><i class="fas fa-times"></i></a></td>
-							  </tr>
+							<tbody id="cart">
 							  <tr class="total">
 								<th scope="row">5</th>
 								<td>Total</td>
-								<td>400$</td>
+								<td id="total">0</td>
 								<td></td>
 							  </tr>
 							</tbody>
@@ -210,7 +187,7 @@ session_start();
           <h4 class="card-title">Vintage Mug</h4>
           <!--Text-->
           <p class="card-text">Enamel vintage mug<br> 45.99 pts </p>
-          <a class="btn btn-unique btn btn-blue-grey">add to basket</a>
+          <a id='7' class="add btn btn-unique btn btn-blue-grey">add to basket</a>
         </div>
         <!--/.Card content-->
   
@@ -241,7 +218,7 @@ session_start();
           <h4 class="card-title">Bloc Note</h4>
           <!--Text-->
           <p class="card-text">A beautiful jungle bloc Note <br> 29.99pts</p>
-          <a class="btn btn-unique btn btn-blue-grey">Add to basket</a>
+          <a  id="8" class="add btn btn-unique btn btn-blue-grey">Add to basket</a>
         </div>
         <!--/.Card content-->
   
@@ -270,7 +247,7 @@ session_start();
             <h4 class="card-title">Wood toothbrush</h4>
             <!--Text-->
             <p class="card-text">The ecological toothbrush <br> 4.99 pts</p>
-            <a class="btn btn-unique btn btn-blue-grey">Add to basket</a>
+            <a id="9" class="add btn btn-unique btn btn-blue-grey">Add to basket</a>
           </div>
           <!--/.Card content-->
         </div>
@@ -301,7 +278,7 @@ session_start();
           <h4 class="card-title">The African wood map</h4>
           <!--Text-->
           <p class="card-text">If you want to locate wakanda this is the ideal map<br> 19.99 pts</p>
-          <a class="btn btn-unique btn btn-blue-grey">Add to basket</a>
+          <a id="10" class=" add btn btn-unique btn btn-blue-grey">Add to basket</a>
         </div>
         <!--/.Card content-->
   
@@ -332,7 +309,7 @@ session_start();
           <h4 class="card-title">Anti stress cube</h4>
           <!--Text-->
           <p class="card-text">This cube 'll be perfect to pass your stress on squezzing it <br> 12.99 pts</p>
-          <a class="btn btn-unique btn btn-blue-grey">Add to basket</a>
+          <a id="11" class=" add btn btn-unique btn btn-blue-grey">Add to basket</a>
         </div>
         <!--/.Card content-->
   
@@ -361,7 +338,7 @@ session_start();
             <h4 class="card-title">Tote Bags</h4>
             <!--Text-->
             <p class="card-text">Our selection of tote bags <br> 9.99 pts</p>
-            <a class="btn btn-unique btn btn-blue-grey">Add to Basket</a>
+            <a id="12" class="add btn btn-unique btn btn-blue-grey">Add to Basket</a>
           </div>
           <!--/.Card content-->
         </div>
@@ -422,8 +399,10 @@ session_start();
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.js"
 	integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
 	crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <!-- Your custom scripts (optional) -->
   <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/shop.js"></script>
 </body>
 </html>

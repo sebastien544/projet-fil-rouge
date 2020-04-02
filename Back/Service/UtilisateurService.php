@@ -14,7 +14,7 @@ class UtilisateurService {
     }
     function checkUserNameAndPassword($mail, $password /*, $role*/, $tab){
         if ($tab["mail"] == $mail && password_verify($tab["password"], $password)){
-            session_start();
+            
            /* $_SESSION["role"] = $role;*/
             return true;
         } 
@@ -48,6 +48,23 @@ class UtilisateurService {
     function afficherInfo($mail){
         return $this->dao->afficherPet($mail);
     }
+
+    function insertItem($id,$mail){
+         $this->dao->insertItem($id,$mail);
+    }
+
+    function selectCart($mail){
+        return $this->dao->selectCart($mail);
+   }
+
+   function removeItem($id, $mail){
+    return $this->dao->removeItem($id, $mail);
+    }
+
+    function updateQuantity($id,$mail,$quantity){
+         $this->dao->updateQuantity($id, $mail, $quantity);
+    }
+
 
 }
 ?>

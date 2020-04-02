@@ -1,5 +1,6 @@
 <?php 
 include_once ("ConnexionDDB.php");
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
 
 class UtilisateurDataAccess extends ConnexionDDB {
@@ -49,6 +50,45 @@ class UtilisateurDataAccess extends ConnexionDDB {
         $data = mysqli_fetch_all($rs, MYSQLI_ASSOC);
         mysqli_close($db);
         return $data;
+    }
+
+    function insertItem($id,$mail){
+        try{
+        $db = $this->connectDatabase();
+        mysqli_query($db, 'INSERT INTO panier VALUES ((SELECT id_utilisateur FROM utilisateur WHERE mail = "'.$mail.'"),'.$id.',1)');
+        mysqli_close($db);
+        }catch(mysqli_sql_exception $mse){
+            throw $mse;
+        }
+    }
+
+    function selectCart($mail){
+        $db = $this->connectDatabase();
+        $rs = mysqli_query($db, 'SELECT pr.designation, pr.prix, pr.id_produit, p.quantity FROM produit as pr INNER JOIN panier as p on pr.id_produit = p.id_produit INNER JOIN utilisateur as u on p.id_utilisateur = u.id_utilisateur WHERE u.mail = "'.$mail.'"');
+        $data = mysqli_fetch_all($rs, MYSQLI_ASSOC);
+        mysqli_close($db);
+        return $data;
+    }
+
+    function removeItem($id,$mail){
+        try{
+        $db = $this->connectDatabase();
+        mysqli_query($db, 'DELETE FROM panier WHERE id_produit = '.$id.' AND id_utilisateur = (SELECT id_utilisateur FROM utilisateur WHERE mail = "'.$mail.'")');
+        mysqli_close($db);
+        }catch(mysqli_sql_exception $mse){
+            throw $mse;
+        }
+    }
+
+    function updateQuantity($id,$mail,$quantity){
+        try{
+        $db = $this->connectDatabase();
+        mysqli_query($db, 'UPDATE panier SET quantity = "'.$quantity.'" WHERE id_produit='.$id.' AND id_utilisateur=(SELECT id_utilisateur FROM utilisateur WHERE mail = "'.$mail.'")');
+        }catch(mysqli_sql_exception $mse){
+            throw $mse;
+        }finally{
+            mysqli_close($db);
+        }
     }
 }
 ?>

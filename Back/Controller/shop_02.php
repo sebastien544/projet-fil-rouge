@@ -84,45 +84,21 @@ session_start();
 						</div>
 						<!--Body-->
 						<div class="modal-body">
-	  
-						  <table class="table table-hover">
+            <table class="table table-hover">
 							<thead>
 							  <tr>
 								<th>#</th>
 								<th>Product name</th>
-								<th>Price</th>
+                <th>Price</th>
+                <th>Quantity</th>
 								<th>Remove</th>
 							  </tr>
 							</thead>
-							<tbody>
-							  <tr>
-								<th scope="row">1</th>
-								<td>Product 1</td>
-								<td>100$</td>
-								<td><a><i class="fas fa-times"></i></a></td>
-							  </tr>
-							  <tr>
-								<th scope="row">2</th>
-								<td>Product 2</td>
-								<td>100$</td>
-								<td><a><i class="fas fa-times"></i></a></td>
-							  </tr>
-							  <tr>
-								<th scope="row">3</th>
-								<td>Product 3</td>
-								<td>100$</td>
-								<td><a><i class="fas fa-times"></i></a></td>
-							  </tr>
-							  <tr>
-								<th scope="row">4</th>
-								<td>Product 4</td>
-								<td>100$</td>
-								<td><a><i class="fas fa-times"></i></a></td>
-							  </tr>
+							<tbody  id="cart">
 							  <tr class="total">
 								<th scope="row">5</th>
 								<td>Total</td>
-								<td>400$</td>
+								<td id="total">0</td>
 								<td></td>
 							  </tr>
 							</tbody>
@@ -227,7 +203,7 @@ session_start();
           <h4 class="card-title">the Giraffe</h4>
           <!--Text-->
           <p class="card-text">Wonderful giraffe toy<br> 45.99 pts </p>
-          <a class="btn btn-unique btn btn-blue-grey">add to basket</a>
+          <a id='1' class="add btn btn-unique btn btn-blue-grey">add to basket</a>
         </div>
         <!--/.Card content-->
   
@@ -258,7 +234,7 @@ session_start();
           <h4 class="card-title">Small Chimpanzee</h4>
           <!--Text-->
           <p class="card-text">Cute Little Monkey <br> 29.99pts</p>
-          <a class="btn btn-unique btn btn-blue-grey">Add to basket</a>
+          <a id='2' class=" add btn btn-unique btn btn-blue-grey">Add to basket</a>
         </div>
         <!--/.Card content-->
   
@@ -287,7 +263,7 @@ session_start();
             <h4 class="card-title">Small stuffed Robert</h4>
             <!--Text-->
             <p class="card-text">clever small ferret but not as the real Robert <br> 24.99 pts</p>
-            <a class="btn btn-unique btn btn-blue-grey">Add to basket</a>
+            <a id='3' class=" add btn btn-unique btn btn-blue-grey">Add to basket</a>
           </div>
           <!--/.Card content-->
         </div>
@@ -318,7 +294,7 @@ session_start();
           <h4 class="card-title">The Hedgehog</h4>
           <!--Text-->
           <p class="card-text">don't with Sonic this one is very slow <br> 19.99 pts</p>
-          <a class="btn btn-unique btn btn-blue-grey">Add to basket</a>
+          <a id='4' class=" add btn btn-unique btn btn-blue-grey">Add to basket</a>
         </div>
         <!--/.Card content-->
   
@@ -349,7 +325,7 @@ session_start();
           <h4 class="card-title">Stuffed Toys</h4>
           <!--Text-->
           <p class="card-text">A baby monkey with a star <br> 24.99 pts</p>
-          <a class="btn btn-unique btn btn-blue-grey">Go to Shop</a>
+          <a id='5' class=" add btn btn-unique btn btn-blue-grey">Go to Shop</a>
         </div>
         <!--/.Card content-->
   
@@ -378,7 +354,7 @@ session_start();
             <h4 class="card-title">small Dog</h4>
             <!--Text-->
             <p class="card-text">A tired dog <br>29.99 pts</p>
-            <a class="btn btn-unique btn btn-blue-grey">Add to Basket</a>
+            <a id='6' class=" add btn btn-unique btn btn-blue-grey">Add to Basket</a>
           </div>
           <!--/.Card content-->
         </div>
@@ -435,9 +411,11 @@ session_start();
 	<script type="text/javascript" src="js/script.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.js"
 	integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
-	crossorigin="anonymous"></script>
+  crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <!-- Your custom scripts (optional) -->
   <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/shop.js"></script>
 </body>
 </html>
