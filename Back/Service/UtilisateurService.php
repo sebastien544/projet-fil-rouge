@@ -66,5 +66,9 @@ class UtilisateurService {
     }
 
 
+    function ajout_petition ($var,$mail){
+        $this->dao->ajout_petition($var,$mail);
+    }
+
 }
 ?>

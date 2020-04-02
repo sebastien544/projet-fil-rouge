@@ -2,14 +2,15 @@
 
 session_start();
 
-include_once (__DIR__ . "../Service/UtilisateurService.php");
+include_once (__DIR__."/../Service/UtilisateurService.php");
 
 if(isset($_POST["validation_petition"])){
 
-    $animal = $_POST["animal"];
+    $petition = $_POST['idPetition'];
 
     $userServ = new UtilisateurService;
-    $userServ->sign_petition($animal, $_SESSION['mail']);
+
+    $userServ->ajout_petition($petition, $_SESSION['mail']);
 
     
 }

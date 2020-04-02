@@ -43,7 +43,7 @@ CREATE TABLE Animal(
 CREATE TABLE stock(
         id_stock      Int  Auto_increment  NOT NULL ,
         stock_produit Varchar (50) NOT NULL,
-		 date_stock   Date NOT NULL ,
+         date_stock   Date NOT NULL 
 	,CONSTRAINT stock_PK PRIMARY KEY (id_stock)
 )ENGINE=InnoDB;
 
@@ -123,7 +123,7 @@ CREATE TABLE utilisateur(
 
 CREATE TABLE compte(
         id_compte      Int  Auto_increment  NOT NULL ,
-        quantite_point Varchar (50) NOT NULL ,
+        quantite_point Varchar (50) NOT NULL 
 	,CONSTRAINT compte_PK PRIMARY KEY (id_compte)
 )ENGINE=InnoDB;
 
@@ -285,7 +285,6 @@ ALTER TABLE Panier
 	REFERENCES Produit(id_produit);
 
 INSERT INTO Animal VALUES (1,"gorilla"),(2,"elephant"),(3,"tiger"),(4, "chimpanze"),(5, "giraffe");
-
 
 INSERT INTO categorie VALUES (1, "goodies"),( 2, "stuffed_toys");
 
