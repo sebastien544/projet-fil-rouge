@@ -214,7 +214,7 @@ session_start();
   
         <!--Card image-->
         <div class="view view-cascade overlay">
-          <img src="../img/giraffe_toy.jpg" class="card-img-top"
+          <img src="img/giraffe_toy.jpg" class="card-img-top"
             alt="narrower">
         
         </div>

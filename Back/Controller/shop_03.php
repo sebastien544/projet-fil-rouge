@@ -257,7 +257,7 @@ session_start();
     
           <!--Card image-->
           <div class="view view-cascade overlay">
-            <img src="../img/toothbrush1.jpg" class="card-img-top"
+            <img src="img/toothbrush1.jpg" class="card-img-top"
               alt="narrower">
             
           </div>
