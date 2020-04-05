@@ -51,6 +51,16 @@ class UtilisateurDataAccess extends ConnexionDDB {
         mysqli_close($db);
         return $data;
     }
+    
+    function ajout_petition($var, $mail){
+        $db =$this->connectDatabase();
+
+        $query='INSERT INTO Signe VALUES ('.$var.',(SELECT id_utilisateur FROM utilisateur WHERE mail = "'.$mail.'"),SYSDATE())';
+
+        mysqli_query($db, $query);
+        mysqli_close($db);
+
+    }
 
     function insertItem($id,$mail){
         try{
@@ -89,6 +99,20 @@ class UtilisateurDataAccess extends ConnexionDDB {
         }finally{
             mysqli_close($db);
         }
+    }
+
+    function selectPetSigne ($var,$mail){
+        try{
+            $db = $this->connectDatabase();
+            $rs= mysqli_query($db, 'SELECT * from Signe where id_petition= '.$var.' AND id_utilisateur = (SELECT id_utilisateur FROM utilisateur WHERE mail = "'.$mail.'") ');
+            $data = mysqli_fetch_all($rs, MYSQLI_ASSOC);
+            return $data;
+            }catch(mysqli_sql_exception $mse){
+                throw $mse;
+            }finally{
+                mysqli_close($db);
+            }
+
     }
 }
 ?>

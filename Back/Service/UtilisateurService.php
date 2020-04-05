@@ -69,6 +69,10 @@ class UtilisateurService {
     function ajout_petition ($var,$mail){
         $this->dao->ajout_petition($var,$mail);
     }
+    function selectPetSigne ($var,$mail){
+        return $this->dao->selectPetSigne($var,$mail);
+
+    }
 
 }
 ?>

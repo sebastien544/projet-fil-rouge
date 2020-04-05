@@ -14,3 +14,13 @@ if(isset($_POST["validation_petition"])){
 
     
 }
+if(isset($_POST['action']) && $_POST['searchPet']){
+    $userServ = new UtilisateurService;
+
+    $petition = $_POST['id'];
+
+    $data=$userServ->selectPetSigne($petition, $_SESSION['mail']);
+
+    echo json_encode($data);
+
+}

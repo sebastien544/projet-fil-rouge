@@ -1,6 +1,10 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-
+require 'path/to/PHPMailer/src/Exception.php';
+require 'path/to/PHPMailer/src/PHPMailer.php';
+require 'path/to/PHPMailer/src/SMTP.php';
 session_start();
 
 	if (isset($_GET['action']) && $_GET['action']== 'logout'){
@@ -12,6 +16,74 @@ session_start();
 		
 
 	}
+
+	if(!empty($_POST)){
+		extract($_POST);
+		$valid =true;
+	
+
+		if (isset($_POST['contact'])){
+			$name = (string) htmlentities(trim($name));
+			$email = (string) htmlentities(trim($email));
+			$subject =  (string)htmlentities(trim($subject));
+			$message = (string) htmlentities(trim($message));
+
+			if(empty($name)){
+				$valid=false;
+				$er_name=("please enter a name");
+			}
+			if(empty($email)){
+				$valid=false;
+				$er_email=("please enter an email");
+			}elseif(!preg_match("/^[a-z0-9\-_.]+@[a-z]+\.[a-z]{2,3}$/i", $email)){
+				$valid=false;
+				$er_email="please enter a valid email";
+			}
+			if(empty($subject)){
+				$valid=false;
+				$er_subject="please enter a subject in order give a response";
+			}
+			if(empty($message)){
+				$valid=false;
+				$er_message=("please enter a message");
+			}
+			if($valid){
+
+				$to = "antoineulysse@gmail.com";
+	
+				$header = 'MiME-Version: 1.0' . "\r\n";
+				$header .= 'Content-type: text\html; charset="utf-8"'. "\r\n";
+				$header .= 'Content-Transfer-Encoding: 8bit';
+				$header .= 'To: vous <'. $to .'>'. "\r\n";
+				$header .= 'From: ' .$name. ', <' .$email. '>'. "\r\n";
+	
+				$message = "<html>
+							<head>
+								<title>Contact</title>
+							</head>
+							<body>
+								<p>
+									".$name . ' ,sujet:'.$subject. 'Bonjour, vous avez reçu un message ' .$message. "
+								</p>
+							</body>
+							</html>";
+				
+	
+				if ($valid=true){
+					echo 'ok'; 
+					mail($to, $subject, $message, $header);
+				}else{
+					echo 'nok';
+				}
+				header('Location: ');
+				exit;
+			}
+
+		}
+
+		
+	}	
+	
 
 ?>
 
@@ -189,6 +261,7 @@ session_start();
 		</div>
 	  </nav>
 <!--/.Navbar -->
+
 <!--Section: Contact v.2-->
 <section class="mb-4">
 
@@ -205,37 +278,48 @@ session_start();
 
       <!--Grid column-->
       <div class="col-md-9 mb-md-0 mb-5">
-          <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+          <form id="contact-form" name="contact-form" method="POST">
 
               <!--Grid row-->
               <div class="row">
-
+			<?php	if(isset($er_name)){ ?>
+				<div class="alert alert-danger" role="alert"><?php echo $er_name ?></div>
+			<?php	
+			}
+			?>
                   <!--Grid column-->
                   <div class="col-md-6">
                       <div class="md-form mb-0">
-                          <input type="text" id="name" name="name" class="form-control">
+                          <input type="text" id="name" name="name" class="form-control" value="<?php if(isset($name)){ echo $name;} ?>">
                           <label for="name" class="">Your name</label>
                       </div>
                   </div>
                   <!--Grid column-->
-
+				  <?php	if(isset($er_email)){ ?>
+				<div class="alert alert-danger" role="alert"><?php echo $er_email ?></div>
+			<?php	
+			}
+			?>
                   <!--Grid column-->
                   <div class="col-md-6">
                       <div class="md-form mb-0">
-                          <input type="text" id="email" name="email" class="form-control">
+                          <input type="text" id="email" name="email" class="form-control" value="<?php if(isset($email)){ echo $email;} ?>">
                           <label for="email" class="">Your email</label>
                       </div>
                   </div>
-                  <!--Grid column-->
-
+				  <!--Grid column-->
               </div>
               <!--Grid row-->
-
+			  <?php	if(isset($er_subject)){ ?>
+				<div class="alert alert-danger" role="alert"><?php echo $er_subject ?></div>
+			<?php	
+			}
+			?>
               <!--Grid row-->
               <div class="row">
                   <div class="col-md-12">
                       <div class="md-form mb-0">
-                          <input type="text" id="subject" name="subject" class="form-control">
+                          <input type="text" id="subject" name="subject" class="form-control" value="<?php if(isset($subject)){ echo $subject;} ?>">
                           <label for="subject" class="">Subject</label>
                       </div>
                   </div>
@@ -244,26 +328,32 @@ session_start();
 
               <!--Grid row-->
               <div class="row">
-
+			  <?php	if(isset($er_message)){ ?>
+				<div class="alert alert-danger" role="alert"><?php echo $er_message ?></div>
+			<?php	
+			}
+			?>
                   <!--Grid column-->
                   <div class="col-md-12">
 
                       <div class="md-form">
-                          <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                          <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" value="<?php if(isset($message)){ echo $message;} ?>"></textarea>
                           <label for="message">Your message</label>
                       </div>
 
                   </div>
               </div>
-              <!--Grid row-->
-
-          </form>
-
-          <div class="text-center text-md-left">
-              <a class="btn btn-primary btn btn-blue-grey" onclick="document.getElementById('contact-form').submit();">Send</a>
-          </div>
+			  <!--Grid row-->
+			  <div class="text-center text-md-left">
+              	<button type="submit" class="btn btn-primary btn btn-blue-grey" name="contact" >Send</button>
+          	  </div>
           <div class="status"></div>
       </div>
+
+		  </form>
+		 
+		
+         
       <!--Grid column-->
 
       <!--Grid column-->
