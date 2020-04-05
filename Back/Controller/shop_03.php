@@ -109,7 +109,7 @@ session_start();
 						<!--Footer-->
 						<div class="modal-footer">
 						  <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
-						  <button class="btn btn-primary">Checkout</button>
+						  <a href="checkout-page.php" class="btn btn-primary">Checkout</a>
 						</div>
 					  </div>
 					</div>

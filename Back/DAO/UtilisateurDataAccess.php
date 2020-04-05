@@ -56,9 +56,10 @@ class UtilisateurDataAccess extends ConnexionDDB {
         try{
         $db = $this->connectDatabase();
         mysqli_query($db, 'INSERT INTO panier VALUES ((SELECT id_utilisateur FROM utilisateur WHERE mail = "'.$mail.'"),'.$id.',1)');
-        mysqli_close($db);
         }catch(mysqli_sql_exception $mse){
             throw $mse;
+        }finally{
+            mysqli_close($db);
         }
     }
 
@@ -90,5 +91,25 @@ class UtilisateurDataAccess extends ConnexionDDB {
             mysqli_close($db);
         }
     }
+
+    function insertAddress($tab,$mail){
+        try{
+            $db = $this->connectDatabase();
+            mysqli_query($db, 'INSERT INTO client VALUES (null,"'.$tab['lastname'].'","'.$tab['firstname'].'","'.$tab['phone'].'","'.$tab['email'].'",null,SYSDATE(),(SELECT id_utilisateur FROM utilisateur WHERE mail = "'.$mail.'"))');
+            mysqli_query($db, 'INSERT INTO adresse VALUES (null,"'.$tab['address'].'",'.$tab['zip'].',"'.$tab['city'].'","'.$tab['country'].'","'.$tab['state'].'",(SELECT MAX(id_client) FROM client))');
+            $rs = mysqli_query($db, 'SELECT * FROM panier');
+            $data = mysqli_fetch_all($rs, MYSQLI_ASSOC);
+            mysqli_query($db, 'INSERT INTO commande VALUES (null,SYSDATE(),(SELECT MAX(id_client) FROM client),'.$data[0]['id_produit'].','.$data[0]['quantity'].')');
+            for($i=1;$i<sizeof($data);$i++){
+                mysqli_query($db, 'INSERT INTO commande VALUES ((SELECT MAX(id_commande) FROM commande),SYSDATE(),(SELECT MAX(id_client) FROM client),'.$data[$i]['id_produit'].','.$data[$i]['quantity'].')');
+            }
+            }catch(mysqli_sql_exception $mse){
+                throw $mse;
+            }finally{
+                mysqli_close($db);
+            }
+    }
+
+   
 }
 ?>

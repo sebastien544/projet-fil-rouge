@@ -70,5 +70,9 @@ class UtilisateurService {
         $this->dao->ajout_petition($var,$mail);
     }
 
+    function insertAddress($tab,$mail){
+        $this->dao->insertAddress($tab,$mail);
+    }
+
 }
 ?>
