@@ -49,6 +49,8 @@ session_start();
 			}
 			if($valid){
 
+				$message= new PHPMailer();
+
 				$to = "antoineulysse@gmail.com";
 	
 				$header = 'MiME-Version: 1.0' . "\r\n";
