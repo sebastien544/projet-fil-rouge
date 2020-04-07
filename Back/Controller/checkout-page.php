@@ -32,7 +32,7 @@ session_start();
   <link href="css/style.min.css" rel="stylesheet">
 </head>
 
-<body class="grey lighten-3">
+<body class="grey lighten-3" onload="recuperer()">
 
 <!--Navbar -->
 <nav class="mb-1 navbar navbar-expand-lg navbar-dark blue-grey">
@@ -84,50 +84,27 @@ session_start();
 						</div>
 						<!--Body-->
 						<div class="modal-body">
-	  
-						  <table class="table table-hover">
+	           <!--
+            <table class="table table-hover">
 							<thead>
 							  <tr>
 								<th>#</th>
 								<th>Product name</th>
-								<th>Price</th>
+                <th>Price</th>
+                <th>Quantity</th>
 								<th>Remove</th>
 							  </tr>
 							</thead>
-							<tbody>
-							  <tr>
-								<th scope="row">1</th>
-								<td>Product 1</td>
-								<td>100$</td>
-								<td><a><i class="fas fa-times"></i></a></td>
-							  </tr>
-							  <tr>
-								<th scope="row">2</th>
-								<td>Product 2</td>
-								<td>100$</td>
-								<td><a><i class="fas fa-times"></i></a></td>
-							  </tr>
-							  <tr>
-								<th scope="row">3</th>
-								<td>Product 3</td>
-								<td>100$</td>
-								<td><a><i class="fas fa-times"></i></a></td>
-							  </tr>
-							  <tr>
-								<th scope="row">4</th>
-								<td>Product 4</td>
-								<td>100$</td>
-								<td><a><i class="fas fa-times"></i></a></td>
-							  </tr>
+							<tbody id="cart">
 							  <tr class="total">
 								<th scope="row">5</th>
 								<td>Total</td>
-								<td>400$</td>
+								<td id="total">0</td>
 								<td></td>
 							  </tr>
 							</tbody>
 						  </table>
-	  
+            -->
 						</div>
 						<!--Footer-->
 						<div class="modal-footer">
@@ -193,20 +170,20 @@ session_start();
     <div class="container wow fadeIn">
 
       <!-- Heading -->
-      <h2 class="my-5 h2 text-center">Checkout form</h2>
+      <h2 class="my-5 h2 text-center">Checkout</h2>
 
       <!--Grid row-->
       <div class="row">
 
         <!--Grid column-->
-        <div class="col-md-8 mb-4">
+        <div class="col-md-7 mb-4">
 
           <!--Card-->
           <div class="card">
 
             <!--Card content-->
             <form class="card-body">
-
+              <h2 class="text-center">Delivery Form</h2>
               <!--Grid row-->
               <div class="row">
 
@@ -214,22 +191,22 @@ session_start();
                 <div class="col-md-6 mb-2">
 
                   <!--firstName-->
-                  <div class="md-form ">
-                    <input type="text" id="firstName" class="form-control">
+                  <div class="md-form">
+                    <input type="text" name="firstname" id="firstName" class="form-control">
                     <label for="firstName" class="">First name</label>
                   </div>
 
-                </div>
-                <!--Grid column-->
+                  </div>
+                  <!--Grid column-->
 
-                <!--Grid column-->
+                  <!--Grid column-->
                 <div class="col-md-6 mb-2">
 
                   <!--lastName-->
                   <div class="md-form">
-                    <input type="text" id="lastName" class="form-control">
+                    <input type="text" name="lastname" id="lastName" class="form-control">
                     <label for="lastName" class="">Last name</label>
-                  </div>
+                  </div> 
 
                 </div>
                 <!--Grid column-->
@@ -237,29 +214,26 @@ session_start();
               </div>
               <!--Grid row-->
 
-              <!--Username-->
-              <div class="md-form input-group pl-0 mb-5">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="basic-addon1">@</span>
-                </div>
-                <input type="text" class="form-control py-0" placeholder="Username" aria-describedby="basic-addon1">
-              </div>
-
               <!--email-->
               <div class="md-form mb-5">
-                <input type="text" id="email" class="form-control" placeholder="youremail@example.com">
+                <input type="text" name="email" id="email" class="form-control" placeholder="youremail@example.com">
                 <label for="email" class="">Email (optional)</label>
               </div>
 
-              <!--address-->
               <div class="md-form mb-5">
-                <input type="text" id="address" class="form-control" placeholder="1234 Main St">
-                <label for="address" class="">Address</label>
+                <input type="number" name="phone" id="phone" class="form-control" placeholder="0836656565">
+                <label for="phone" class="">Phone number</label>
+              </div> 
+
+              <!--address-->
+              <div class="md-form mb-5 ">
+                  <input type="text" name="address" id="address" class="form-control " placeholder="Main St">
+                  <label for="address" class="">Address</label>
               </div>
 
               <!--address-2-->
               <div class="md-form mb-5">
-                <input type="text" id="address-2" class="form-control" placeholder="Apartment or suite">
+                <input type="text" name="addresse-2" id="address-2" class="form-control" placeholder="Apartment or suite">
                 <label for="address-2" class="">Address 2 (optional)</label>
               </div>
 
@@ -270,7 +244,7 @@ session_start();
                     <div class="col-lg-4 col-md-12 mb-4">
 
                       <label for="country">Country</label>
-                      <select class="custom-select d-block w-100" id="country" required>
+                      <select name="country" class="custom-select d-block w-100" id="country" >
                         <option value="">Choose...</option>
                         <option>France</option>
                         <option>Wakanda</option>
@@ -286,7 +260,7 @@ session_start();
                     <div class="col-lg-4 col-md-6 mb-4">
 
                       <label for="state">State</label>
-                      <select class="custom-select d-block w-100" id="state" required>
+                      <select name="state" class="custom-select d-block w-100" id="state" >
                         <option value="">Choose...</option>
                         <option>Hauts de France</option>
                       </select>
@@ -301,7 +275,7 @@ session_start();
                     <div class="col-lg-4 col-md-6 mb-4">
 
                       <label for="zip">Post Code</label>
-                      <input type="text" class="form-control" id="zip" placeholder="" required>
+                      <input name="zip" type="text" class="form-control" id="zip" placeholder="" >
                       <div class="invalid-feedback">
                         Zip code required.
                       </div>
@@ -310,7 +284,7 @@ session_start();
                     </div>
                       <div class="col-md-6 mb-3">
                         <label for="cc-name">City</label>
-                        <input type="text" class="form-control" id="city" placeholder="" required>
+                        <input name="city" type="text" class="form-control" id="city" placeholder="" >
                         <small class="text-muted">Compulsory</small>
                         <div class="invalid-feedback">
                           Enter a valid city
@@ -339,7 +313,7 @@ session_start();
               <div class="row">
                 <div class="col-md-6 mb-3">
                   <label for="cc-name">Enter the amount in Points</label>
-                  <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                  <input type="text" class="form-control" id="cc-name" placeholder="" >
                   <small class="text-muted">please enter the exact amount</small>
                   <div class="invalid-feedback">
                     Enter the amount in Points
@@ -351,7 +325,7 @@ session_start();
               </div>
               
               <hr class="mb-4">
-              <button class="btn btn-primary btn-lg btn-block btn btn-blue-grey" type="submit">Continue to checkout</button>
+              <button  class="btn btn-primary btn-lg btn-block btn btn-blue-grey" type="submit">Confirm command</button>
 
             </form>
 
@@ -362,15 +336,36 @@ session_start();
         <!--Grid column-->
 
         <!--Grid column-->
-        <div class="col-md-4 mb-4">
+        <div class="col-md-5 mb-4">
 
           <!-- Heading -->
           <h4 class="d-flex justify-content-between align-items-center mb-3">
             <span class="text-muted">Your cart</span>
-            <span class="badge badge-primary badge-pill numero">3</span>
+            <span class="badge badge-primary badge-pill numero"></span>
           </h4>
 
-          <!-- Cart -->
+          <table class="table table-hover bg-white rounded shadow mb-3 z-depth-1">
+							<thead>
+							  <tr>
+								<th>#</th>
+								<th>Product name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+								<th>Remove</th>
+							  </tr>
+							</thead>
+							<tbody id="cart">
+                <tr><td>Promocode</td></tr>
+							  <tr class="total">
+								<th scope="row">5</th>
+								<td>Total</td>
+								<td id="total">0</td>
+								<td></td>
+							  </tr>
+							</tbody>
+						  </table>
+
+          <!-- Cart 
           <ul class="list-group mb-3 z-depth-1">
             <li class="list-group-item d-flex justify-content-between lh-condensed">
               <div>
@@ -404,15 +399,15 @@ session_start();
               <span>Total (USD)</span>
               <strong>20 Points</strong>
             </li>
-          </ul>
+          </ul>-->
           <!-- Cart -->
 
           <!-- Promo code -->
           <form class="card p-2">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Promo code" aria-label="Recipient's username" aria-describedby="basic-addon2">
+              <input type="text" id="inputCode" class="form-control" placeholder="Promo code" aria-label="Recipient's username" aria-describedby="basic-addon2">
               <div class="input-group-append">
-                <button class="btn btn-secondary btn-md waves-effect m-0 btn btn-blue-grey" type="button">Redeem</button>
+                <button id="redeem" class="btn btn-secondary btn-md waves-effect m-0 btn btn-blue-grey" type="button">Redeem</button>
               </div>
             </div>
           </form>
@@ -483,6 +478,9 @@ session_start();
 <script type="text/javascript" src="js/mdb.min.js"></script>
 <!-- Your custom scripts (optional) -->
 <script type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 </body>
+<script type="text/javascript" src="js/shop.js"></script>
 
 </html>

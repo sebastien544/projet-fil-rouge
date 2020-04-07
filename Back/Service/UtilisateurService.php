@@ -74,5 +74,14 @@ class UtilisateurService {
 
     }
 
+    function insertAddress($tab,$mail){
+        $this->dao->insertAddress($tab,$mail);
+    }
+
+    function selectPromo($var){
+       return $this->dao->selectPromo($var);
+    }
+    
+
 }
 ?>

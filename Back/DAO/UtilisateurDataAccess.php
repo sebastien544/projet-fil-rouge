@@ -66,9 +66,10 @@ class UtilisateurDataAccess extends ConnexionDDB {
         try{
         $db = $this->connectDatabase();
         mysqli_query($db, 'INSERT INTO panier VALUES ((SELECT id_utilisateur FROM utilisateur WHERE mail = "'.$mail.'"),'.$id.',1)');
-        mysqli_close($db);
         }catch(mysqli_sql_exception $mse){
             throw $mse;
+        }finally{
+            mysqli_close($db);
         }
     }
 
@@ -101,18 +102,52 @@ class UtilisateurDataAccess extends ConnexionDDB {
         }
     }
 
+    function insertAddress($tab,$mail){
+        try{
+            $db = $this->connectDatabase();
+            mysqli_query($db, 'INSERT INTO adresse VALUES (null,"'.$tab['address'].'",'.$tab['zip'].',"'.$tab['city'].'","'.$tab['country'].'","'.$tab['state'].'")');
+            mysqli_query($db, 'INSERT INTO client VALUES (null,"'.$tab['lastname'].'","'.$tab['firstname'].'","'.$tab['phone'].'","'.$tab['email'].'",null,SYSDATE(),(SELECT id_utilisateur FROM utilisateur WHERE mail = "'.$mail.'"),(SELECT MAX(id_adresse) FROM adresse))');
+            $rs = mysqli_query($db, 'SELECT * FROM panier WHERE id_utilisateur =(SELECT id_utilisateur FROM utilisateur WHERE mail = "'.$mail.'") ');
+            $data = mysqli_fetch_all($rs, MYSQLI_ASSOC);
+            mysqli_query($db, 'INSERT INTO commande VALUES (null,SYSDATE(),(SELECT MAX(id_client) FROM client),'.$data[0]['id_produit'].','.$data[0]['quantity'].')');
+            for($i=1;$i<sizeof($data);$i++){
+                mysqli_query($db, 'INSERT INTO commande  VALUES ((SELECT MAX(co.id_commande) FROM commande as co),SYSDATE(),(SELECT MAX(id_client) FROM client),'.$data[$i]['id_produit'].','.$data[$i]['quantity'].')');
+                mysqli_query($db, 'INSERT INTO stock VALUES ((SELECT id_stock FROM produit WHERE id_produit = '.$data[$i]['id_produit'].'),((SELECT s.stock_produit FROM stock as s INNER JOIN produit as p on s.id_stock = p.id_stock WHERE id_produit='.$data[$i]['id_produit'].' ORDER BY date_stock DESC LIMIT 1)-(SELECT quantity FROM panier WHERE id_produit='.$data[$i]['id_produit'].')),SYSDATE())');
+            }
+            mysqli_query($db, 'DELETE FROM panier');
+        }catch(mysqli_sql_exception $mse){
+            throw $mse;
+        }finally{
+            mysqli_close($db);
+        }
+
+    }
+
     function selectPetSigne ($var,$mail){
         try{
             $db = $this->connectDatabase();
             $rs= mysqli_query($db, 'SELECT * from Signe where id_petition= '.$var.' AND id_utilisateur = (SELECT id_utilisateur FROM utilisateur WHERE mail = "'.$mail.'") ');
             $data = mysqli_fetch_all($rs, MYSQLI_ASSOC);
             return $data;
-            }catch(mysqli_sql_exception $mse){
-                throw $mse;
-            }finally{
-                mysqli_close($db);
-            }
-
+        }catch(mysqli_sql_exception $mse){
+            throw $mse;
+        }finally{
+            mysqli_close($db);
+        }
     }
+
+    function selectPromo($var){
+        try{
+            $db = $this->connectDatabase();
+            $rs= mysqli_query($db, 'SELECT reduction from promotions where code_promo = "'.$var.'"');
+            $data = mysqli_fetch_all($rs, MYSQLI_ASSOC);
+            return $data;
+        }catch(mysqli_sql_exception $mse){
+            throw $mse;
+        }finally{
+            mysqli_close($db);
+        }
+    }
+
 }
 ?>
