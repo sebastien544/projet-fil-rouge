@@ -8,6 +8,11 @@ include_once("../Service/UtilisateurService.php");
         $userServ->insertAddress($_POST,$_SESSION['mail']);
     }
 
+    if(isset($_POST['promo'])){
+        $data = $userServ->selectPromo($_POST['codePromo']);
+        echo json_encode($data);
+    }
+
     if(isset($_POST['action']) && $_POST['action'] == 'ajouter'){
         $userServ->insertItem($_POST['id'], $_SESSION['mail']);
     }
@@ -31,7 +36,7 @@ include_once("../Service/UtilisateurService.php");
     }
 
     if(isset($_SESSION['mail'])){
-        if($_POST['action'] == 'afficher' || $_POST['action'] == 'supprimer' || $_POST['action'] == 'ajouter'){
+        if(isset($_POST['action']) && ($_POST['action'] == 'afficher' || $_POST['action'] == 'supprimer' || $_POST['action'] == 'ajouter')){
             $data = $userServ->selectCart($_SESSION['mail']);
             $var = 0;
             for($i=0;$i<sizeof($data);$i++){
@@ -47,7 +52,7 @@ include_once("../Service/UtilisateurService.php");
             echo '  <tr class="bg-light text-success">
                         <th colspan="2" scope="row" >Promo code</th>
                         <td id="code" colspan="2">Example code</td>
-                        <td>-5%</td>
+                        <td id="reduction">-5%</td>
                     </tr>
                     <tr class="total">
                         <th scope="row">5</th>

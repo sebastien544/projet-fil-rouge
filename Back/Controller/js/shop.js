@@ -50,7 +50,17 @@ function updateQuantity(id,idInput,role){
 }
 
 $('#redeem').click(function(){
-    $('#code').html($('#inputCode').val())
+    var val = $('#inputCode').val()
+    $.ajax({
+        url:'shopController.php',
+        type:'POST',
+        data:'promo&codePromo='+val+'',
+        success: function(data){
+            response = JSON.parse(data)
+            $('#reduction').html('-'+response[0].reduction+'%')
+            $('#code').html(val)
+        }
+    });
 });
 
 $("form").on( "submit", function( event ) {
@@ -77,12 +87,13 @@ $("form").on( "submit", function( event ) {
                     else{
                       console.log(response.error.message);
                     }
-                } 
+                }else{
+                    window.location.href="personal-space.php";
+                }
             }
             else{
-                $('.modal').modal('hide');
-                $('tbody').load('affichage.php',{
-                });
+                window.location.href="personal-space.php";
+                
             }
         }, 
         error : function(xhr, message, status){

@@ -218,16 +218,19 @@
                     <!--/.Card image-->
 
                     <!--Card content-->
-                    <form action="formulaire_petition.php" method="POST">
+                    <form action="petition.php" method="POST">
                       <div class="card-body card-body-cascade">
                         <!--Title-->
                         <h4 class="card-title">Gorilla</h4>
                         <!--Text-->
                         <p class="card-text" >Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
                         laboriosam, nisi ut aliquid ex ea commodi.</p>
-                        <input type="hidden" value="1" name="idPetition">
-                        <input type="hidden"  name="validation_petition">
-                        <input type="submit"  value="SIGN" class="btn btn-unique btn btn-blue-grey">
+                        <div id="disapear1">
+                          <input type="hidden" value="1" name="idPetition">
+                          <input type="hidden"  name="validation_petition">
+                          <input type="submit" id="btn_envoyer" onclick="btn01()" value="SIGN" class="btn btn-unique btn btn-blue-grey" onload="bouton(1)">
+                        </div>
+                        <p id="answers1" class="card-text">you can sign the petition</p>
                       </div>
                     </form>
                     <!--/.Card content-->
@@ -253,16 +256,20 @@
                     <!--/.Card image-->
 
                     <!--Card content-->
-                    <form action="formulaire_petition.php" method="POST">
+                    <form action="petition.php" method="POST">
                       <div class="card-body card-body-cascade">
                           <!--Title-->
                           <h4 class="card-title">Giraffe</h4>
                           <!--Text-->
                           <p class="card-text">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
                           laboriosam, nisi ut aliquid ex ea commodi.</p>
-                          <input type="hidden" value="2" name="idPetition">
-                          <input type="hidden"  name="validation_petition">
-                          <input type="submit"   value="SIGN"  class="btn btn-unique btn btn-blue-grey">
+                            <div id="disapear2">
+                            <input type="hidden" value="2" name="idPetition">
+                            <input type="hidden"  name="validation_petition">
+                            <input type="submit" onclick="btn02()" id="hide"  value="SIGN"  class="btn btn-unique btn btn-blue-grey" >
+                            </div>
+                            <p id="answers2" class="card-text">you can sign the petition</p>
+                          
                       </div>
                     </form>
                     <!--/.Card content-->
@@ -288,16 +295,19 @@
                     <!--/.Card image-->
 
                     <!--Card content-->
-                    <form action="formulaire_petition.php" method="POST">
+                    <form action="petition.php" method="POST">
                       <div class="card-body card-body-cascade">
                           <!--Title-->
                           <h4 class="card-title">Chimpanzee</h4>
                           <!--Text-->
                           <p class="card-text">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
                           laboriosam, nisi ut aliquid ex ea commodi.</p>
-                          <input type="hidden" value="3" name="idPetition">
-                          <input type="hidden"  name="validation_petition">
-                          <input type="submit" value="SIGN" class="btn btn-unique btn btn-blue-grey">
+                          <div id="disapear3">
+                            <input type="hidden" value="3" name="idPetition">
+                            <input type="hidden"  name="validation_petition">
+                            <input type="submit" onclick="btn03()"  value="SIGN" class="btn btn-unique btn btn-blue-grey" >
+                          </div>
+                            <p id="answers3" class="card-text">you can sign the petition</p>
                       </div>
                     </form>
                     <!--/.Card content-->
@@ -352,23 +362,7 @@
         <!-- Copyright -->
       </footer>  
         
-          <script type="text/javascript">
-           $('.carousel.carousel-multi-item.v-2 .carousel-item').each(function(){
-              var next = $(this).next();
-              if (!next.length) {
-                next = $(this).siblings(':first');
-              }
-              next.children(':first-child').clone().appendTo($(this));
-
-              for (var i=0;i<4;i++) {
-                next=next.next();
-                if (!next.length) {
-                  next=$(this).siblings(':first');
-                }
-                next.children(':first-child').clone().appendTo($(this));
-              }
-            });
-          </script>
+      
 
 
 

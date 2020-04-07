@@ -69,10 +69,19 @@ class UtilisateurService {
     function ajout_petition ($var,$mail){
         $this->dao->ajout_petition($var,$mail);
     }
+    function selectPetSigne ($var,$mail){
+        return $this->dao->selectPetSigne($var,$mail);
+
+    }
 
     function insertAddress($tab,$mail){
         $this->dao->insertAddress($tab,$mail);
     }
+
+    function selectPromo($var){
+       return $this->dao->selectPromo($var);
+    }
+    
 
 }
 ?>
