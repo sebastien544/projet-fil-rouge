@@ -1,17 +1,35 @@
 $(document).ready(function()
 {
-    $("#loginDiv").hide();
-    //$("button").clicked(function(){
-        if($(this).prop("#clicked") == true)
-        {
-            $("#loginDiv").hide();
-            $("#menuDiv").show();
-        }
-   // });
+
+    $("#loginDiv").load('Connexion.php',{
+        action:"affichage"
+    })
 
 
-   
 });
+
+$("#deconnection").click(function(){
+
+    $("#loginDiv").load('Connexion.php',{
+        action:"logout"
+    })
+
+});
+
+/*function connec (form) {
+   
+    $('#loginDiv').load('Connexion.php',{
+        data:$(form.value).serialize()
+    })
+}; */
+$('#loginDiv').on('submit', 'form', function( event ){
+    $("#loginDiv").load('Connexion.php',$(this).serialize(),{
+        
+        
+        
+    })
+});
+
 
 
 function btn01(){

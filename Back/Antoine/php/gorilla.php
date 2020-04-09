@@ -140,67 +140,24 @@ session_start();
 					  </div>
 					</div>
 				  </div>
-
-		  <a class="btn-floating btn-lg " href="connexion-objet.php?action=logout"><span style="color: white"><i class="fas fa-sign-out-alt"></i></span></a>
+	  		<!-- bouton deconexion -->
+		  <a class="btn-floating btn-lg " href="gorilla.php?action=logout" id="deconnection"><span style="color: white"><i class="fas fa-sign-out-alt"></i></span></a>
 			<!--Dropdown primary-->
-			<li class="nav-item dropdown" id="menuDiv">
-				<!--Trigger-->
+			<!-- <li class="nav-item dropdown" id="menuDiv">
+				
 				<a class="nav-link dropdown-toggle"  id="dropdownMenu1" data-toggle="dropdown"
 				aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i></a>
-				<div class="dropdown-menu dropdown-menu-lg-right dropdown-menu-sm-left dropdown-default">
-
-							<!--Menu-->
-							
-							<a class="dropdown-item" href="/projet-fil-rouge/Back/Controller/personal-space.php">Donation History</a>
-							<a class="dropdown-item" href="/projet-fil-rouge/Back/Controller/personal-space.php">Petition History</a>
-							<a class="dropdown-item" href="/projet-fil-rouge/Back/Controller/personal-space.php">Personal Informations</a>
-						
-						
-					</div>	
-			</li>
+				
+			</li> -->
 				<!--/Dropdown primary-->
-		  <li class="nav-item dropdown" id="loginDiv" >
+		  <li class="nav-item dropdown"  >
 			  <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
 				aria-haspopup="true" aria-expanded="false">
 				<i class="fas fa-user"></i>
 			  </a>
-			  <div class="dropdown-menu dropdown-menu-lg-right dropdown-menu-sm-left dropdown-default"
-				aria-labelledby="navbarDropdownMenuLink-333">
-				<form class="text-center border border-light p-5" method=POST action="projet-fil-rouge/Back/Controller/authentification.php">
-	  
-				  <p class="h4 mb-4">Sign in</p>
-			  
-				  <!-- Email -->
-				  <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail" name="mail">
-			  
-				  <!-- Password -->
-				  <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password"  name="password">
-			  
-				  <div class="d-flex justify-content-around">
-					  <div>
-						  <!-- Remember me -->
-						  <div class="custom-control custom-checkbox">
-							  <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
-							  <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
-						  </div>
-					  </div>
-					  <div>
-						  <!-- Forgot password -->
-						  <a href="">Forgot password?</a>
-					  </div>
-				  </div>
-			  
-				  <!-- Sign in button -->
-				  <button class="btn btn-info btn-block my-4 btn btn-blue-grey" type="submit" name="validation" id="jquery-toggle" id="clicked">Sign in</button>
-			  
-				  <!-- Register -->
-				  <p>Not a member?
-					 <br> <a href="signup-page.php">Register</a>
-				  </p>
-			  
-			  </form>
-	  
+			  <div class="dropdown-menu dropdown-menu-lg-right dropdown-menu-sm-left dropdown-default" id="loginDiv" aria-labelledby="navbarDropdownMenuLink-333">
 			  </div>
+			 
 			</li>
 	  
 		  </ul>

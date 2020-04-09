@@ -11,7 +11,7 @@ session_start();
                         $_SESSION['mail'] = $data["mail"];
                 }
                 else {
-                        header("location:connexion-objet.php?role=error");
+                        header("location:home.php?role=error");
                 }   
         }
 
