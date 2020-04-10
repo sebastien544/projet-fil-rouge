@@ -50,6 +50,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'affichage'){
                 </div>
 
                 <input type="hidden" name="action" value="login">
+                <button class="btn btn-info btn-block my-4 btn btn-blue-grey" name="validation" id="jquery-toggle" type="submit" >Sign in</button>
           
 
                     Register 
@@ -78,6 +79,8 @@ if (isset($_POST['action']) && $_POST['action'] == 'login'){
             if($data && $service->checkUserNameAndPassword($data["mail"], $data['password'], /*$data['role'],*/ $_POST)){
                     
                     $_SESSION['mail'] = $data["mail"];
+                    $success=array('success'=>true);
+                    echo json_encode($success);
                     
             }
             else {

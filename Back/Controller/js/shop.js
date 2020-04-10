@@ -63,7 +63,7 @@ $('#redeem').click(function(){
     });
 });
 
-$("form").on( "submit", function( event ) {
+$("#checkout").on( "submit", function( event ) {
     event.preventDefault();
     $.ajax({
         url:'shopController.php',

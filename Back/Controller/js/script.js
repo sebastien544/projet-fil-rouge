@@ -3,6 +3,7 @@ $(document).ready(function()
     $("#loginDiv").load('Connexion.php',{
         action:"affichage"
     })
+    
 });
 
 $("#deconnection").click(function(){
@@ -15,6 +16,7 @@ $("#deconnection").click(function(){
                 $("#loginDiv").load('Connexion.php',{
                     action:"affichage"
                 })
+                
         },
         error : function(xhr, message, status){
             alert("Erreur !!");
@@ -22,15 +24,19 @@ $("#deconnection").click(function(){
     });
 
 });
-function connec(){
+$('#loginDiv').on('submit', 'form', function(event){
+    event.preventDefault();
     $.ajax({
         url:'Connexion.php',
         type:'POST',
-        data: 'mail='+$('#mail').val()+'&password='+$('#password').val()+'&action=login',
+        data: $( this ).serialize(),
         success : function(data){
-            response=JSON.parse(data)
-            if(response.erreur){
-                alert("if")
+            response = JSON.parse(data)
+            if(response.success){
+                $("#loginDiv").load('Connexion.php',{
+                    action:"affichage"
+                });
+            }else{
                 $('#warning1').attr('class','text-center alert alert-dismissible alert-danger')
                 h = $('<h4>');
                 h.attr('class', 'alert-heading');
@@ -47,20 +53,17 @@ function connec(){
                 b.text('X')
                 $('#warning1').append(b);
 
-            }else{
-                alert("else")
-                $("#loginDiv").load('Connexion.php',{
-                    action:"affichage"
-                })
             }
-        },     
-      
+        },
+
         error : function(xhr, message, status){
             alert("Erreur !!");
         }
-    });   
+    });
 
-};
+});
+
+
 
 function btn01(){
     document.getElementById("answers1").innerHTML ="you have already signed the petition";

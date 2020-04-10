@@ -7,21 +7,9 @@ use PHPMailer\PHPMailer\Exception;
 //require 'path/to/PHPMailer/src/SMTP.php';
 session_start();
 
-	if (isset($_GET['action']) && $_GET['action']== 'logout'){
-		
-
-		session_destroy();
-
-		header('location:connexion-objet.php');
-		
-
-	}
-
 	if(!empty($_POST)){
 		extract($_POST);
 		$valid =true;
-	
-
 		if (isset($_POST['contact'])){
 			$name = (string) htmlentities(trim($name));
 			$email = (string) htmlentities(trim($email));
@@ -80,15 +68,10 @@ session_start();
 				header('Location: ');
 				exit;
 			}
-
-		}
-
-		
+		}	
 	}	
-	
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -112,171 +95,111 @@ session_start();
 <body>
   <!--Navbar -->
   <nav class="mb-1 navbar navbar-expand-lg navbar-dark blue-grey">
-		<a class="navbar-brand" href="http://localhost/projet-fil-rouge/Back/Antoine/php/gorilla.php">Save-Them.com</a>
+		<a class="navbar-brand" href="gorilla.php">Save-Them.com</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
-		  aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
-		  <span class="navbar-toggler-icon"></span>
+			aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarSupportedContent-333">
-		  <ul class="navbar-nav mr-auto">
-			<li class="nav-item ">
-			  <a class="nav-link" href="home.php">Home
-				<span class="sr-only">(current)</span>
-			  </a>
-			</li>
-			<li class="nav-item">
-			  <a class="nav-link" href="donation-page.php">Donate</a>
-			</li>
-			<li class="nav-item">
-			  <a class="nav-link" href="petition.php">Petition</a>
-			</li>
-			<li class="nav-item">
-			  <a class="nav-link" href="shop_01.php">Shop</a>
-			</li>
-			<li class="nav-item">
-			  <a class="nav-link" href="contactus.php">About us</a>
-			</li>
-			<li class="nav-item">
-			</li>
-		  </ul>
-	   
-				
-				
-			
-		  <ul class="navbar-nav ml-auto nav-flex-icons">
-		  <a class="btn-floating btn-lg"  data-toggle="modal" data-target="#modalCart"><span style="color: white"><i class="fas fa-shopping-cart"></i></span></a>
-	  
-				  <!-- Modal: modalCart -->
-				  <div class="modal fade" id="modalCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-					aria-hidden="true">
-					<div class="modal-dialog" role="document">
-					  <div class="modal-content">
-						<!--Header-->
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item ">
+				<a class="nav-link" href="home.php">Home
+					<span class="sr-only">(current)</span>
+				</a>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link" href="donation-page.php">Donate</a>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link" href="petition.php">Petition</a>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link" href="shop_01.php">Shop</a>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link" href="contactus.php">About us</a>
+				</li>
+				<li class="nav-item">
+				</li>
+			</ul>
+		
+		<ul class="navbar-nav ml-auto nav-flex-icons">
+			<a class="btn-floating btn-lg"  data-toggle="modal" data-target="#modalCart"><span style="color: white"><i class="fas fa-shopping-cart"></i></span></a>
+		 <!-- Modal: modalCart -->
+			<div class="modal fade" id="modalCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+						aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
 						<div class="modal-header">
-						  <h4 class="modal-title" id="myModalLabel">Your cart</h4>
-						  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">×</span>
-						  </button>
+							<h4 class="modal-title" id="myModalLabel">Your cart</h4>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">×</span>
+							</button>
 						</div>
-						<!--Body-->
-						<div class="modal-body">
-	  
-						  <table class="table table-hover">
-							<thead>
-							  <tr>
-								<th>#</th>
-								<th>Product name</th>
-								<th>Price</th>
-								<th>Remove</th>
-							  </tr>
-							</thead>
-							<tbody>
-							  <tr>
-								<th scope="row">1</th>
-								<td>Product 1</td>
-								<td>100$</td>
-								<td><a><i class="fas fa-times"></i></a></td>
-							  </tr>
-							  <tr>
-								<th scope="row">2</th>
-								<td>Product 2</td>
-								<td>100$</td>
-								<td><a><i class="fas fa-times"></i></a></td>
-							  </tr>
-							  <tr>
-								<th scope="row">3</th>
-								<td>Product 3</td>
-								<td>100$</td>
-								<td><a><i class="fas fa-times"></i></a></td>
-							  </tr>
-							  <tr>
-								<th scope="row">4</th>
-								<td>Product 4</td>
-								<td>100$</td>
-								<td><a><i class="fas fa-times"></i></a></td>
-							  </tr>
-							  <tr class="total">
-								<th scope="row">5</th>
-								<td>Total</td>
-								<td>400$</td>
-								<td></td>
-							  </tr>
-							</tbody>
-						  </table>
-	  
-						</div>
-						<!--Footer-->
-						<div class="modal-footer">
-						  <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
-						  <button class="btn btn-primary">Checkout</button>
-						</div>
-					  </div>
+							<!--Body-->
+							<div class="modal-body">
+							<table class="table table-hover">
+								<thead>
+								<tr>
+									<th>#</th>
+									<th>Product name</th>
+									<th>Price</th>
+									<th>Quantity</th>
+									<th>Remove</th>
+								</tr>
+								</thead>
+								<tbody  id="cart">
+								<tr class="total">
+									<th scope="row">5</th>
+									<td>Total</td>
+									<td id="total">0</td>
+									<td></td>
+								</tr>
+								</tbody>
+							</table>
+		
+							</div>
+							<!--Footer-->
+							<div class="modal-footer">
+							<button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
+							<button class="btn btn-primary">Checkout</button>
+							</div>
 					</div>
-				  </div>
+				</div>
+			</div>
 
-		  <a class="btn-floating btn-lg " href="connexion-objet.php?action=logout"><span style="color: white"><i class="fas fa-sign-out-alt"></i></span></a>
-			<li class="nav-item dropdown">
-			  <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-				aria-haspopup="true" aria-expanded="false">
-				<i class="fas fa-user"></i>
-			  </a>
-			  <div class="dropdown-menu dropdown-menu-lg-right dropdown-menu-sm-left dropdown-default"
-				aria-labelledby="navbarDropdownMenuLink-333">
-				<form class="text-center border border-light p-5" action="#!">
-	  
-				  <p class="h4 mb-4">Sign in</p>
-			  
-				  <!-- Email -->
-				  <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
-			  
-				  <!-- Password -->
-				  <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
-			  
-				  <div class="d-flex justify-content-around">
-					  <div>
-						  <!-- Remember me -->
-						  <div class="custom-control custom-checkbox">
-							  <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
-							  <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
-						  </div>
-					  </div>
-					  <div>
-						  <!-- Forgot password -->
-						  <a href="">Forgot password?</a>
-					  </div>
-				  </div>
-			  
-				  <!-- Sign in button -->
-				  <button class="btn btn-info btn-block my-4 btn btn-blue-grey" type="submit">Sign in</button>
-			  
-				  <!-- Register -->
-				  <p>Not a member?
-					 <br> <a href="signup-page.php">Register</a>
-				  </p>
-			  
-			  </form>
-	  
-			  </div>
-			</li>
-	  
-		  </ul>
+					<a class="btn-floating btn-lg " id="deconnection"><span style="color: white"><i class="fas fa-sign-out-alt"></i></span></a>
+						<!--/Dropdown primary-->
+						<li class="nav-item dropdown"  >
+							<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-user"></i>
+							</a>
+							<div class="dropdown-menu dropdown-menu-lg-right dropdown-menu-sm-left dropdown-default"  aria-labelledby="navbarDropdownMenuLink-333">
+							<div id="warning1"></div>
+							
+							<div id="loginDiv"></div>
+							</div>
+							
+						</li>
+			</ul>
 		</div>
-	  </nav>
+	</nav>
 <!--/.Navbar -->
 
-<!--Section: Contact v.2-->
-<section class="mb-4">
+		<!--Section: Contact v.2-->
+		<section class="mb-4">
 
-  <!--Section heading-->
+  		<!--Section heading-->
  
-  <!--Section description-->
-  <div class="texte">
-    <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
-    <p class="text-center w-responsive mx-auto mb-5">We are a fundation in order to help species in danger from Africa, we think that you are able to help them via a petition or a donation.<br> if you have any question please contact us with the form below</p>
-    <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
-        a matter of hours to help you.</p>
-    </div>
-  <div class="row">
+  		<!--Section description-->
+		<div class="texte">
+			<h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+			<p class="text-center w-responsive mx-auto mb-5">We are a fundation in order to help species in danger from Africa, we think that you are able to help them via a petition or a donation.<br> if you have any question please contact us with the form below</p>
+			<p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
+				a matter of hours to help you.</p>
+		</div>
+  		<div class="row">
 
       <!--Grid column-->
       <div class="col-md-9 mb-md-0 mb-5">
@@ -284,11 +207,9 @@ session_start();
 
               <!--Grid row-->
               <div class="row">
-			<?php	if(isset($er_name)){ ?>
-				<div class="alert alert-danger" role="alert"><?php echo $er_name ?></div>
-			<?php	
-			}
-			?>
+				<?php if(isset($er_name)){ ?>
+					<div class="alert alert-danger" role="alert"><?php echo $er_name ?></div>
+				<?php } ?>
                   <!--Grid column-->
                   <div class="col-md-6">
                       <div class="md-form mb-0">
@@ -299,9 +220,7 @@ session_start();
                   <!--Grid column-->
 				  <?php	if(isset($er_email)){ ?>
 				<div class="alert alert-danger" role="alert"><?php echo $er_email ?></div>
-			<?php	
-			}
-			?>
+				<?php	} ?>
                   <!--Grid column-->
                   <div class="col-md-6">
                       <div class="md-form mb-0">
@@ -312,11 +231,9 @@ session_start();
 				  <!--Grid column-->
               </div>
               <!--Grid row-->
-			  <?php	if(isset($er_subject)){ ?>
-				<div class="alert alert-danger" role="alert"><?php echo $er_subject ?></div>
-			<?php	
-			}
-			?>
+			  	<?php	if(isset($er_subject)){ ?>
+					<div class="alert alert-danger" role="alert"><?php echo $er_subject ?></div>
+				<?php	}?>
               <!--Grid row-->
               <div class="row">
                   <div class="col-md-12">
@@ -329,34 +246,27 @@ session_start();
               <!--Grid row-->
 
               <!--Grid row-->
-              <div class="row">
-			  <?php	if(isset($er_message)){ ?>
-				<div class="alert alert-danger" role="alert"><?php echo $er_message ?></div>
-			<?php	
-			}
-			?>
-                  <!--Grid column-->
-                  <div class="col-md-12">
+				<div class="row">
+					<?php	if(isset($er_message)){ ?>
+						<div class="alert alert-danger" role="alert"><?php echo $er_message ?></div>
+					<?php	}?>
+					<!--Grid column-->
+					<div class="col-md-12">
 
-                      <div class="md-form">
-                          <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" value="<?php if(isset($message)){ echo $message;} ?>"></textarea>
-                          <label for="message">Your message</label>
-                      </div>
+						<div class="md-form">
+							<textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" value="<?php if(isset($message)){ echo $message;} ?>"></textarea>
+							<label for="message">Your message</label>
+						</div>
 
-                  </div>
-              </div>
+					</div>
+				</div>
 			  <!--Grid row-->
 			  <div class="text-center text-md-left">
               	<button type="submit" class="btn btn-primary btn btn-blue-grey" name="contact" >Send</button>
           	  </div>
-          <div class="status"></div>
+				  <div class="status"></div>
+		</form>		  
       </div>
-
-		  </form>
-		 
-		
-         
-      <!--Grid column-->
 
       <!--Grid column-->
       <div class="col-md-3 text-center">
@@ -376,58 +286,58 @@ session_start();
       </div>
       <!--Grid column-->
 
-  </div>
+  		</div>
 
 </section>
 
 <!-- Footer -->
-<footer class="page-footer font-small blue-grey pt-4">
+	<footer class="page-footer font-small blue-grey pt-4">
 
-  <!-- Footer Elements -->
-  <div class="container">
+		<!-- Footer Elements -->
+		<div class="container">
 
-    <!-- Social buttons -->
-    <ul class="list-unstyled list-inline text-center">
-      <li class="list-inline-item">
-        <a class="btn-floating btn-fb mx-1">
-          <i class="fab fa-facebook-f"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-tw mx-1">
-          <i class="fab fa-twitter"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-gplus mx-1">
-          <i class="fab fa-google-plus-g"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-li mx-1">
-          <i class="fab fa-linkedin-in"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-dribbble mx-1">
-          <i class="fab fa-dribbble"> </i>
-        </a>
-      </li>
-    </ul>
-    <!-- Social buttons -->
+			<!-- Social buttons -->
+			<ul class="list-unstyled list-inline text-center">
+			<li class="list-inline-item">
+				<a class="btn-floating btn-fb mx-1">
+				<i class="fab fa-facebook-f"> </i>
+				</a>
+			</li>
+			<li class="list-inline-item">
+				<a class="btn-floating btn-tw mx-1">
+				<i class="fab fa-twitter"> </i>
+				</a>
+			</li>
+			<li class="list-inline-item">
+				<a class="btn-floating btn-gplus mx-1">
+				<i class="fab fa-google-plus-g"> </i>
+				</a>
+			</li>
+			<li class="list-inline-item">
+				<a class="btn-floating btn-li mx-1">
+				<i class="fab fa-linkedin-in"> </i>
+				</a>
+			</li>
+			<li class="list-inline-item">
+				<a class="btn-floating btn-dribbble mx-1">
+				<i class="fab fa-dribbble"> </i>
+				</a>
+			</li>
+			</ul>
+			<!-- Social buttons -->
 
-  </div>
-  <!-- Footer Elements -->
+		</div>
+		<!-- Footer Elements -->
 
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
-  </div>
-  <!-- Copyright -->
+		<!-- Copyright -->
+		<div class="footer-copyright text-center py-3">© 2020 Copyright:
+			<a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+		</div>
+		<!-- Copyright -->
 
-</footer>
+	</footer>
 
-<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/popper.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/mdb.min.js"></script>
@@ -435,8 +345,9 @@ session_start();
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.js"
 	integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
 	crossorigin="anonymous"></script>
-
-  <!-- Your custom scripts (optional) -->
-  <script type="text/javascript" src="js/script.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- Your custom scripts (optional) -->
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/shop.js"></script>
 </body>
 </html>

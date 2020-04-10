@@ -20,10 +20,7 @@ class UtilisateurDataAccess extends ConnexionDDB {
         $newPwd = password_hash("$newPwd", PASSWORD_DEFAULT);
         mysqli_query($db, 'INSERT INTO  compte VALUES (null,10000)');
         $stmt = $db->prepare("INSERT INTO utilisateur VALUES (null, ?, ?, ?, ?, null, (SELECT MAX(id_compte) FROM compte))");
-        $stmt->bind_param(1, $newFirstName);
-        $stmt->bind_param(2, $newLastName);
-        $stmt->bind_param(3, $newMail);
-        $stmt->bind_param(4, $newPwd);
+        $stmt->bind_param("ssss", $newFirstName,$newLastName,$newMail,$newPwd);
         $stmt->execute();
         $db->close();
     } 
@@ -39,7 +36,7 @@ class UtilisateurDataAccess extends ConnexionDDB {
         $db = $this->connectDatabase();
         $db->query('INSERT INTO don VALUES (null,(SELECT id_animal FROM animal WHERE type_animal = "'.$tab['animal'].'"))');
         $stmt = $db->prepare('INSERT INTO effectuer VALUES ((SELECT MAX(id_don) FROM don),(SELECT id_utilisateur FROM utilisateur WHERE mail = "'.$mail.'"),SYSDATE(), ?,"'.$tab['frequency'].'")');
-        $stmt->bind_param(1, $tab['amount']);
+        $stmt->bind_param("i", $tab['amount']);
         $stmt->execute();
         $db->close();
     }
@@ -113,18 +110,12 @@ class UtilisateurDataAccess extends ConnexionDDB {
         try{
             $db = $this->connectDatabase();
             $stmt = $db->prepare('INSERT INTO adresse VALUES (null, ?, ?, ?, ?, ?)');
-            $stmt->bind_param(1, $tab['address']);
-            $stmt->bind_param(2, $tab['zip']);
-            $stmt->bind_param(3, $tab['city']);
-            $stmt->bind_param(4, $tab['country']);
-            $stmt->bind_param(5, $tab['state']);
+            $stmt->bind_param("sisss", $tab['address'],$tab['zip'],$tab['city'],$tab['country'],
+            $tab['state']);
             $stmt->execute();
 
             $stmt1 = $db->prepare('INSERT INTO client VALUES (null, ?, ?, ?, ?, null, SYSDATE(), (SELECT id_utilisateur FROM utilisateur WHERE mail = "'.$mail.'"),(SELECT MAX(id_adresse) FROM adresse))');
-            $stmt1->bind_param(1, $tab['lastname']);
-            $stmt1->bind_param(2, $tab['firstname']);
-            $stmt1->bind_param(3, $tab['phone']);
-            $stmt1->bind_param(4, $tab['email']);
+            $stmt1->bind_param("ssis", $tab['lastname'], $tab['firstname'], $tab['phone'], $tab['email']);
             $stmt1->execute();
 
             $rs = $db->query('SELECT * FROM panier WHERE id_utilisateur =(SELECT id_utilisateur FROM utilisateur WHERE mail = "'.$mail.'")');
@@ -160,7 +151,7 @@ class UtilisateurDataAccess extends ConnexionDDB {
         try{
             $db = $this->connectDatabase();
             $stmt = $db->prepare('SELECT reduction from promotions where code_promo = "?"');
-            $stmt->bind_param(1, $var);
+            $stmt->bind_param("s", $var);
             $stmt->execute();
             $rs = $stmt->get_result();
             $data = mysqli_fetch_all($rs, MYSQLI_ASSOC);
