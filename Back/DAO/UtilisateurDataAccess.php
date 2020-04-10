@@ -7,11 +7,14 @@ class UtilisateurDataAccess extends ConnexionDDB {
     
     // Recherche d'un user dans la base de données
     function rechercheUtilisateur($mail){
-        $db = $this->connectDatabase();
-        $rs = mysqli_query($db, "SELECT * FROM utilisateur WHERE mail = '$mail'");
-        $data = mysqli_fetch_assoc($rs);
-        mysqli_close($db);
-        return $data;
+
+            $db = $this->connectDatabase();
+            $rs = mysqli_query($db, "SELECT * FROM utilisateur WHERE mail = '$mail'");
+            $data = mysqli_fetch_assoc($rs);
+            mysqli_close($db);
+            return $data;
+        
+        
     }
     // Inscription d'un nouvel user dans la bbd
     function inscription($newMail, $newPwd, $newFirstName, $newLastName ){
