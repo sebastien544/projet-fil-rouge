@@ -54,7 +54,7 @@ class UtilisateurDataAccess extends ConnexionDDB {
         $query=('SELECT s.id_petition, s.date_signature, a.type_animal FROM Signe as s INNER JOIN utilisateur as u on s.id_utilisateur = u.id_utilisateur INNER JOIN petition as p on s.id_petition = p.id_petition INNER JOIN animal as a on p.id_animal = a.id_animal WHERE u.mail = "'.$mail.'"');
         $rs = mysqli_query($db, $query );
         $data = mysqli_fetch_all($rs, MYSQLI_ASSOC);
-        $db->close();
+        mysqli_close($db);
         return $data;
     }
     
