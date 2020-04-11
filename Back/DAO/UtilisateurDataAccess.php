@@ -51,7 +51,8 @@ class UtilisateurDataAccess extends ConnexionDDB {
 
     function afficherPet($mail){
         $db = $this->connectDatabase();
-        $rs = $db->query('SELECT s.date_signature, p.animaux FROM signe as s INNER JOIN utilisateur as u on s.id_utilisateur = u.id_utilisateur INNER JOIN petition as p on s.id_petition = p.id_petition WHERE u.mail = "'.$mail.'"');
+        $query=('SELECT s.id_petition, s.date_signature, a.type_animal FROM Signe as s INNER JOIN utilisateur as u on s.id_utilisateur = u.id_utilisateur INNER JOIN petition as p on s.id_petition = p.id_petition INNER JOIN animal as a on p.id_animal = a.id_animal WHERE u.mail = "'.$mail.'"');
+        $rs = mysqli_query($db, $query );
         $data = mysqli_fetch_all($rs, MYSQLI_ASSOC);
         $db->close();
         return $data;
