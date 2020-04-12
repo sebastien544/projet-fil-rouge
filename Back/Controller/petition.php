@@ -100,15 +100,14 @@
               <li class="nav-item dropdown"  >
                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
                   aria-haspopup="true" aria-expanded="false">
-                  <i class="fas fa-user"></i>
+                  <i id="test" class="fas fa-user"></i>
                 </a>
-                <div class="dropdown-menu dropdown-menu-lg-right dropdown-menu-sm-left dropdown-default"  aria-labelledby="navbarDropdownMenuLink-333">
-                <div id="warning1"></div>
-                
-                <div id="loginDiv"></div>
+                <div  class="dropdown-menu dropdown-menu-lg-right dropdown-menu-sm-left dropdown-default"  aria-labelledby="navbarDropdownMenuLink-333">
+                  <div id="warning1"></div>
+                  
+                  <div id="loginDiv"></div>
                 </div>
-                
-                </li>
+              </li>
         </ul>
         </div>
     </nav>
@@ -145,7 +144,7 @@
                         <div id="disapear1" class="d-flex justify-content-center">
                           <!--<input type="hidden" value="2" name="idPetition">-->
                               <!--<input type="hidden"  name="validation_petition">-->
-                              <input  onclick="btn(1)" id="1"  value="SIGN"  class="btn btn-unique btn btn-blue-grey" >
+                              <input  onclick="btn(1)" id="1"  value="SIGN"  class="btn btn-unique btn btn-blue-grey signPet" >
                             </div>
                              <p id="answers1" class="card-text"></p>
                       </div>
@@ -182,7 +181,7 @@
                             <div id="disapear2" class="d-flex justify-content-center">
                               <!--<input type="hidden" value="2" name="idPetition">-->
                               <!--<input type="hidden"  name="validation_petition">-->
-                              <input  onclick="btn(2)" id="2"  value="SIGN"  class="btn btn-unique btn btn-blue-grey mx-auto" >
+                              <input  onclick="btn(2)" id="2"  value="SIGN"  class="btn btn-unique btn btn-blue-grey mx-auto signPet" >
                             </div>
                              <p id="answers2" class="card-text"></p>
                           
@@ -220,7 +219,7 @@
                           <div id="disapear3" class="d-flex justify-content-center">
                            <!--<input type="hidden" value="2" name="idPetition">-->
                               <!--<input type="hidden"  name="validation_petition">-->
-                              <input  onclick="btn(3)" id="3"  value="SIGN"  class="btn btn-unique btn btn-blue-grey" >
+                              <input  onclick="btn(3)" id="3"  value="SIGN"  class="btn btn-unique btn btn-blue-grey signPet" >
                             </div>
                              <p id="answers3" class="card-text"></p>
                       </div>

@@ -88,7 +88,7 @@
               <!--Footer-->
               <div class="modal-footer">
               <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
-              <button class="btn btn-primary">Checkout</button>
+              <a href="checkout-page.php" class="btn btn-primary">Checkout</a>
               </div>
             </div>
             </div>
@@ -106,9 +106,9 @@
               <li class="nav-item dropdown"  >
                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
                   aria-haspopup="true" aria-expanded="false">
-                  <i class="fas fa-user"></i>
+                  <i id="test" class="fas fa-user"></i>
                 </a>
-                <div class="dropdown-menu dropdown-menu-lg-right dropdown-menu-sm-left dropdown-default"  aria-labelledby="navbarDropdownMenuLink-333">
+                <div  class="dropdown-menu dropdown-menu-lg-right dropdown-menu-sm-left dropdown-default"  aria-labelledby="navbarDropdownMenuLink-333">
                 <div id="warning1"></div>
                 
                 <div id="loginDiv"></div>

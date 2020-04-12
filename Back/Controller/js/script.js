@@ -1,18 +1,17 @@
-$(document).ready(function()
-{
-    $("#loginDiv").load('Connexion.php',{
-        action:"affichage"
-    })
-
+function signed(){
     $.ajax({
         url:'petitionController.php',
         type:'POST',
         data: "action=afficherPet",
         success : function(data){
             response = JSON.parse(data)
-            for(i=0; i<response.length; i++){
-                $('#'+response[i].id_petition+'').attr('disabled','disabled')
-                $('#'+response[i].id_petition+'').attr('value','SIGNED')
+            if(response.status == false){
+                
+            }else{
+                for(i=0; i<response.length; i++){
+                    $('#'+response[i].id_petition+'').attr('disabled','disabled')
+                    $('#'+response[i].id_petition+'').attr('value','SIGNED')
+                }
             }
     
         },
@@ -20,6 +19,15 @@ $(document).ready(function()
             alert("Erreur !!");
         }
     });
+}
+
+$(document).ready(function()
+{
+    $("#loginDiv").load('Connexion.php',{
+        action:"affichage"
+    });
+
+   signed();
     
 });
 
@@ -33,6 +41,14 @@ $("#deconnection").click(function(){
                 $("#loginDiv").load('Connexion.php',{
                     action:"affichage"
                 })
+
+                $('#cart').load('shopController.php',{
+                    action:"afficher"
+                });
+
+                $('.signPet').removeAttr('disabled')
+                $('.signPet').attr('value','SIGN')
+                
                 
         },
         error : function(xhr, message, status){
@@ -53,6 +69,8 @@ $('#loginDiv').on('submit', 'form', function(event){
                 $("#loginDiv").load('Connexion.php',{
                     action:"affichage"
                 });
+                $('.close').click();
+                signed();
             }else{
                 $('#warning1').attr('class','text-center alert alert-dismissible alert-danger')
                 h = $('<h4>');
@@ -85,10 +103,29 @@ function btn(id){
         url:'petitionController.php',
         type:'POST',
         data: 'idPetition='+id+'&action=validation_petition',
-        success : function(){
-            $('#'+id+'').attr('disabled','disabled')
-            $('#'+id+'').attr('value','SIGNED')
-            $('#answers'+id+'').html("Thank you for your support")
+        success : function(data){
+            response = JSON.parse(data)
+            if(response.status == true){
+                $('#'+id+'').attr('disabled','disabled')
+                $('#'+id+'').attr('value','SIGNED')
+                $('#answers'+id+'').html("Thank you for your support")
+            }else{
+                $('#test').click()
+                $('#warning1').empty();
+                div = $('<div>')
+                div.attr('class',' alert alert-dismissible alert-success')
+                p = $('<p>');
+                p.attr('class', 'mb-0')
+                p.text('You must be connected');
+                div.append(p);
+                b = $('<button>')
+                b.attr('type','button')
+                b.attr('class','close')
+                b.attr('data-dismiss','alert')
+                b.html('&times;')
+                div.append(b);
+                $('#warning1').append(div);
+            }
         },
         error : function(xhr, message, status){
             alert("Erreur !!");
