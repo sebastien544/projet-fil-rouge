@@ -87,13 +87,8 @@
 						</div>
 						<!--Footer-->
 						<div class="modal-footer">
-<<<<<<< HEAD
-              <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
-              <a  href="checkout-page.php" class="btn btn-primary">Checkout</a>
-=======
 						<button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
 						<a href="checkout-page.php" class="btn btn-primary">Checkout</a>
->>>>>>> b01454ca5c1f5edb5c6989881ea1c4479626d683
 						</div>
 					</div>
 					</div>

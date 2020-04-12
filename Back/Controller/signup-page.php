@@ -19,40 +19,10 @@
     <!-- Material Design Bootstrap -->
     <link href="css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
+    <link href="css/Sign-up.css">
     <link href="css/style.min.css" rel="stylesheet">
-    <style type="text/css">
-
-      html,
-      body,
-      header,
-      .carousel {
-        height: 60vh;
-      }
-
-      @media (max-width: 740px) {
-        html,
-        body,
-        header,
-        .carousel {
-          height: 100vh;
-        }
-      }
-
-      @media (min-width: 800px) and (max-width: 850px) {
-        html,
-        body,
-        header,
-        .carousel {
-          height: 100vh;
-        }
-      }
-
-      @media (min-width: 800px) and (max-width: 850px) {
-              .navbar:not(.top-nav-collapse) {
-                  background: #1C2331!important;
-              }
-          }
-    </style>
+    
+    
 </head>
 
 <body>
@@ -154,36 +124,40 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-6 border" style="background-image: url(img/gray-elephant-3739343.jpg);height: 1000px;background-size: cover;">
-        <h2 class="mb-3 text-white text-center mt-4" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; " >Help us, make a donation</h2>
-        <div class="offset-2 col-8 text-white" style="margin-top: 600px;">
-          <h1 class="mb-3 " style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 75px;" >He will never forget you</h1>
+      <div class="col-6 border" style="background-image: url(img/gray-elephant-3739343.jpg); background-size: cover;background-position: center center;">
+        <h2 class="mb-3 text-white text-center mt-4" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 4vw; " >Help us, make a donation.</h2>
+        <div class="offset-2 col-8 text-white" style="margin-top: 85%; position:relative;">
+          <h1 class="mb-3 " style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 5vw;" >He will never forget you !</h1>
         </div></div>
-      <div class="col-6" style="background-color: rgb(214, 131, 36);">
-        <form class="col-8 offset-2 mt-5" method="POST" action="authentification.php">
-          <h1 class="text-center" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Sign up</h1>
-          <div class="md-form">
-            <input type="text" id="materialLoginFormEmail" class="form-control" name="firstName">
-            <label for="materialLoginFormEmail" class="text-white">First Name</label>
+      <div class="col-6 col-3-sm" style="background-color: rgb(214, 131, 36);">
+        <form class="col-9 mt-5" method="POST" action="authentification.php">
+          <h1 class="text-center mb-5" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Sign up</h1>
+          <div class="col" >
+          <input type="text" id="defaultRegisterFormFirstName" class="form-control mb-5" placeholder="First name" name="firstName" style="background-color: rgb(214, 131, 36);">
+           
           </div>
-          <div class="md-form">
-            <input type="text" id="materialLoginFormEmail" class="form-control" name="lastName">
-            <label for="materialLoginFormEmail" class="text-white">Last Name</label>
+          <div class="col">
+          <input type="text" id="defaultRegisterFormLastName" class="form-control mb-5" placeholder="Last name" name="lastName" style="background-color: rgb(214, 131, 36);">
+           
           </div>
-          <div class="md-form">
-            <input type="email" id="materialLoginFormEmail" class="form-control" name="mail">
-            <label for="materialLoginFormEmail" class="text-white">E-mail</label>
+          <div class="col">
+            <input type="email" id="defaultRegisterEmail" class="form-control mb-2" name="mail" placeholder="E-mail" style="background-color: rgb(214, 131, 36);" >
+            <label for="materialLoginFormEmail" class="text-white"></label>
           </div>
-          <div class="md-form">
-            <input type="password" id="materialLoginFormEmail" class="form-control" name="password">
-            <label for="materialLoginFormEmail" class="text-white">Password</label>
+          <div class="col">
+            <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted">
+              At least 8 characters and 1 digit
+            </small>
+            <input type="password" id="defaultRegisterFormPassword" class="form-control mb-5" placeholder="Password" name="password" aria-describedby="defaultRegisterFormPasswordHelpBlock" style="background-color: rgb(214, 131, 36);">
+           
           </div>
 
-          <div class="md-form">
-            <input type="password" id="materialLoginFormEmail" class="form-control" name="password_verification">
-            <label for="materialLoginFormEmail" class="text-white">Verification Password</label>
+          <div class="col">
+          <input type="password" id="defaultRegisterFormPassword" class="form-control mb-5" placeholder="Verification Password" aria-describedby="defaultRegisterFormPasswordHelpBlock"name="password_verification" style="background-color: rgb(214, 131, 36);">
+          
           </div>
-          <button class="btn btn-black rounded" style="margin-left: 180px;" type="submit" name="validation" >Sign up</button>
+          
+          <button class="btn btn-black rounded my-4 "  type="submit" name="validation" >Sign up</button>
           </form>
       </div>
     </div>
