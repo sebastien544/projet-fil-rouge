@@ -49,49 +49,7 @@
 			</ul>
 		
 			<ul class="navbar-nav ml-auto nav-flex-icons">
-			<a class="btn-floating btn-lg"  data-toggle="modal" data-target="#modalCart"><span style="color: white"><i class="fas fa-shopping-cart"></i></span></a>
-		 <!-- Modal: modalCart -->
-		 <div class="modal fade" id="modalCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-					aria-hidden="true">
-					<div class="modal-dialog" role="document">
-					  <div class="modal-content">
-			<div class="modal-header">
-						  <h4 class="modal-title" id="myModalLabel">Your cart</h4>
-						  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">×</span>
-						  </button>
-						</div>
-						<!--Body-->
-						<div class="modal-body">
-            <table class="table table-hover">
-							<thead>
-							  <tr>
-								<th>#</th>
-								<th>Product name</th>
-                <th>Price</th>
-                <th>Quantity</th>
-								<th>Remove</th>
-							  </tr>
-							</thead>
-							<tbody  id="cart">
-							  <tr class="total">
-								<th scope="row">5</th>
-								<td>Total</td>
-								<td id="total">0</td>
-								<td></td>
-							  </tr>
-							</tbody>
-						  </table>
-	  
-						</div>
-						<!--Footer-->
-						<div class="modal-footer">
-						<button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
-						<button class="btn btn-primary">Checkout</button>
-						</div>
-					</div>
-					</div>
-				</div>
+			
 
 					<a class="btn-floating btn-lg " id="deconnection"><span style="color: white"><i class="fas fa-sign-out-alt"></i></span></a>
 					

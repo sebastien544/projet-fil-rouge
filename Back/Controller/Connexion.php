@@ -18,9 +18,13 @@ if (isset($_POST['action']) && $_POST['action'] == 'logout'){
 
 if (isset($_POST['action']) && $_POST['action'] == 'affichage'){
     if(isset($_SESSION['mail'])){
-        echo ' <a class="dropdown-item" href="/projet-fil-rouge/Back/Controller/personal-space.php">Donation History</a>
-                <a class="dropdown-item" href="/projet-fil-rouge/Back/Controller/personal-space.php">Petition History</a>
-                <a class="dropdown-item" href="/projet-fil-rouge/Back/Controller/personal-space.php">Personal Informations</a>
+        echo ' 
+                    
+                    <a class="dropdown-item" >My Account</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/projet-fil-rouge/Back/Controller/personal-space.php">Donation History</a>
+                    <a class="dropdown-item" href="/projet-fil-rouge/Back/Controller/personal-space.php">Petition History</a>
+                    <a class="dropdown-item" href="/projet-fil-rouge/Back/Controller/personal-space.php">Personal Informations</a>
              ';
 
     }else{ echo '
@@ -37,14 +41,12 @@ if (isset($_POST['action']) && $_POST['action'] == 'affichage'){
 
                 <div class="d-flex justify-content-around">
                     <div>
-                    Remember me 
                         <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
                             <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
                         </div>
                     </div>
                         <div>
-                                Forgot password 
                             <a href="">Forgot password?</a>
                         </div>
                 </div>
@@ -53,9 +55,9 @@ if (isset($_POST['action']) && $_POST['action'] == 'affichage'){
                 <button class="btn btn-info btn-block my-4 btn btn-blue-grey" name="validation" id="jquery-toggle" type="submit" >Sign in</button>
           
 
-                    Register 
+               
                     <p>Not a member?
-                        <br> <a href="signup-page.php">Register</a>
+                        <br> <a class="btn btn-link" href="signup-page.php">Register</a>
                     </p>
 
                 </form>';

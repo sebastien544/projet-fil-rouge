@@ -174,7 +174,7 @@
                     <!--/.Card image-->
 
                     <!--Card content-->
-                    <form action="petition.php" method="POST">
+                    <form action="formulaire_petition.php" method="POST">
                       <div class="card-body card-body-cascade">
                           <!--Title-->
                           <h4 class="card-title">Giraffe</h4>
@@ -184,7 +184,7 @@
                             <div id="disapear2">
                             <input type="hidden" value="2" name="idPetition">
                             <input type="hidden"  name="validation_petition">
-                            <input type="submit" onclick="btn02()" id="hide"  value="SIGN"  class="btn btn-unique btn btn-blue-grey" >
+                            <input type="submit"  id="hide"  value="SIGN"  class="btn btn-unique btn btn-blue-grey" >
                             </div>
                             <p id="answers2" class="card-text">you can sign the petition</p>
                           

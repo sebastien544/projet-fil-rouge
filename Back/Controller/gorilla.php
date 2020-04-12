@@ -12,7 +12,7 @@
 		<!-- Material Design Bootstrap -->
 		<link href="css/mdb.min.css" rel="stylesheet">
 		<!-- Your custom styles (optional) -->
-		<link href="" rel="stylesheet">
+		<link href="style.css" rel="stylesheet">
 	  </head>
 
 
@@ -85,7 +85,7 @@
 						<!--Footer-->
 						<div class="modal-footer">
 						<button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
-						<button class="btn btn-primary">Checkout</button>
+						<a  href="checkout-page.php" class="btn btn-primary">Checkout</a>
 						</div>
 					</div>
 				</div>
@@ -100,7 +100,7 @@
 							<div class="dropdown-menu dropdown-menu-lg-right dropdown-menu-sm-left dropdown-default"  aria-labelledby="navbarDropdownMenuLink-333">
 							<div id="warning1"></div>
 							
-							<div id="loginDiv"></div>
+							<div id="loginDiv" ></div>
 							</div>
 							
 						</li>
@@ -136,7 +136,7 @@
 
 
 						<div class="col-md-10 offset-1">
-								<button type="button" class="btn btn-success">Donate</button>
+								<button type="button" class="btn btn-blue-grey" href="donation-page.php">Donate</button>
 						</div>
 					</div>
 			</div>
@@ -150,31 +150,58 @@
 		<div class="container">
 	
 		<!-- Social buttons -->
+	
 		<ul class="list-unstyled list-inline text-center">
+			<li class="list-inline-item">	
+				<div class="btn-group dropup">
+				<button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+   				 aria-haspopup="true" aria-expanded="false">Get Involved</button>
+					<div class="dropdown-menu blue-grey">
+						<a class="dropdown-item blue-grey" href="#">Make a Donation</a>
+						<a class="dropdown-item blue-grey " href="#">Our fights</a>
+						<a class="dropdown-item blue-grey" href="#">Petition</a>
+						<a class="dropdown-item blue-grey" href="#">Shop</a>
+					</div>
+				</div>
+			</li>
+		
+			
 			<li class="list-inline-item">
-			<a class="btn-floating btn-fb mx-1">
-				<i class="fab fa-facebook-f"> </i>
-			</a>
+					<div class="btn-group dropup">
+						<button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+   				 			aria-haspopup="true" aria-expanded="false">About Save-Them</button>
+						
+						<div class="dropdown-menu blue-grey">
+							<a class="dropdown-item blue-grey" href="#">Contact Us</a>
+							<a class="dropdown-item blue-grey " href="#">Need Help</a>
+							<a class="dropdown-item blue-grey" href="#">Joint Save-Them</a>
+						</div>
+					</div>
 			</li>
 			<li class="list-inline-item">
-			<a class="btn-floating btn-tw mx-1">
-				<i class="fab fa-twitter"> </i>
-			</a>
+			<div class="btn-group dropup">
+						<button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+   				 			aria-haspopup="true" aria-expanded="false">Get Informed</button>
+					
+					<div class="dropdown-menu blue-grey">
+						<a class="dropdown-item blue-grey" href="#">Newsletter</a>
+						<a class="dropdown-item blue-grey " href="#">Us in the Press</a>
+						<a class="dropdown-item blue-grey" href="#">the Animals in Danger</a>
+					</div>
+				</div>
+			
 			</li>
 			<li class="list-inline-item">
-			<a class="btn-floating btn-gplus mx-1">
-				<i class="fab fa-google-plus-g"> </i>
-			</a>
-			</li>
-			<li class="list-inline-item">
-			<a class="btn-floating btn-li mx-1">
-				<i class="fab fa-linkedin-in"> </i>
-			</a>
-			</li>
-			<li class="list-inline-item">
-			<a class="btn-floating btn-dribbble mx-1">
-				<i class="fab fa-dribbble"> </i>
-			</a>
+			<div class="btn-group dropup">
+					<button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+   				 			aria-haspopup="true" aria-expanded="false">Legal</button>
+					<div class="dropdown-menu blue-grey">
+						<a class="dropdown-item blue-grey" href="#">Cookies</a>
+						<a class="dropdown-item blue-grey " href="#">Privacy and Data Protection</a>
+						<a class="dropdown-item blue-grey" href="#">Terms & Conditions</a>
+				
+					</div>
+				</div>
 			</li>
 		</ul>
 		<!-- Social buttons -->
@@ -184,7 +211,7 @@
 	
 		<!-- Copyright -->
 		<div class="footer-copyright text-center py-3">© 2020 Copyright:
-		<a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+		<a href="home.php"> Robert Fundation - Save-Them.com</a>
 		</div>
 		<!-- Copyright -->
 	
