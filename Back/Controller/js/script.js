@@ -3,6 +3,23 @@ $(document).ready(function()
     $("#loginDiv").load('Connexion.php',{
         action:"affichage"
     })
+
+    $.ajax({
+        url:'petitionController.php',
+        type:'POST',
+        data: "action=afficherPet",
+        success : function(data){
+            response = JSON.parse(data)
+            for(i=0; i<response.length; i++){
+                $('#'+response[i].id_petition+'').attr('disabled','disabled')
+                $('#'+response[i].id_petition+'').attr('value','SIGNED')
+            }
+    
+        },
+        error : function(xhr, message, status){
+            alert("Erreur !!");
+        }
+    });
     
 });
 
@@ -63,21 +80,20 @@ $('#loginDiv').on('submit', 'form', function(event){
 
 });
 
-
-
-function btn01(){
-    document.getElementById("answers1").innerHTML ="you have already signed the petition";
-    document.getElementById("disapear1").innerHTML ="";
-}
-
-function btn02(){
-    document.getElementById("answers2").innerHTML ="you have already signed the petition";
-    document.getElementById("disapear2").innerHTML ="";
-}
-
-function btn03(){
-    document.getElementById("answers3").innerHTML ="you have already signed the petition";
-    document.getElementById("disapear3").innerHTML ="";
+function btn(id){
+    $.ajax({
+        url:'petitionController.php',
+        type:'POST',
+        data: 'idPetition='+id+'&action=validation_petition',
+        success : function(){
+            $('#'+id+'').attr('disabled','disabled')
+            $('#'+id+'').attr('value','SIGNED')
+            $('#answers'+id+'').html("Thank you for your support")
+        },
+        error : function(xhr, message, status){
+            alert("Erreur !!");
+        }
+    });
 }
 
 
