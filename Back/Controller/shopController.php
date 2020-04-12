@@ -14,7 +14,14 @@ include_once("../Service/UtilisateurService.php");
     }
 
     if(isset($_POST['action']) && $_POST['action'] == 'ajouter'){
-        $userServ->insertItem($_POST['id'], $_SESSION['mail']);
+        if(isset($_SESSION['mail'])){
+            $userServ->insertItem($_POST['id'], $_SESSION['mail']);
+            $data = array('status' => true);
+            echo json_encode($data);
+        }else{
+            $data = array('status' => false);
+            echo json_encode($data);
+        }
     }
 
     if(isset($_POST['action']) && $_POST['action'] == 'supprimer'){
@@ -36,7 +43,7 @@ include_once("../Service/UtilisateurService.php");
     }
 
     if(isset($_SESSION['mail'])){
-        if(isset($_POST['action']) && ($_POST['action'] == 'afficher' || $_POST['action'] == 'supprimer' || $_POST['action'] == 'ajouter')){
+        if(isset($_POST['action']) && ($_POST['action'] == 'afficher' || $_POST['action'] == 'supprimer')){
             $data = $userServ->selectCart($_SESSION['mail']);
             $var = 0;
             for($i=0;$i<sizeof($data);$i++){
@@ -61,4 +68,6 @@ include_once("../Service/UtilisateurService.php");
                         <td></td>
                     </tr>';
         }
+    }else{
+        echo "";
     }

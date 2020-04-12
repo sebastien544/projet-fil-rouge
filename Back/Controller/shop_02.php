@@ -87,8 +87,13 @@
 						</div>
 						<!--Footer-->
 						<div class="modal-footer">
+<<<<<<< HEAD
               <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
               <a  href="checkout-page.php" class="btn btn-primary">Checkout</a>
+=======
+						<button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
+						<a href="checkout-page.php" class="btn btn-primary">Checkout</a>
+>>>>>>> b01454ca5c1f5edb5c6989881ea1c4479626d683
 						</div>
 					</div>
 					</div>
@@ -99,9 +104,9 @@
 						<li class="nav-item dropdown"  >
 							<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
 								aria-haspopup="true" aria-expanded="false">
-								<i class="fas fa-user"></i>
+								<i id="test" class="fas fa-user"></i>
 							</a>
-							<div class="dropdown-menu dropdown-menu-lg-right dropdown-menu-sm-left dropdown-default"  aria-labelledby="navbarDropdownMenuLink-333">
+							<div  class="dropdown-menu dropdown-menu-lg-right dropdown-menu-sm-left dropdown-default"  aria-labelledby="navbarDropdownMenuLink-333">
 							<div id="warning1"></div>
 							
 							<div id="loginDiv"></div>

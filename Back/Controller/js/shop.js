@@ -1,27 +1,34 @@
-$('#cart').load('shopController.php',{
-    action:"afficher"
-});
-
-function recuperer(){
- $.ajax({
-    url:'shopController.php',
-    type:'POST',
-    data:'action=recuperer',
-    success: function(data){
-        response = JSON.parse(data)
-        $('#firstName').val(response.prenom)
-        $('#lastName').val(response.nom)
-        $('#email').val(response.mail)
-    }
- })
+function message(){
+    $('#test').click()
+    $('#warning1').empty();
+    div = $('<div>')
+    div.attr('class','text-center alert alert-dismissible alert-success')
+    p = $('<p>');
+    p.attr('class', 'mb-0')
+    p.text('You must be connected');
+    div.append(p);
+    b = $('<button>')
+    b.attr('type','button')
+    b.attr('class','close')
+    b.attr('data-dismiss','alert')
+    b.html('&times;')
+    div.append(b);
+    $('#warning1').append(div);
 }
 
-$('.add').click(function (e){
-    $('#cart').load('shopController.php',{
-        action:"ajouter",
-        id:$(this).attr('id')
-     });
-});
+function recuperer(){
+    $.ajax({
+       url:'shopController.php',
+       type:'POST',
+       data:'action=recuperer',
+       success: function(data){
+           response = JSON.parse(data)
+           $('#firstName').val(response.prenom)
+           $('#lastName').val(response.nom)
+           $('#email').val(response.mail)
+       }
+    })
+}
 
 function remove(val){
     $('#cart').load('shopController.php',{
@@ -48,6 +55,33 @@ function updateQuantity(id,idInput,role){
         }
     });
 }
+
+$('#cart').load('shopController.php',{
+    action:"afficher"
+});
+
+
+
+$('.add').click(function (e){
+    $.ajax({
+        url:'shopController.php',
+        type:'POST',
+        data: 'id='+$(this).attr('id')+'&action=ajouter',
+        success : function(data){
+            response = JSON.parse(data)
+            if(response.status == true){
+                $('#cart').load('shopController.php',{
+                    action:"afficher"
+                });
+            }else{
+                message();
+            }
+        },
+        error : function(xhr, message, status){
+            alert("Erreur !!");
+        }
+    });
+});
 
 $('#redeem').click(function(){
     var val = $('#inputCode').val()
