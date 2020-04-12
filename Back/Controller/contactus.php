@@ -199,94 +199,96 @@ session_start();
 			<p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
 				a matter of hours to help you.</p>
 		</div>
-  		<div class="row">
+	<div class="container">	
+		<div class="row justify-content-md-center">
 
-      <!--Grid column-->
-      <div class="col-md-9 mb-md-0 mb-5">
-          <form id="contact-form" name="contact-form" method="POST">
+		<!--Grid column-->
+		<div class="col-md-8 mb-md-0 mb-5">
+			<form id="contact-form" name="contact-form" method="POST">
 
-              <!--Grid row-->
-              <div class="row">
-				<?php if(isset($er_name)){ ?>
-					<div class="alert alert-danger" role="alert"><?php echo $er_name ?></div>
-				<?php } ?>
-                  <!--Grid column-->
-                  <div class="col-md-6">
-                      <div class="md-form mb-0">
-                          <input type="text" id="name" name="name" class="form-control" value="<?php if(isset($name)){ echo $name;} ?>">
-                          <label for="name" class="">Your name</label>
-                      </div>
-                  </div>
-                  <!--Grid column-->
-				  <?php	if(isset($er_email)){ ?>
-				<div class="alert alert-danger" role="alert"><?php echo $er_email ?></div>
-				<?php	} ?>
-                  <!--Grid column-->
-                  <div class="col-md-6">
-                      <div class="md-form mb-0">
-                          <input type="text" id="email" name="email" class="form-control" value="<?php if(isset($email)){ echo $email;} ?>">
-                          <label for="email" class="">Your email</label>
-                      </div>
-                  </div>
-				  <!--Grid column-->
-              </div>
-              <!--Grid row-->
-			  	<?php	if(isset($er_subject)){ ?>
-					<div class="alert alert-danger" role="alert"><?php echo $er_subject ?></div>
-				<?php	}?>
-              <!--Grid row-->
-              <div class="row">
-                  <div class="col-md-12">
-                      <div class="md-form mb-0">
-                          <input type="text" id="subject" name="subject" class="form-control" value="<?php if(isset($subject)){ echo $subject;} ?>">
-                          <label for="subject" class="">Subject</label>
-                      </div>
-                  </div>
-              </div>
-              <!--Grid row-->
-
-              <!--Grid row-->
+				<!--Grid row-->
 				<div class="row">
-					<?php	if(isset($er_message)){ ?>
-						<div class="alert alert-danger" role="alert"><?php echo $er_message ?></div>
-					<?php	}?>
+					<?php if(isset($er_name)){ ?>
+						<div class="alert alert-danger" role="alert"><?php echo $er_name ?></div>
+					<?php } ?>
 					<!--Grid column-->
-					<div class="col-md-12">
-
-						<div class="md-form">
-							<textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" value="<?php if(isset($message)){ echo $message;} ?>"></textarea>
-							<label for="message">Your message</label>
+					<div class="col-md-6">
+						<div class="md-form mb-0">
+							<input type="text" id="name" name="name" class="form-control" value="<?php if(isset($name)){ echo $name;} ?>">
+							<label for="name" class="">Your name</label>
 						</div>
-
+					</div>
+					<!--Grid column-->
+					<?php	if(isset($er_email)){ ?>
+					<div class="alert alert-danger" role="alert"><?php echo $er_email ?></div>
+					<?php	} ?>
+					<!--Grid column-->
+					<div class="col-md-6">
+						<div class="md-form mb-0">
+							<input type="text" id="email" name="email" class="form-control" value="<?php if(isset($email)){ echo $email;} ?>">
+							<label for="email" class="">Your email</label>
+						</div>
+					</div>
+					<!--Grid column-->
+				</div>
+				<!--Grid row-->
+					<?php	if(isset($er_subject)){ ?>
+						<div class="alert alert-danger" role="alert"><?php echo $er_subject ?></div>
+					<?php	}?>
+				<!--Grid row-->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="md-form mb-0">
+							<input type="text" id="subject" name="subject" class="form-control" value="<?php if(isset($subject)){ echo $subject;} ?>">
+							<label for="subject" class="">Subject</label>
+						</div>
 					</div>
 				</div>
-			  <!--Grid row-->
-			  <div class="text-center text-md-left">
-              	<button type="submit" class="btn btn-primary btn btn-blue-grey" name="contact" >Send</button>
-          	  </div>
-				  <div class="status"></div>
-		</form>		  
-      </div>
+				<!--Grid row-->
 
-      <!--Grid column-->
-      <div class="col-md-3 text-center">
-          <ul class="list-unstyled mb-0">
-              <li><i class="fas fa-map-marker-alt fa-2x"></i>
-                  <p>Robert Fundation, Roubaix-Kigali </p>
-              </li>
+				<!--Grid row-->
+					<div class="row">
+						<?php	if(isset($er_message)){ ?>
+							<div class="alert alert-danger" role="alert"><?php echo $er_message ?></div>
+						<?php	}?>
+						<!--Grid column-->
+						<div class="col-md-12">
 
-              <li><i class="fas fa-phone mt-4 fa-2x"></i>
-                  <p>08 36 65 65 65</p>
-              </li>
+							<div class="md-form">
+								<textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" value="<?php if(isset($message)){ echo $message;} ?>"></textarea>
+								<label for="message">Your message</label>
+							</div>
 
-              <li><i class="fas fa-envelope mt-4 fa-2x"></i>
-                  <p>contact@robertfundation.com</p>
-              </li>
-          </ul>
-      </div>
-      <!--Grid column-->
+						</div>
+					</div>
+				<!--Grid row-->
+				<div class="text-center ">
+					<button type="submit" class="btn btn-primary btn btn-blue-grey" name="contact" >Send</button>
+				</div>
+					<div class="status"></div>
+			</form>		  
+		</div>
 
-  		</div>
+		<!--Grid column-->
+		<div class="col-md-4 text-center">
+			<ul class="list-unstyled mb-0">
+				<li><i class="fas fa-map-marker-alt fa-2x"></i>
+					<p>Robert Fundation, Roubaix-Kigali </p>
+				</li>
+
+				<li><i class="fas fa-phone mt-4 fa-2x"></i>
+					<p>08 36 65 65 65</p>
+				</li>
+
+				<li><i class="fas fa-envelope mt-4 fa-2x"></i>
+					<p>contact@robertfundation.com</p>
+				</li>
+			</ul>
+		</div>
+		<!--Grid column-->
+
+		</div>
+	</div>	
 
 </section>
 
