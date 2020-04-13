@@ -124,13 +124,14 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-6 border" style="background-image: url(img/gray-elephant-3739343.jpg); background-size: cover;background-position: center center;">
+      <div class="col-xl-6 col-lg-12 col-md-12 border" style="background-image: url(img/gray-elephant-3739343.jpg); background-size: cover;background-position: center center;">
         <h2 class="mb-3 text-white text-center mt-4" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 4vw; " >Help us, make a donation.</h2>
-        <div class="offset-2 col-8 text-white" style="margin-top: 85%; position:relative;">
-          <h1 class="mb-3 " style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 5vw;" >He will never forget you !</h1>
-        </div></div>
-      <div class="col-6 col-3-sm" style="background-color: rgb(214, 131, 36);">
-        <form class="col-9 mt-5" method="POST" action="authentification.php">
+          <div class="offset-2 col-8 text-white" style="margin-top: 85%; position:relative;">
+            <h1 class="mb-3 " style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 5vw;" >He will never forget you !</h1>
+          </div>
+      </div>
+      <div class="col-xl-6 col-lg-12 col-md-12" style="background-color: rgb(214, 131, 36);">
+        <form class="col-md-8 offset-md-2 " method="POST" action="authentification.php">
           <h1 class="text-center mb-5" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Sign up</h1>
           <div class="col" >
           <input type="text" id="defaultRegisterFormFirstName" class="form-control mb-5" placeholder="First name" name="firstName" style="background-color: rgb(214, 131, 36);">
@@ -165,41 +166,79 @@
 
 
 
-  <footer class="page-footer font-small blue-grey pt-4">
-    <!-- Footer Elements -->
-    <div class="container">
-      <!-- Social buttons -->
-      <ul class="list-unstyled list-inline text-center">
-        <li class="list-inline-item">
-          <a class="btn-floating btn-fb mx-1">
-            <i class="fab fa-facebook-f"> </i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="btn-floating btn-tw mx-1">
-            <i class="fab fa-twitter"> </i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="btn-floating btn-gplus mx-1">
-            <i class="fab fa-google-plus-g"> </i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="btn-floating btn-li mx-1">
-            <i class="fab fa-linkedin-in"> </i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="btn-floating btn-dribbble mx-1">
-            <i class="fab fa-dribbble"> </i>
-          </a>
-        </li>
-      </ul>
-      <!-- Social buttons -->
+ 		<!-- Footer -->
+     <footer class="page-footer font-small blue-grey pt-4">
+
+<!-- Footer Elements -->
+<div class="container">
+
+<!-- Social buttons -->
+
+<ul class="list-unstyled list-inline text-center">
+  <li class="list-inline-item">	
+    <div class="btn-group dropup">
+    <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">Get Involved</button>
+      <div class="dropdown-menu blue-grey">
+        <a class="dropdown-item blue-grey" href="#">Make a Donation</a>
+        <a class="dropdown-item blue-grey " href="#">Our fights</a>
+        <a class="dropdown-item blue-grey" href="#">Petition</a>
+        <a class="dropdown-item blue-grey" href="#">Shop</a>
+      </div>
     </div>
+  </li>
+
+  
+  <li class="list-inline-item">
+      <div class="btn-group dropup">
+        <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">About Save-Them</button>
+        
+        <div class="dropdown-menu blue-grey">
+          <a class="dropdown-item blue-grey" href="#">Contact Us</a>
+          <a class="dropdown-item blue-grey " href="#">Need Help</a>
+          <a class="dropdown-item blue-grey" href="#">Joint Save-Them</a>
+        </div>
+      </div>
+  </li>
+  <li class="list-inline-item">
+  <div class="btn-group dropup">
+        <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">Get Informed</button>
+      
+      <div class="dropdown-menu blue-grey">
+        <a class="dropdown-item blue-grey" href="#">Newsletter</a>
+        <a class="dropdown-item blue-grey " href="#">Us in the Press</a>
+        <a class="dropdown-item blue-grey" href="#">the Animals in Danger</a>
+      </div>
+    </div>
+  
+  </li>
+  <li class="list-inline-item">
+  <div class="btn-group dropup">
+      <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">Legal</button>
+      <div class="dropdown-menu blue-grey">
+        <a class="dropdown-item blue-grey" href="#">Cookies</a>
+        <a class="dropdown-item blue-grey " href="#">Privacy and Data Protection</a>
+        <a class="dropdown-item blue-grey" href="#">Terms & Conditions</a>
     
-  </footer>
+      </div>
+    </div>
+  </li>
+</ul>
+<!-- Social buttons -->
+
+</div>
+<!-- Footer Elements -->
+
+<!-- Copyright -->
+<div class="footer-copyright text-center py-3">© 2020 Copyright:
+<a href="home.php"> Robert Fundation - Save-Them.com</a>
+</div>
+<!-- Copyright -->
+
+</footer>
 <!--/.Footer-->
 
     <!-- SCRIPTS -->
