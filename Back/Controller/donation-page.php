@@ -81,7 +81,7 @@ session_start();
 				</ul>
 			
 		<ul class="navbar-nav ml-auto nav-flex-icons">
-				<a class="btn-floating btn-lg"  data-toggle="modal" data-target="#modalCart"><span style="color: white"><i class="fas fa-shopping-cart"></i></span></a>
+				<a class="btn-floating btn-lg" title="Cart"  data-toggle="modal" data-target="#modalCart"><span style="color: white"><i class="fas fa-shopping-cart"></i></span></a>
 			<!-- Modal: modalCart -->
 			<div class="modal fade" id="modalCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
 						aria-hidden="true">
@@ -89,7 +89,7 @@ session_start();
 						<div class="modal-content">
 				<div class="modal-header">
 							<h4 class="modal-title" id="myModalLabel">Your cart</h4>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<button type="button" class="close"  data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">×</span>
 							</button>
 							</div>
@@ -98,7 +98,7 @@ session_start();
 							<table class="table table-hover">
 								<thead>
 								<tr>
-									<th>#</th>
+									<th></th>
 									<th>Product name</th>
 									<th>Price</th>
 									<th>Quantity</th>
@@ -107,7 +107,7 @@ session_start();
 								</thead>
 								<tbody  id="cart">
 								<tr class="total">
-									<th scope="row">5</th>
+									<th scope="row"></th>
 									<td>Total</td>
 									<td id="total">0</td>
 									<td></td>
@@ -119,16 +119,16 @@ session_start();
 							<!--Footer-->
 							<div class="modal-footer">
 							<button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
-							<button class="btn btn-primary">Checkout</button>
+							<a type="button" class="btn btn-primary" href="checkout-page.php">Checkout</a>
 							</div>
 						</div>
 						</div>
 					</div>
 
-						<a class="btn-floating btn-lg " id="deconnection"><span style="color: white"><i class="fas fa-sign-out-alt"></i></span></a>
+						<a class="btn-floating btn-lg" title="Logout" id="deconnection"><span style="color: white"><i class="fas fa-sign-out-alt"></i></span></a>
 								<!--/Dropdown primary-->
 							<li class="nav-item dropdown"  >
-								<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+								<a class="nav-link dropdown-toggle" title="Login or register" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
 									aria-haspopup="true" aria-expanded="false">
 									<i class="fas fa-user"></i>
 								</a>
@@ -181,37 +181,69 @@ session_start();
 
 
 
+		<!-- Footer -->
     <footer class="page-footer font-small blue-grey pt-4">
-      <div class="container">
-        <ul class="list-unstyled list-inline text-center">
-            <li class="list-inline-item">
-              <a class="btn-floating btn-fb mx-1">
-                <i class="fab fa-facebook-f"> </i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a class="btn-floating btn-tw mx-1">
-                <i class="fab fa-twitter"> </i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a class="btn-floating btn-gplus mx-1">
-                <i class="fab fa-google-plus-g"> </i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a class="btn-floating btn-li mx-1">
-                <i class="fab fa-linkedin-in"> </i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a class="btn-floating btn-dribbble mx-1">
-                <i class="fab fa-dribbble"> </i>
-              </a>
-            </li>
-          </ul>
+
+<!-- Footer Elements -->
+<div class="container">
+
+<ul class="list-unstyled list-inline text-center">
+  <li class="list-inline-item">	
+    <div class="btn-group dropup">
+    <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">Get Involved</button>
+      <div class="dropdown-menu blue-grey">
+        <a class="dropdown-item blue-grey" href="donation-page.php">Make a Donation</a>
+        <a class="dropdown-item blue-grey " href="gorilla.php">Our fights</a>
+        <a class="dropdown-item blue-grey" href="petition.php">Petition</a>
+        <a class="dropdown-item blue-grey" href="shop_01.php">Shop</a>
       </div>
-    </footer>
+    </div>
+  </li>
+
+  
+  <li class="list-inline-item">
+      <div class="btn-group dropup">
+        <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">About Save-Them</button>
+        
+        <div class="dropdown-menu blue-grey">
+          <a class="dropdown-item blue-grey" href="contactus.php">Contact Us</a>
+          <a class="dropdown-item blue-grey " href="#">Need Help</a>
+          <a class="dropdown-item blue-grey" href="#">Joint Save-Them</a>
+        </div>
+      </div>
+  </li>
+  <li class="list-inline-item">
+  <div class="btn-group dropup">
+        <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">Get Informed</button>
+      
+      <div class="dropdown-menu blue-grey">
+        <a class="dropdown-item blue-grey" href="#">Newsletter</a>
+        <a class="dropdown-item blue-grey " href="#">Us in the Press</a>
+        <a class="dropdown-item blue-grey" href="#">the Animals in Danger</a>
+      </div>
+    </div>
+  
+  </li>
+  <li class="list-inline-item">
+  <div class="btn-group dropup">
+      <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">Legal</button>
+      <div class="dropdown-menu blue-grey">
+        <a class="dropdown-item blue-grey" href="#">Cookies</a>
+        <a class="dropdown-item blue-grey " href="#">Privacy and Data Protection</a>
+        <a class="dropdown-item blue-grey" href="#">Terms & Conditions</a>
+    
+      </div>
+    </div>
+  </li>
+</ul>
+
+
+</div>
+<!-- Footer Elements -->
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/popper.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
