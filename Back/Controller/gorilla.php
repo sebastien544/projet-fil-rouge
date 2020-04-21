@@ -93,7 +93,7 @@
 					<a class="btn-floating btn-lg " title="Logout" id="deconnection"><span style="color: white"><i class="fas fa-sign-out-alt"></i></span></a>
 							<!--/Dropdown primary-->
 						<li class="nav-item dropdown"  >
-							<a class="nav-link dropdown-toggle" title="Login or" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+							<a class="nav-link dropdown-toggle" title="Login or register" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
 								aria-haspopup="true" aria-expanded="false">
 								<i class="fas fa-user"></i>
 							</a>
