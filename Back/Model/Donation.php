@@ -1,6 +1,8 @@
 <?php
+include_once ('../Model/Utilisateur.php');
+include_once ('Animal.php');
 
-    class Donation {
+class Donation {
 
         private $date;
         private $montant;
@@ -8,11 +10,17 @@
         private $user;
         private $animal;
 
+        public function __construct()
+        {
+                $this->user = new Utilisateur();
+                $this->animal = new Animal();
+        }
+
         /**
          * Get the value of date
          */ 
         public function getDate()
-        {
+        {       
                 return $this->date;
         }
 
@@ -107,4 +115,4 @@
 
                 return $this;
         }
-    }
+}

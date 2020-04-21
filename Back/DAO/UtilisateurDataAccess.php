@@ -3,15 +3,17 @@ include_once ("ConnexionDDB.php");
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
 
-class UtilisateurDataAccess extends ConnexionDDB {
+class UtilisateurDataAccess extends ConnexionDDB 
+{
     
     /**
      * Recherche un utilisateur dans la base de données
      *
      * @param string $mail
-     * @return void
+     * @return array 
      */
-    function rechercheUtilisateur(string $mail){
+    function rechercheUtilisateur(string $mail) : array
+    {
         $db = $this->connectDatabase();
         $rs = $db->query("SELECT * FROM utilisateur WHERE mail = '$mail'");
         $data = mysqli_fetch_assoc($rs);
@@ -49,15 +51,7 @@ class UtilisateurDataAccess extends ConnexionDDB {
         header("location:connexion-objet.php"); // modifier le lien du header 
     }
 
-    function findAnimalBy(array $tab)
-    {
-        $db = $this->connectDatabase();
-        $rs = $db->query('SELECT id_animal FROM animal WHERE type_animal = "'.$tab['animal'].'"');
-        $data = mysqli_fetch_assoc($rs);
-        $db->close();
-        $rs->free();
-        return $data;
-    }
+    
 
    
   

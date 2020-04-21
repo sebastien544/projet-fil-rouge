@@ -1,6 +1,6 @@
 <?php 
 
-include_once (__DIR__ . "/../Model/Petition.php");
+include_once (__DIR__ . "/../Model/SignaturePetition.php");
 include_once (__DIR__ . "/../Model/Utilisateur.php");
 include_once (__DIR__. "/../DAO/PetitionDataAccess.php");
 include_once (__DIR__. "/../DAO/UtilisateurDataAccess.php");  
@@ -17,7 +17,7 @@ class PetitionService  {
 
     function ajoutPetition($idPet, $mail){
         $data = $this->userDAO->rechercheUtilisateur($mail);
-        $pet = new Petition();
+        $pet = new SignaturePetition();
         $pet->setUser($data['id_utilisateur'])
             ->setDate(date("Y-m-d H:i:s"));
         $this->dao->ajoutPetition($pet, $idPet);

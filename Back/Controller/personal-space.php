@@ -187,9 +187,9 @@
               </thead>
               <tbody>
                 <?php
-                include("../Service/UtilisateurService.php");
-                  $userServ = new UtilisateurService;
-                  $data = $userServ->afficherDon($_SESSION['mail']);
+                include("../Service/DonationService.php");
+                  $donServ = new DonationService;
+                  $data = $donServ->afficherDon($_SESSION['mail']);
                   for($i=0; $i < sizeof($data); $i++){
                     echo '<tr>
                           <th scope="row">'.($i+1).'</th>
@@ -212,8 +212,9 @@
               </thead>
               <tbody>
                 <?php
-                  $userServ = new UtilisateurService;
-                  $data = $userServ->afficherPet($_SESSION['mail']);
+                  include_once ('../Service/PetitionService.php');
+                  $petServ = new PetitionService;
+                  $data = $petServ->afficherPetitions($_SESSION['mail']);
                   for($i=0; $i < sizeof($data); $i++){
                     echo '<tr>
                           <th scope="row">'.($i+1).'</th>
@@ -227,6 +228,7 @@
           </div>
           <div class="col-md-5  offset-2 mb-4 ">
           <?php
+          include_once ('../Service/UtilisateurService.php');
             $userServ = new UtilisateurService;
             $data = $userServ->rechercheUser($_SESSION['mail']);
             echo  '<form class="text-center border border-light p-5" action="#!">

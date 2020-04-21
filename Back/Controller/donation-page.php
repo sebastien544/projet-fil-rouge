@@ -131,7 +131,6 @@
 			</ul>
 			</div>
 		</nav>
-    <button id="coucou"></button>
     
     
     <div class="container-fluid" style="background-image: url(img/gorilla.jpeg);background-size: cover; height: 100%;background-position: center;">

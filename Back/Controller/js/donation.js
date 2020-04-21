@@ -10,7 +10,7 @@ $("button").click(function(e){
 $("#donationForm").on( "submit", function( event ) {
     event.preventDefault();
     $.ajax({
-        url:'DonationController.php',
+        url:'donationController.php',
         type:'POST',
         data:$( this ).serialize(),
         success : function(data){
