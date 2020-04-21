@@ -1,18 +1,3 @@
-<?php
-include_once ("../Service/UtilisateurService.php");
-
-session_start();
-
-  
-  if($_POST){
-		if(isset($_SESSION['mail'])){
-		  $userServ = new UtilisateurService;
-		  $userServ->ajout_don($_POST, $_SESSION['mail']);
-		}
-	  }
-
-?>
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -204,7 +189,7 @@ session_start();
 								<hr>
 							</p>
 						</div>
-						<div class="col-md-10 offset-1">
+						<div class="col-md-10 offset-1 text-center">
 								<a type="button" class="btn btn-blue-grey" href="signup-page.php">Sign Up</a>
 						</div>
           </div>
@@ -217,7 +202,7 @@ session_start();
       <!-- Card image -->
       <div class="view view-cascade overlay">
         <img class="card-img-top" src="https://images.pexels.com/photos/951007/pexels-photo-951007.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
-        <a href="#!">
+        <a href="tiger.html">
           <div class="mask rgba-white-slight"></div>
         </a>
       </div>
@@ -246,7 +231,7 @@ session_start();
         <!-- Card image -->
         <div class="view view-cascade overlay">
           <img class="card-img-top" src="img/elephant-card.jpg" alt="Card image cap">
-          <a href="#!">
+          <a href="elephant.html">
             <div class="mask rgba-white-slight"></div>
           </a>
         </div>
@@ -275,7 +260,7 @@ session_start();
       <!-- Card image -->
       <div class="view view-cascade overlay">
         <img class="card-img-top" src="img/gorilla-card.jpg" alt="Card image cap">
-        <a href="#!">
+        <a href="gorilla.php">
           <div class="mask rgba-white-slight"></div>
         </a>
       </div>
@@ -300,7 +285,7 @@ session_start();
         <!-- Card image -->
         <div class="view view-cascade overlay">
           <img class="card-img-top" src="img/girafe-card.jpg" alt="Card image cap">
-          <a href="#!">
+          <a href="giraffe.html">
             <div class="mask rgba-white-slight"></div>
           </a>
         </div>
