@@ -1,18 +1,3 @@
-<?php
-include_once ("../Service/UtilisateurService.php");
-
-session_start();
-
-  
-  if($_POST){
-		if(isset($_SESSION['mail'])){
-		  $userServ = new UtilisateurService;
-		  $userServ->ajout_don($_POST, $_SESSION['mail']);
-		}
-	  }
-
-?>
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -33,6 +18,7 @@ session_start();
   <link rel="stylesheet" href="css/mdb.min.css">
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="_custom-styles scss">
 
   <style type="text/css">
  
@@ -133,7 +119,7 @@ session_start();
         </ul>
         </div>
       </nav>
-
+<div class="container-fluid">
   <div class="col-md-12">
           <!--Carousel Wrapper-->
     <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
@@ -151,17 +137,26 @@ session_start();
           <img class="d-block w-100" src="img/giraffe-home2.jpg"
             alt="First slide">
         </div>
+        <div class="carousel-caption">
+          <h2 class="h2-responsive ">Help Us to Save Them!</h2>
+        </div>
         <!--/First slide-->
         <!--Second slide-->
         <div class="carousel-item">
           <img class="d-block w-100" src="img/Gorilla-home2.jpg"
             alt="Second slide">
         </div>
+        <div class="carousel-caption">
+          <h2 class="h2-responsive">Help Us to Save Them!</h2>
+        </div>
         <!--/Second slide-->
         <!--Third slide-->
         <div class="carousel-item">
           <img class="d-block w-100" src="img/Tiger-home.jpg"
             alt="Third slide">
+        </div>
+        <div class="carousel-caption">
+          <h2 class="h2-responsive">Help Us to Save Them!</h2>
         </div>
         <!--/Third slide-->
       </div>
@@ -178,111 +173,148 @@ session_start();
       <!--/.Controls-->
     </div>
   </div>  
+  <div class="text-center mt-2"> 
+   <a href="#down"><i class="fas fa-chevron-circle-down blue-grey-text fa-3x"></i></a>
+  </div> 
 
- 
 
-
-<div class="container-fluid">
+  <div  id="down" class="container-fluid mt-5">
 				<div class="row">
-					<div class="col-lg-8 offset-lg-2 col-sm-4 offset-sm-4 "><h1>Save Them are engaged to save the species in Danger in the Wakanda</h1></div>
+					<div class="col-lg-8 offset-lg-2 col-sm-4 offset-sm-4 "><h1 class="title h1 my-4">Save Them are engaged to save the species in Danger in the Wakanda</h1></div>
 				</div>
 					<div class="row text-black">
 						<div class="col-md-10 offset-md-1">
 							<p>Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée. Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum. <br/>
 								<br/>
 								<hr>
-
 							</p>
-							
 						</div>
-
-
-
-						<div class="col-md-10 offset-1">
-								<button type="button" class="btn btn-blue-grey" href="signup-page.php">Sign Up</button>
+						<div class="col-md-10 offset-1 text-center">
+								<a type="button" class="btn btn-blue-grey" href="signup-page.php">Sign Up</a>
 						</div>
           </div>
   </div>
-  <div class="col-lg-4 col-sm-12">
-    <!-- Card Wider -->
-<div class="card card-cascade wider">
+  <div class="row mt-5 mx-lg-n5">
+    <div class="col-xl-4 offset-xl-2 col-sm-12">
+      <!-- Card Wider -->
+      <div class="card card-cascade wider">
 
-<!-- Card image -->
-<div class="view view-cascade overlay">
-  <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/photo6.jpg" alt="Card image cap">
-  <a href="#!">
-    <div class="mask rgba-white-slight"></div>
-  </a>
-</div>
+      <!-- Card image -->
+      <div class="view view-cascade overlay">
+        <img class="card-img-top" src="https://images.pexels.com/photos/951007/pexels-photo-951007.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
+        <a href="tiger.html">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
 
-<!-- Card content -->
-<div class="card-body card-body-cascade text-center pb-0">
+      <!-- Card content -->
+      <div class="card-body card-body-cascade text-center pb-0">
 
-  <!-- Title -->
-  <h4 class="card-title"><strong>Alison Belmont</strong></h4>
-  <!-- Subtitle -->
-  <h5 class="blue-text pb-2"><strong>Graffiti Artist</strong></h5>
-  <!-- Text -->
-  <p class="card-text">Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque
-    laudantium, totam rem aperiam. </p>
+        <!-- Title -->
+        <h4 class="card-title"><strong>The Tiger</strong></h4>
+       
+        <!-- Text -->
+        <p class="card-text">Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque
+          laudantium, totam rem aperiam. </p>
 
-  <!-- Linkedin -->
-  <a class="px-2 fa-lg li-ic"><i class="fab fa-linkedin-in"></i></a>
-  <!-- Twitter -->
-  <a class="px-2 fa-lg tw-ic"><i class="fab fa-twitter"></i></a>
-  <!-- Dribbble -->
-  <a class="px-2 fa-lg fb-ic"><i class="fab fa-facebook-f"></i></a>
+    
 
-  <!-- Card footer -->
-  <div class="card-footer text-muted text-center mt-4">
-    2 days ago
-  </div>
+      </div>
 
-</div>
+      </div>
+    </div>  
+      <!-- Card Wider -->
+    <div  class="col-xl-4  col-sm-12">  
+      <!-- Card Wider -->
+      <div class="card card-cascade wider">
 
-</div>
-<!-- Card Wider -->
-<!-- Card Wider -->
-<div class="card card-cascade wider">
+        <!-- Card image -->
+        <div class="view view-cascade overlay">
+          <img class="card-img-top" src="img/elephant-card.jpg" alt="Card image cap">
+          <a href="elephant.html">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
 
-  <!-- Card image -->
-  <div class="view view-cascade overlay">
-    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/photo6.jpg" alt="Card image cap">
-    <a href="#!">
-      <div class="mask rgba-white-slight"></div>
-    </a>
-  </div>
+          <!-- Card content -->
+          <div class="card-body card-body-cascade text-center pb-0">
 
-  <!-- Card content -->
-  <div class="card-body card-body-cascade text-center pb-0">
+            <!-- Title -->
+            <h4 class="card-title"><strong>The Elephant</strong></h4>
+         
+            <!-- Text -->
+            <p class="card-text">Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque
+              laudantium, totam rem aperiam. </p>
+          </div>
+      </div>    
 
-    <!-- Title -->
-    <h4 class="card-title"><strong>Alison Belmont</strong></h4>
-    <!-- Subtitle -->
-    <h5 class="blue-text pb-2"><strong>Graffiti Artist</strong></h5>
-    <!-- Text -->
-    <p class="card-text">Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque
-      laudantium, totam rem aperiam. </p>
-
-    <!-- Linkedin -->
-    <a class="px-2 fa-lg li-ic"><i class="fab fa-linkedin-in"></i></a>
-    <!-- Twitter -->
-    <a class="px-2 fa-lg tw-ic"><i class="fab fa-twitter"></i></a>
-    <!-- Dribbble -->
-    <a class="px-2 fa-lg fb-ic"><i class="fab fa-facebook-f"></i></a>
-
-    <!-- Card footer -->
-    <div class="card-footer text-muted text-center mt-4">
-      2 days ago
     </div>
-
-  </div>
-
-</div>
+  </div>    
 <!-- Card Wider -->
 
+<div class="row mt-5 mx-lg-n5">
+    <div class="col-xl-4 offset-xl-2 col-sm-12">
+      <!-- Card Wider -->
+      <div class="card card-cascade wider">
 
-  </div>
+      <!-- Card image -->
+      <div class="view view-cascade overlay">
+        <img class="card-img-top" src="img/gorilla-card.jpg" alt="Card image cap">
+        <a href="gorilla.php">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+
+      <!-- Card content -->
+      <div class="card-body card-body-cascade text-center pb-0">
+
+        <!-- Title -->
+        <h4 class="card-title"><strong>The Gorilla</strong></h4>
+        <!-- Text -->
+        <p class="card-text">Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque
+          laudantium, totam rem aperiam. </p>
+      </div>
+
+      </div>
+    </div>  
+      <!-- Card Wider -->
+    <div  class="col-xl-4  col-sm-12">  
+      <!-- Card Wider -->
+      <div class="card card-cascade wider">
+
+        <!-- Card image -->
+        <div class="view view-cascade overlay">
+          <img class="card-img-top" src="img/girafe-card.jpg" alt="Card image cap">
+          <a href="giraffe.html">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+
+          <!-- Card content -->
+          <div class="card-body card-body-cascade text-center pb-0">
+
+            <!-- Title -->
+            <h4 class="card-title"><strong>The Giraffe</strong></h4>
+            <!-- Text -->
+            <p class="card-text">Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque
+              laudantium, totam rem aperiam. </p>
+          </div>
+      </div>    
+
+    </div>
+  </div>    
+<!-- Card Wider -->
+
+  <div class="row mt-5 mb-5 mx-lg-n5">
+    <div class="col-md-10 offset-md-1">
+      <video class="video-fluid z-depth-1" style="width: 100%; height: auto;" autoplay loop controls muted>
+        <source src="video/video.mp4" type="video/mp4" />
+      </video>
+    </div>  
+  </div>  
+
+
+</div>  
 
   
  

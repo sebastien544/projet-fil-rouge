@@ -97,8 +97,8 @@
 
                   <!--firstName-->
                   <div class="md-form">
-                    <input type="text" name="firstname" id="firstName" class="form-control">
-                    <label for="firstName" class="">First name</label>
+                    <label for="validationDefault01">First name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="First name" name="firstname" required>
                   </div>
 
                   </div>
@@ -109,8 +109,8 @@
 
                   <!--lastName-->
                   <div class="md-form">
-                    <input type="text" name="lastname" id="lastName" class="form-control">
-                    <label for="lastName" class="">Last name</label>
+                    <label for="validationDefault02">Last name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Last name" name="lastname" required>
                   </div> 
 
                 </div>
@@ -126,7 +126,7 @@
               </div>
 
               <div class="md-form mb-5">
-                <input type="number" name="phone" id="phone" class="form-control" placeholder="0836656565">
+                <input type="number" name="phone" id="phone" class="form-control" placeholder="Your phone number">
                 <label for="phone" class="">Phone number</label>
               </div> 
 
@@ -147,32 +147,15 @@
 
                     <!--Grid column-->
                     <div class="col-lg-4 col-md-12 mb-4">
-
-                      <label for="country">Country</label>
-                      <select name="country" class="custom-select d-block w-100" id="country" >
-                        <option value="">Choose...</option>
-                        <option>France</option>
-                        <option>Wakanda</option>
-                      </select>
-                      <div class="invalid-feedback">
-                        Please select a valid country.
-                      </div>
-
+                      <label for="validationDefault05">Country</label>
+                      <input type="text" class="form-control" id="validationDefault05" placeholder="Country" required>
                     </div>
                     <!--Grid column-->
 
                     <!--Grid column-->
                     <div class="col-lg-4 col-md-6 mb-4">
-
-                      <label for="state">State</label>
-                      <select name="state" class="custom-select d-block w-100" id="state" >
-                        <option value="">Choose...</option>
-                        <option>Hauts de France</option>
-                      </select>
-                      <div class="invalid-feedback">
-                        Please provide a valid state.
-                      </div>
-
+                      <label for="validationDefault04">State</label>
+                      <input type="text" class="form-control" id="validationDefault04" placeholder="State" required>
                     </div>
                     <!--Grid column-->
 
@@ -180,7 +163,7 @@
                     <div class="col-lg-4 col-md-6 mb-4">
 
                       <label for="zip">Post Code</label>
-                      <input name="zip" type="text" class="form-control" id="zip" placeholder="" >
+                      <input name="zip" type="text" class="form-control" id="zip" placeholder="ex: 75000" >
                       <div class="invalid-feedback">
                         Zip code required.
                       </div>
@@ -189,7 +172,7 @@
                     </div>
                       <div class="col-md-6 mb-3">
                         <label for="cc-name">City</label>
-                        <input name="city" type="text" class="form-control" id="city" placeholder="" >
+                        <input name="city" type="text" class="form-control" id="city" placeholder="ex: Paris" >
                         <small class="text-muted">Compulsory</small>
                         <div class="invalid-feedback">
                           Enter a valid city
