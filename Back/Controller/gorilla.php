@@ -49,7 +49,7 @@
 			</ul>
 		
 		<ul class="navbar-nav ml-auto nav-flex-icons">
-			<a class="btn-floating btn-lg"  data-toggle="modal" data-target="#modalCart"><span style="color: white"><i class="fas fa-shopping-cart"></i></span></a>
+			<a class="btn-floating btn-lg" title="cart"  data-toggle="modal" data-target="#modalCart"><span style="color: white"><i class="fas fa-shopping-cart"></i></span></a>
 		 <!-- Modal: modalCart -->
 		 	<div class="modal fade" id="modalCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
 					aria-hidden="true">
@@ -64,7 +64,7 @@
             			<table class="table table-hover">
 							<thead>
 							  <tr>
-								<th>#</th>
+								<th></th>
 								<th>Product name</th>
                 				<th>Price</th>
                 				<th>Quantity</th>
@@ -73,7 +73,7 @@
 							</thead>
 							<tbody  id="cart">
 							  <tr class="total">
-								<th scope="row">5</th>
+								<th scope="row"></th>
 								<td>Total</td>
 								<td id="total">0</td>
 								<td></td>
@@ -85,15 +85,15 @@
 						<!--Footer-->
 						<div class="modal-footer">
 						<button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
-						<a  href="checkout-page.php" class="btn btn-primary">Checkout</a>
+						<a type="button" class="btn btn-primary" href="checkout-page.php">Checkout</a>
 						</div>
 					</div>
 				</div>
 			</div>
-					<a class="btn-floating btn-lg " id="deconnection"><span style="color: white"><i class="fas fa-sign-out-alt"></i></span></a>
+					<a class="btn-floating btn-lg " title="Logout" id="deconnection"><span style="color: white"><i class="fas fa-sign-out-alt"></i></span></a>
 							<!--/Dropdown primary-->
 						<li class="nav-item dropdown"  >
-							<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+							<a class="nav-link dropdown-toggle" title="Login or" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
 								aria-haspopup="true" aria-expanded="false">
 								<i class="fas fa-user"></i>
 							</a>
@@ -148,19 +148,17 @@
 
 		<!-- Footer Elements -->
 		<div class="container">
-	
-		<!-- Social buttons -->
-	
+
 		<ul class="list-unstyled list-inline text-center">
 			<li class="list-inline-item">	
 				<div class="btn-group dropup">
 				<button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
    				 aria-haspopup="true" aria-expanded="false">Get Involved</button>
 					<div class="dropdown-menu blue-grey">
-						<a class="dropdown-item blue-grey" href="#">Make a Donation</a>
-						<a class="dropdown-item blue-grey " href="#">Our fights</a>
-						<a class="dropdown-item blue-grey" href="#">Petition</a>
-						<a class="dropdown-item blue-grey" href="#">Shop</a>
+						<a class="dropdown-item blue-grey" href="donation-page.php">Make a Donation</a>
+						<a class="dropdown-item blue-grey " href="gorilla.php">Our fights</a>
+						<a class="dropdown-item blue-grey" href="petition.php">Petition</a>
+						<a class="dropdown-item blue-grey" href="shop_01.php">Shop</a>
 					</div>
 				</div>
 			</li>
@@ -172,7 +170,7 @@
    				 			aria-haspopup="true" aria-expanded="false">About Save-Them</button>
 						
 						<div class="dropdown-menu blue-grey">
-							<a class="dropdown-item blue-grey" href="#">Contact Us</a>
+							<a class="dropdown-item blue-grey" href="contactus.php">Contact Us</a>
 							<a class="dropdown-item blue-grey " href="#">Need Help</a>
 							<a class="dropdown-item blue-grey" href="#">Joint Save-Them</a>
 						</div>

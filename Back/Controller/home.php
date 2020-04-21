@@ -72,7 +72,7 @@ session_start();
         </ul>
       
         <ul class="navbar-nav ml-auto nav-flex-icons">
-        <a class="btn-floating btn-lg"  data-toggle="modal" data-target="#modalCart"><span style="color: white"><i class="fas fa-shopping-cart"></i></span></a>
+        <a class="btn-floating btn-lg" title="Cart" data-toggle="modal" data-target="#modalCart"><span style="color: white"><i class="fas fa-shopping-cart"></i></span></a>
       <!-- Modal: modalCart -->
       <div class="modal fade" id="modalCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
@@ -89,7 +89,7 @@ session_start();
               <table class="table table-hover">
                 <thead>
                   <tr>
-                  <th>#</th>
+                  <th></th>
                   <th>Product name</th>
                   <th>Price</th>
                   <th>Quantity</th>
@@ -98,7 +98,7 @@ session_start();
                 </thead>
                 <tbody  id="cart">
                   <tr class="total">
-                  <th scope="row">5</th>
+                  <th scope="row"></th>
                   <td>Total</td>
                   <td id="total">0</td>
                   <td></td>
@@ -110,16 +110,16 @@ session_start();
               <!--Footer-->
               <div class="modal-footer">
               <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
-              <button class="btn btn-primary">Checkout</button>
+              <a type="button" class="btn btn-primary" href="checkout-page.php">Checkout</a>
               </div>
             </div>
             </div>
           </div>
 
-            <a class="btn-floating btn-lg " id="deconnection"><span style="color: white"><i class="fas fa-sign-out-alt"></i></span></a>
+            <a class="btn-floating btn-lg " title="Logout" id="deconnection"><span style="color: white"><i class="fas fa-sign-out-alt"></i></span></a>
                 <!--/Dropdown primary-->
               <li class="nav-item dropdown"  >
-                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" title="Login or register" data-toggle="dropdown"
                   aria-haspopup="true" aria-expanded="false">
                   <i class="fas fa-user"></i>
                 </a>
@@ -133,171 +133,230 @@ session_start();
         </ul>
         </div>
       </nav>
-  
+
+  <div class="col-md-12">
+          <!--Carousel Wrapper-->
+    <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
+      <!--Indicators-->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-1z" data-slide-to="1"></li>
+        <li data-target="#carousel-example-1z" data-slide-to="2"></li>
+      </ol>
+      <!--/.Indicators-->
+      <!--Slides-->
+      <div class="carousel-inner" role="listbox">
+        <!--First slide-->
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="img/giraffe-home2.jpg"
+            alt="First slide">
+        </div>
+        <!--/First slide-->
+        <!--Second slide-->
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/Gorilla-home2.jpg"
+            alt="Second slide">
+        </div>
+        <!--/Second slide-->
+        <!--Third slide-->
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/Tiger-home.jpg"
+            alt="Third slide">
+        </div>
+        <!--/Third slide-->
+      </div>
+      <!--/.Slides-->
+      <!--Controls-->
+      <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+      <!--/.Controls-->
+    </div>
+  </div>  
+
+ 
+
+
+<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-8 offset-lg-2 col-sm-4 offset-sm-4 "><h1>Save Them are engaged to save the species in Danger in the Wakanda</h1></div>
+				</div>
+					<div class="row text-black">
+						<div class="col-md-10 offset-md-1">
+							<p>Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée. Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum. <br/>
+								<br/>
+								<hr>
+
+							</p>
+							
+						</div>
 
 
 
-  <!--Carousel Wrapper-->
-<div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
-  <!--Indicators-->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-2" data-slide-to="1"></li>
-    <li data-target="#carousel-example-2" data-slide-to="2"></li>
-  </ol>
-  <!--/.Indicators-->
-  <!--Slides-->
-  <div class="carousel-inner" role="listbox">
-    <div class="carousel-item active">
-        
-      <div class="view">
-        <img class="d-block w-100" src="img/tiger.jpeg."
-          alt="First slide">
-        <div class="mask rgba-black-light"></div>
-      </div>
-      <div class="carousel-caption">
-        <h3 class="h3-responsive">They need your help!!!</h3>
-        <p>They hope you care</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <!--Mask color-->
-      <div class="view">
-        <img class="d-block w-100" src="img/giraffe.jpeg."
-          alt="Second slide">
-        <div class="mask rgba-black-light"></div>
-      </div>
-      <div class="carousel-caption">
-        <h3 class="h3-responsive">Strong mask</h3>
-        <p>Secondary text</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <!--Mask color-->
-      <div class="view">
-        <img class="d-block w-100" src="img/elephant.jpeg"
-          alt="Third slide">
-        <div class="mask rgba-black-light"></div>
-      </div>
-      <div class="carousel-caption">
-        <h3 class="h3-responsive">Slight mask</h3>
-        <p>Third text</p>
-      </div>
-    </div>
+						<div class="col-md-10 offset-1">
+								<button type="button" class="btn btn-blue-grey" href="signup-page.php">Sign Up</button>
+						</div>
+          </div>
   </div>
-  <!--/.Slides-->
-  <!--Controls-->
-  <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
+  <div class="col-lg-4 col-sm-12">
+    <!-- Card Wider -->
+<div class="card card-cascade wider">
+
+<!-- Card image -->
+<div class="view view-cascade overlay">
+  <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/photo6.jpg" alt="Card image cap">
+  <a href="#!">
+    <div class="mask rgba-white-slight"></div>
   </a>
-  <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-  <!--/.Controls-->
 </div>
-<!--/.Carousel Wrapper-->
 
-<!--/.Connexion-->
+<!-- Card content -->
+<div class="card-body card-body-cascade text-center pb-0">
 
-<!-- Default form register -->
-<form class="text-center border border-light p-5" action="#!">
+  <!-- Title -->
+  <h4 class="card-title"><strong>Alison Belmont</strong></h4>
+  <!-- Subtitle -->
+  <h5 class="blue-text pb-2"><strong>Graffiti Artist</strong></h5>
+  <!-- Text -->
+  <p class="card-text">Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque
+    laudantium, totam rem aperiam. </p>
 
-    <p class="h4 mb-4">Sign up</p>
+  <!-- Linkedin -->
+  <a class="px-2 fa-lg li-ic"><i class="fab fa-linkedin-in"></i></a>
+  <!-- Twitter -->
+  <a class="px-2 fa-lg tw-ic"><i class="fab fa-twitter"></i></a>
+  <!-- Dribbble -->
+  <a class="px-2 fa-lg fb-ic"><i class="fab fa-facebook-f"></i></a>
 
-    <div class="form-row mb-4">
-        <div class="col">
-            <!-- First name -->
-            <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name">
-        </div>
-        <div class="col">
-            <!-- Last name -->
-            <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Last name">
-        </div>
+  <!-- Card footer -->
+  <div class="card-footer text-muted text-center mt-4">
+    2 days ago
+  </div>
+
+</div>
+
+</div>
+<!-- Card Wider -->
+<!-- Card Wider -->
+<div class="card card-cascade wider">
+
+  <!-- Card image -->
+  <div class="view view-cascade overlay">
+    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/photo6.jpg" alt="Card image cap">
+    <a href="#!">
+      <div class="mask rgba-white-slight"></div>
+    </a>
+  </div>
+
+  <!-- Card content -->
+  <div class="card-body card-body-cascade text-center pb-0">
+
+    <!-- Title -->
+    <h4 class="card-title"><strong>Alison Belmont</strong></h4>
+    <!-- Subtitle -->
+    <h5 class="blue-text pb-2"><strong>Graffiti Artist</strong></h5>
+    <!-- Text -->
+    <p class="card-text">Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque
+      laudantium, totam rem aperiam. </p>
+
+    <!-- Linkedin -->
+    <a class="px-2 fa-lg li-ic"><i class="fab fa-linkedin-in"></i></a>
+    <!-- Twitter -->
+    <a class="px-2 fa-lg tw-ic"><i class="fab fa-twitter"></i></a>
+    <!-- Dribbble -->
+    <a class="px-2 fa-lg fb-ic"><i class="fab fa-facebook-f"></i></a>
+
+    <!-- Card footer -->
+    <div class="card-footer text-muted text-center mt-4">
+      2 days ago
     </div>
 
-    <!-- E-mail -->
-    <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail">
+  </div>
 
-    <!-- Password -->
-    <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
-    <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
-        At least 8 characters and 1 digit
-    </small>
+</div>
+<!-- Card Wider -->
 
-    <!-- Phone number -->
-    <input type="text" id="defaultRegisterPhonePassword" class="form-control" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock">
-    <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
-        Optional - for two step authentication
-    </small>
 
-    <!-- Newsletter -->
-    <div class="custom-control custom-checkbox">
-        <input type="checkbox" class="custom-control-input" id="defaultRegisterFormNewsletter">
-        <label class="custom-control-label" for="defaultRegisterFormNewsletter">Subscribe to our newsletter</label>
-    </div>
+  </div>
 
-    <!-- Sign up button -->
-    <button class="btn btn-info my-4 btn-block" type="submit">Sign in</button>
-
-    
-    
-    <hr>
-
-    <!-- Terms of service -->
-    <p>By clicking
-        <em>Sign up</em> you agree to our
-        <a href="" target="_blank">terms of service</a>
-
-</form>
-<!-- Default form register -->
   
+ 
+
+		<!-- Footer -->
+    <footer class="page-footer font-small blue-grey pt-4">
+
+<!-- Footer Elements -->
+<div class="container">
+
+<ul class="list-unstyled list-inline text-center">
+  <li class="list-inline-item">	
+    <div class="btn-group dropup">
+    <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">Get Involved</button>
+      <div class="dropdown-menu blue-grey">
+        <a class="dropdown-item blue-grey" href="donation-page.php">Make a Donation</a>
+        <a class="dropdown-item blue-grey " href="gorilla.php">Our fights</a>
+        <a class="dropdown-item blue-grey" href="petition.php">Petition</a>
+        <a class="dropdown-item blue-grey" href="shop_01.php">Shop</a>
+      </div>
+    </div>
+  </li>
+
+  
+  <li class="list-inline-item">
+      <div class="btn-group dropup">
+        <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">About Save-Them</button>
+        
+        <div class="dropdown-menu blue-grey">
+          <a class="dropdown-item blue-grey" href="contactus.php">Contact Us</a>
+          <a class="dropdown-item blue-grey " href="#">Need Help</a>
+          <a class="dropdown-item blue-grey" href="#">Joint Save-Them</a>
+        </div>
+      </div>
+  </li>
+  <li class="list-inline-item">
+  <div class="btn-group dropup">
+        <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">Get Informed</button>
+      
+      <div class="dropdown-menu blue-grey">
+        <a class="dropdown-item blue-grey" href="#">Newsletter</a>
+        <a class="dropdown-item blue-grey " href="#">Us in the Press</a>
+        <a class="dropdown-item blue-grey" href="#">the Animals in Danger</a>
+      </div>
+    </div>
+  
+  </li>
+  <li class="list-inline-item">
+  <div class="btn-group dropup">
+      <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">Legal</button>
+      <div class="dropdown-menu blue-grey">
+        <a class="dropdown-item blue-grey" href="#">Cookies</a>
+        <a class="dropdown-item blue-grey " href="#">Privacy and Data Protection</a>
+        <a class="dropdown-item blue-grey" href="#">Terms & Conditions</a>
+    
+      </div>
+    </div>
+  </li>
+</ul>
+<!-- Social buttons -->
+
+</div>
+<!-- Footer Elements -->
 
 
-<!--/.Connexion-->
-
-
-<!--Footer-->
-<footer class="page-footer font-small blue-grey pt-4">
-  <!-- Footer Elements -->
-  <div class="container">
-    <!-- Social buttons -->
-    <ul class="list-unstyled list-inline text-center">
-      <li class="list-inline-item">
-        <a class="btn-floating btn-fb mx-1">
-          <i class="fab fa-facebook-f"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-tw mx-1">
-          <i class="fab fa-twitter"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-gplus mx-1">
-          <i class="fab fa-google-plus-g"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-li mx-1">
-          <i class="fab fa-linkedin-in"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-dribbble mx-1">
-          <i class="fab fa-dribbble"> </i>
-        </a>
-      </li>
-    </ul>
-    <!-- Social buttons -->
-  </div>
-  <!-- Footer Elements -->
-  <!-- Copyright -->
+<!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
-  </div>
-  <!-- Copyright -->
+		<a href="home.php"> Robert Fundation - Save-Them.com</a>
+	</div>
+<!-- Copyright -->
 </footer>
 <!--/.Footer-->
 

@@ -51,21 +51,20 @@
 			<ul class="navbar-nav ml-auto nav-flex-icons">
 			
 
-					<a class="btn-floating btn-lg " id="deconnection"><span style="color: white"><i class="fas fa-sign-out-alt"></i></span></a>
+					<a class="btn-floating btn-lg" title="Logout" id="deconnection"><span style="color: white"><i class="fas fa-sign-out-alt"></i></span></a>
 					
 							<!--/Dropdown primary-->
 						<li class="nav-item dropdown"  >
-							<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+							  <a class="nav-link dropdown-toggle" title="Login or register" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
 								aria-haspopup="true" aria-expanded="false">
 								<i class="fas fa-user"></i>
-							</a>
-							<div class="dropdown-menu dropdown-menu-lg-right dropdown-menu-sm-left dropdown-default"  aria-labelledby="navbarDropdownMenuLink-333">
-							<div id="warning1"></div>
-							
-							<div id="loginDiv"></div>
-							</div>
-							
-							</li>
+							  </a>
+                <div class="dropdown-menu dropdown-menu-lg-right dropdown-menu-sm-left dropdown-default"  aria-labelledby="navbarDropdownMenuLink-333">
+                <div id="warning1"></div>
+                
+                <div id="loginDiv"></div>
+                </div>
+						</li>
 			</ul>
 			</div>
 		</nav>
@@ -253,7 +252,7 @@
           <table class="table table-hover bg-white rounded shadow mb-3 z-depth-1">
 							<thead>
 							  <tr>
-								<th>#</th>
+								<th></th>
 								<th>Product name</th>
                 <th>Price</th>
                 <th>Quantity</th>
@@ -263,7 +262,7 @@
 							<tbody id="cart">
                 <tr><td>Promocode</td></tr>
 							  <tr class="total">
-								<th scope="row">5</th>
+								<th scope="row"></th>
 								<td>Total</td>
 								<td id="total">0</td>
 								<td></td>
@@ -291,44 +290,69 @@
     </div>
   </main>
   <!--Main layout-->
-  <!-- Footer -->
-<footer class="page-footer font-small blue-grey pt-4">
+  		<!-- Footer -->
+	<footer class="page-footer font-small blue-grey pt-4">
 
-  <!-- Footer Elements -->
-  <div class="container">
+<!-- Footer Elements -->
+<div class="container">
 
-    <!-- Social buttons -->
-    <ul class="list-unstyled list-inline text-center">
-      <li class="list-inline-item">
-        <a class="btn-floating btn-fb mx-1">
-          <i class="fab fa-facebook-f"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-tw mx-1">
-          <i class="fab fa-twitter"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-gplus mx-1">
-          <i class="fab fa-google-plus-g"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-li mx-1">
-          <i class="fab fa-linkedin-in"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-dribbble mx-1">
-          <i class="fab fa-dribbble"> </i>
-        </a>
-      </li>
-    </ul>
-    <!-- Social buttons -->
+<ul class="list-unstyled list-inline text-center">
+  <li class="list-inline-item">	
+    <div class="btn-group dropup">
+    <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">Get Involved</button>
+      <div class="dropdown-menu blue-grey">
+        <a class="dropdown-item blue-grey" href="donation-page.php">Make a Donation</a>
+        <a class="dropdown-item blue-grey " href="gorilla.php">Our fights</a>
+        <a class="dropdown-item blue-grey" href="petition.php">Petition</a>
+        <a class="dropdown-item blue-grey" href="shop_01.php">Shop</a>
+      </div>
+    </div>
+  </li>
 
-  </div>
-  <!-- Footer Elements -->
+  
+  <li class="list-inline-item">
+      <div class="btn-group dropup">
+        <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">About Save-Them</button>
+        
+        <div class="dropdown-menu blue-grey">
+          <a class="dropdown-item blue-grey" href="contactus.php">Contact Us</a>
+          <a class="dropdown-item blue-grey " href="#">Need Help</a>
+          <a class="dropdown-item blue-grey" href="#">Joint Save-Them</a>
+        </div>
+      </div>
+  </li>
+  <li class="list-inline-item">
+  <div class="btn-group dropup">
+        <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">Get Informed</button>
+      
+      <div class="dropdown-menu blue-grey">
+        <a class="dropdown-item blue-grey" href="#">Newsletter</a>
+        <a class="dropdown-item blue-grey " href="#">Us in the Press</a>
+        <a class="dropdown-item blue-grey" href="#">the Animals in Danger</a>
+      </div>
+    </div>
+  
+  </li>
+  <li class="list-inline-item">
+  <div class="btn-group dropup">
+      <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">Legal</button>
+      <div class="dropdown-menu blue-grey">
+        <a class="dropdown-item blue-grey" href="#">Cookies</a>
+        <a class="dropdown-item blue-grey " href="#">Privacy and Data Protection</a>
+        <a class="dropdown-item blue-grey" href="#">Terms & Conditions</a>
+    
+      </div>
+    </div>
+  </li>
+</ul>
+<!-- Social buttons -->
+
+</div>
+<!-- Footer Elements -->
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2020 Copyright:
