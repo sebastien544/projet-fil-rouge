@@ -145,3 +145,7 @@ function bouton(idPetition){
         }
     });
 }
+
+function coucou(){
+    alert("coucou")
+}

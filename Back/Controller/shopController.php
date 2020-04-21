@@ -1,21 +1,24 @@
 <?php
 session_start();
-include_once("../Service/UtilisateurService.php");
+include_once ("../Service/UtilisateurService.php");
+include_once ('../Service/PanierService.php');
 
     $userServ = new  UtilisateurService();
+    $panierServ = new PanierService();
 
     if(isset($_POST['firstname'])){
         $userServ->insertAddress($_POST,$_SESSION['mail']);
     }
 
     if(isset($_POST['promo'])){
-        $data = $userServ->selectPromo($_POST['codePromo']);
+        $data = $panierServ->rechercheCodePromo($_POST['codePromo']);
         echo json_encode($data);
     }
 
     if(isset($_POST['action']) && $_POST['action'] == 'ajouter'){
         if(isset($_SESSION['mail'])){
-            $userServ->insertItem($_POST['id'], $_SESSION['mail']);
+            $PanierServ = new PanierService();
+            $PanierServ->insertItem($_POST['id'], $_SESSION['mail']);
             $data = array('status' => true);
             echo json_encode($data);
         }else{
@@ -25,7 +28,7 @@ include_once("../Service/UtilisateurService.php");
     }
 
     if(isset($_POST['action']) && $_POST['action'] == 'supprimer'){
-        $userServ->removeItem($_POST['id'], $_SESSION['mail']);
+        $panierServ->removeItem($_POST['id'], $_SESSION['mail']);
     }
 
     if(isset($_POST['action']) && $_POST['action'] == 'recuperer'){
@@ -39,12 +42,12 @@ include_once("../Service/UtilisateurService.php");
         }else{
             $quantity = $_POST['quantity']-1;
         }
-         $userServ->updateQuantity($_POST['id'], $_SESSION['mail'], $quantity);
+         $panierServ->updateQuantity($_POST['id'], $_SESSION['mail'], $quantity);
     }
 
     if(isset($_SESSION['mail'])){
         if(isset($_POST['action']) && ($_POST['action'] == 'afficher' || $_POST['action'] == 'supprimer')){
-            $data = $userServ->selectCart($_SESSION['mail']);
+            $data = $panierServ->afficherPanier($_SESSION['mail']);
             $var = 0;
             for($i=0;$i<sizeof($data);$i++){
                 echo '<tr  class="items">

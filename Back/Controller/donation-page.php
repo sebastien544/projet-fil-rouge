@@ -1,15 +1,4 @@
-<?php
-include_once ("../Service/UtilisateurService.php");
 
-session_start();
-  if($_POST){
-    if(isset($_SESSION['mail'])){
-      $userServ = new UtilisateurService;
-      $userServ->ajout_don($_POST, $_SESSION['mail']);
-    }
-  }
-
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -142,7 +131,7 @@ session_start();
 			</ul>
 			</div>
 		</nav>
-    
+    <button id="coucou"></button>
     
     
     <div class="container-fluid" style="background-image: url(img/gorilla.jpeg);background-size: cover; height: 100%;background-position: center;">
@@ -151,7 +140,7 @@ session_start();
           <h1 class="mb-3" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >HELP US TO HELP THEM</h1>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam ut cupiditate asperiores voluptate id praesentium libero porro inventore laborum sunt maiores, exercitationem animi. Consectetur quasi non voluptatibus iste magnam blanditiis.</p>
         </div>
-        <form class="bg-white col-md-3 col-sm-12 offset-md-1 rounded p-4" style="margin-top: 100px;" method="POST" action="donation-page.php">
+        <form class="bg-white col-md-3 col-sm-12 offset-md-1 rounded p-4" id="donationForm" style="margin-top: 100px;" >
           <h6 class="text-center">your donation</h6>
           <h3 id="displayDon" class="text-center"></h3>
           <h6 class="mt-4">Select donation amount</h6>
@@ -159,7 +148,7 @@ session_start();
           <button class="btn btn-blue-grey btn-sm" style="width: 70px; height: 40px;" type="button">50</button>
           <button class="btn btn-blue-grey btn-sm" style="width: 70px; height: 40px;" type="button">150</button>
           <button class="btn btn-blue-grey btn-sm" style="width: 70px; height: 40px;" type="button">500</button>
-          <input class="form-control font-weight-bold" type=text placeholder="Amount" id="amount" name="amount">
+          <input class="form-control font-weight-bold" type=number placeholder="Amount" id="amount" name="amount">
           <h6 class="mt-4">Frequency</h6>
           <select class="form-control mb-4 font-weight-bold" name="frequency">
             <option>One time</option>
@@ -248,26 +237,20 @@ session_start();
     <script type="text/javascript" src="js/popper.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/mdb.min.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
+	
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.js"
 	integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
 	crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<!-- Your custom scripts (optional) -->
-	<script type="text/javascript" src="js/script.js"></script>
-	<script type="text/javascript" src="js/shop.js"></script>
+	 <script type="text/javascript" src="js/script.js"></script>
+  <!-- <script type="text/javascript" src="js/shop.js"></script>  -->
+  <script type="text/javascript" src="js/donation.js"></script>
 
     <script type="text/javascript">
-    new WOW().init();
-    $("button").click(function(e){
-        $("#displayDon").html(this.textContent);
-		$('#amount').attr('value', this.textContent )
-    });
-    $("#submit").click(function(e){
-        $("#myModal").show("slow");
-	});
+   
     </script>
-     
+  
   </body>
  
 </html>
