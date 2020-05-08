@@ -115,7 +115,7 @@
   <div class="row">
 
     <!-- Grid column -->
-    <div class="col-lg-4 col-sm-12">
+    <div class="col-xl-4 col-lg-6 col-sm-12">
   
       <!--Card Narrower-->
       <div class="card card-cascade narrower">
@@ -146,7 +146,7 @@
     <!-- Grid column -->
   
     <!-- Grid column -->
-    <div class="col-lg-4 col-sm-12">
+    <div class="col-xl-4 col-lg-6 col-sm-12">
   
       <!--Card Narrower-->
       <div class="card card-cascade narrower">
@@ -175,7 +175,7 @@
   
     </div>
     <!-- Grid column -->
-    <div class="col-lg-4 col-sm-12">
+    <div class="col-xl-4 col-lg-6 col-sm-12">
   
         <!--Card Narrower-->
         <div class="card card-cascade narrower">
@@ -200,13 +200,37 @@
           <!--/.Card content-->
         </div>
         <!--/.Card Narrower-->
-      </div>
+    </div>
+    <!-- <div class="col-xl-4 col-lg-6 col-sm-12">
+  
+        
+        <div class="card card-cascade narrower">
+    
+         
+          <div class="view view-cascade overlay">
+            <img src="https://images.pexels.com/photos/165263/pexels-photo-165263.jpeg?cs=srgb&dl=doudou-ecriture-manuscrite-jouet-message-165263.jpg&fm=jpg" class="card-img-top"
+              alt="narrower">
+            
+          </div>
+  
+          <div class="card-body card-body-cascade">
+            <h5 class="blue-grey-text"><i class="fas fa-hippo"></i> Shop</h5>
+            
+            <h4 class="card-title">Hobo Teddy Bear</h4>
+            
+            <p class="card-text">this teddy is looking for a family<br> 24.99 pts</p>
+            <a id='3' class=" add btn btn-unique btn btn-blue-grey">Add to basket</a>
+          </div>
+          
+        </div>
+       
+      </div> -->
   </div>
   <!-- Grid row -->
   <div class="row">
 
     <!-- Grid column -->
-    <div class="col-lg-4 col-sm-12">
+    <div class="col-xl-4 col-lg-6 col-sm-12">
   
       <!--Card Narrower-->
       <div class="card card-cascade narrower">
@@ -237,7 +261,7 @@
     <!-- Grid column -->
   
     <!-- Grid column -->
-    <div class="col-lg-4 col-sm-12">
+    <div class="col-xl-4 col-lg-6 col-sm-12">
   
       <!--Card Narrower-->
       <div class="card card-cascade narrower">
@@ -266,7 +290,7 @@
   
     </div>
     <!-- Grid column -->
-    <div class="col-lg-4 col-sm-12">
+    <div class="col-xl-4 col-lg-6 col-sm-12">
   
         <!--Card Narrower-->
         <div class="card card-cascade narrower">
@@ -291,7 +315,33 @@
           <!--/.Card content-->
         </div>
         <!--/.Card Narrower-->
-      </div>
+    </div>
+     <!-- <div class="col-xl-4 col-lg-6 col-sm-12">
+  
+       
+        <div class="card card-cascade narrower">
+    
+        
+          <div class="view view-cascade overlay">
+            <img src="https://images.pexels.com/photos/246576/pexels-photo-246576.jpeg?cs=srgb&dl=a-l-interieur-animal-animal-en-peluche-canape-246576.jpg&fm=jpg" class="card-img-top"
+              alt="narrower">
+            
+          </div>
+  
+    
+         
+          <div class="card-body card-body-cascade">
+            <h5 class="blue-grey-text"><i class="fas fa-hippo"></i> Shop</h5>
+            
+            <h4 class="card-title">John Deer</h4>
+            
+            <p class="card-text">Special for christmas <br>29.99 pts</p>
+            <a id='6' class=" add btn btn-unique btn btn-blue-grey">Add to Basket</a>
+          </div>
+        
+        </div>
+       
+      </div> -->
   </div>  
 		<!-- Footer -->
     <footer class="page-footer font-small blue-grey pt-4">

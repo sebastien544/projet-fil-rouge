@@ -223,7 +223,7 @@
           <div class="card-body card-body-cascade">
             <h5 class="blue-grey-text"><i class="fas fa-hippo"></i> Shop</h5>
             <!--Title-->
-            <h4 class="card-title">The African wood map</h4>
+            <h4 class="card-title">African wood map</h4>
             <!--Text-->
             <p class="card-text">If you want to locate wakanda this is the ideal map<br> 19.99 pts</p>
             <a id="10" class=" add btn btn-unique btn btn-blue-grey">Add to basket</a>
@@ -285,7 +285,7 @@
               <!--Title-->
               <h4 class="card-title">Tote Bags</h4>
               <!--Text-->
-              <p class="card-text">Our selection of tote bags <br> 9.99 pts</p>
+              <p class="card-text">Our selection of tote bags with different fabrics (cotton, linen) <br> 9.99 pts</p>
               <a id="12" class="add btn btn-unique btn btn-blue-grey">Add to Basket</a>
             </div>
             <!--/.Card content-->

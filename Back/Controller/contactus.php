@@ -91,6 +91,7 @@ session_start();
   <link rel="stylesheet" href="css/mdb.min.css">
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/geebral_responsive.css">
 </head>
 <body>
   <!--Navbar -->
@@ -203,7 +204,7 @@ session_start();
 		<div class="row justify-content-md-center">
 
 		<!--Grid column-->
-		<div class="col-md-8 mb-md-0 mb-5">
+		<div class="col-lg-8 mb-lg-0 col-md-8 mb-md-0 mb-5">
 			<form id="contact-form" name="contact-form" method="POST">
 
 				<!--Grid row-->
@@ -212,7 +213,7 @@ session_start();
 						<div class="alert alert-danger" role="alert"><?php echo $er_name ?></div>
 					<?php } ?>
 					<!--Grid column-->
-					<div class="col-md-6">
+					<div class="col-lg-6 col-md-6">
 						<div class="md-form mb-0">
 							<input type="text" id="name" name="name" class="form-control" value="<?php if(isset($name)){ echo $name;} ?>">
 							<label for="name" class="">Your name</label>
@@ -292,68 +293,104 @@ session_start();
 
 </section>
 
-		<!-- Footer -->
-		<footer class="page-footer font-small blue-grey pt-4">
-
-<!-- Footer Elements -->
+</div>
 <div class="container">
+  <div class="row">
+    <div class="col-12"></div>
+  </div>
 
-<ul class="list-unstyled list-inline text-center">
-	<li class="list-inline-item">	
-		<div class="btn-group dropup">
-		<button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-			aria-haspopup="true" aria-expanded="false">Get Involved</button>
-			<div class="dropdown-menu blue-grey">
-				<a class="dropdown-item blue-grey" href="donation-page.php">Make a Donation</a>
-				<a class="dropdown-item blue-grey " href="gorilla.php">Our fights</a>
-				<a class="dropdown-item blue-grey" href="petition.php">Petition</a>
-				<a class="dropdown-item blue-grey" href="shop_01.php">Shop</a>
-			</div>
-		</div>
-	</li>
+  <div class="row">
+  	<div class="col-12"></div>
+  </div>
 
-	
-	<li class="list-inline-item">
+  <div class="row">
+  	<div class="col-12"></div>
+  </div>
+
+  <div class="row">
+  	<div class="col-12"></div>
+  </div>
+
+  <div class="row">
+  	<div class="col-12"></div>
+  </div>
+  <div class="row">
+    <div class="col-12"></div>
+  </div>
+
+  <div class="row">
+  	<div class="col-12"></div>
+  </div>
+
+  <div class="row">
+  	<div class="col-12"></div>
+  </div>
+  </div>
+</div>
+
+		<!-- Footer -->
+<footer class="page-footer font-small blue-grey pt-4">
+
+	<!-- Footer Elements -->
+	<div class="container">
+
+	<ul class="list-unstyled list-inline text-center">
+		<li class="list-inline-item">	
 			<div class="btn-group dropup">
-				<button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-						aria-haspopup="true" aria-expanded="false">About Save-Them</button>
-				
+			<button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+				aria-haspopup="true" aria-expanded="false">Get Involved</button>
 				<div class="dropdown-menu blue-grey">
-					<a class="dropdown-item blue-grey" href="contactus.php">Contact Us</a>
-					<a class="dropdown-item blue-grey " href="#">Need Help</a>
-					<a class="dropdown-item blue-grey" href="#">Joint Save-Them</a>
+					<a class="dropdown-item blue-grey" href="donation-page.php">Make a Donation</a>
+					<a class="dropdown-item blue-grey " href="gorilla.php">Our fights</a>
+					<a class="dropdown-item blue-grey" href="petition.php">Petition</a>
+					<a class="dropdown-item blue-grey" href="shop_01.php">Shop</a>
 				</div>
 			</div>
-	</li>
-	<li class="list-inline-item">
-	<div class="btn-group dropup">
-				<button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-						aria-haspopup="true" aria-expanded="false">Get Informed</button>
-			
-			<div class="dropdown-menu blue-grey">
-				<a class="dropdown-item blue-grey" href="#">Newsletter</a>
-				<a class="dropdown-item blue-grey " href="#">Us in the Press</a>
-				<a class="dropdown-item blue-grey" href="#">the Animals in Danger</a>
-			</div>
-		</div>
-	
-	</li>
-	<li class="list-inline-item">
-	<div class="btn-group dropup">
-			<button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-						aria-haspopup="true" aria-expanded="false">Legal</button>
-			<div class="dropdown-menu blue-grey">
-				<a class="dropdown-item blue-grey" href="#">Cookies</a>
-				<a class="dropdown-item blue-grey " href="#">Privacy and Data Protection</a>
-				<a class="dropdown-item blue-grey" href="#">Terms & Conditions</a>
-		
-			</div>
-		</div>
-	</li>
-</ul>
-<!-- Social buttons -->
+		</li>
 
-</div>
+		
+		<li class="list-inline-item">
+				<div class="btn-group dropup">
+					<button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">About Save-Them</button>
+					
+					<div class="dropdown-menu blue-grey">
+						<a class="dropdown-item blue-grey" href="contactus.php">Contact Us</a>
+						<a class="dropdown-item blue-grey " href="#">Need Help</a>
+						<a class="dropdown-item blue-grey" href="#">Joint Save-Them</a>
+					</div>
+				</div>
+		</li>
+		<li class="list-inline-item">
+		<div class="btn-group dropup">
+					<button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">Get Informed</button>
+				
+				<div class="dropdown-menu blue-grey">
+					<a class="dropdown-item blue-grey" href="#">Newsletter</a>
+					<a class="dropdown-item blue-grey " href="#">Us in the Press</a>
+					<a class="dropdown-item blue-grey" href="#">the Animals in Danger</a>
+				</div>
+			</div>
+		
+		</li>
+		<li class="list-inline-item">
+		<div class="btn-group dropup">
+				<button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">Legal</button>
+				<div class="dropdown-menu blue-grey">
+					<a class="dropdown-item blue-grey" href="#">Cookies</a>
+					<a class="dropdown-item blue-grey " href="#">Privacy and Data Protection</a>
+					<a class="dropdown-item blue-grey" href="#">Terms & Conditions</a>
+			
+				</div>
+			</div>
+		</li>
+	</ul>
+	<!-- Social buttons -->
+
+
+
 <!-- Footer Elements -->
 
 		<!-- Copyright -->

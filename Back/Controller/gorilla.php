@@ -12,12 +12,13 @@
 		<!-- Material Design Bootstrap -->
 		<link href="css/mdb.min.css" rel="stylesheet">
 		<!-- Your custom styles (optional) -->
-		<link href="style.css" rel="stylesheet">
+		<link href="css/style.min.css" rel="stylesheet">
+		<link href="css/general_responsive.css" rel="stylesheet">
 	  </head>
 
 
 
-	<body class="grey lighten-3">
+	<body>
 
 		<nav class="mb-1 navbar navbar-expand-lg navbar-dark blue-grey">
 			<a class="navbar-brand" href="gorilla.php">Save-Them.com</a>
@@ -107,15 +108,16 @@
 		</ul>
 		</div>
 		</nav>
-			<div class="col-md-10 offset-md-1">
+	<div class="container"> 
+		<div class="row">
+			<div class="col-xl-10 col-lg-10 offset-lg-1 col-md-8 offset-md-2 ">
 				<img src="img/gorille2.jpg" class="img-fluid" alt="Responsive image">
 			</div>
-			<div class="container-fluid">
-				<div class="row">
+			
 					<div class="col-md-6 offset-md-5"><h1>Gorilla</h1></div>
-				</div>
+				
 					<div class="row text-black">
-						<div class="col-md-10 offset-md-1">
+						<div class="col-xl-10 col-lg-10 offset-lg-1 col-md-10 offset-md-1 ">
 							<p>Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée. Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum. <br/>
 								<br/>
 								<hr>
@@ -129,20 +131,28 @@
 								Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page,
 								le texte définitif venant remplacer
 								le faux-texte dès qu'il est prêt ou que la mise en page est achevée. Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.
+								Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page,
+							le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée. Généralement,
+							on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.
+							Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page,
+								le texte définitif venant remplacer
+								le faux-texte dès qu'il est prêt ou que la mise en page est achevée. Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.
+								Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page,
+								le texte définitif venant remplacer
+								le faux-texte dès qu'il est prêt ou que la mise en page est achevée. Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.
+								Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page,
+							le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée. Généralement,
+							on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.
 							</p>
 							
 						</div>
 
-
-
-						<div class="col-md-10 offset-1">
+						<div class="col-xl-10 col-lg-10 offset-lg-1 col-md-8 offset-md-2">
 								<button type="button" class="btn btn-blue-grey" href="donation-page.php">Donate</button>
 						</div>
 					</div>
-			</div>
-		
-
-
+		</div>
+	</div>
 		<!-- Footer -->
 	<footer class="page-footer font-small blue-grey pt-4">
 
