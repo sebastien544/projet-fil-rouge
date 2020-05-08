@@ -4,7 +4,6 @@ include_once (__DIR__ . "/../Model/Donation.php");
 include_once (__DIR__. "/../DAO/DonationDataAccess.php"); 
 
 
-
 class DonationService  
 {
     private $dao;
@@ -16,13 +15,13 @@ class DonationService
 
     function ajoutDon(array $tab,string $mail)
     {   
-        
         $don = new Donation();
         $don->getUser()->currentUser($mail);
-        $don->getAnimal()->findAnimal($tab['animal']);
+        $Animal = $this->dao->findAnimalBy($tab['animal']);
         $don->setMontant($tab['amount'])
             ->setFrequence($tab['frequency'])
-            ->setDate(date("Y-m-d H:i:s"));
+            ->setDate(date("Y-m-d H:i:s"))
+            ->setIdAnimal($Animal['id_animal']);
         $this->dao->ajoutDon($don);
     }
 

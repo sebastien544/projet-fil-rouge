@@ -1,14 +1,14 @@
 <?php
 
-    include_once ("../Service/UtilisateurService.php");
+    include_once ("../Service/PetitionService.php");
 
     session_start();
 
-        $userServ = new UtilisateurService();
+        $userServ = new petitionService();
 
         if(isset($_POST['action']) && $_POST['action'] == "afficherPet"){
             if(isset($_SESSION['mail'])){
-                $data = $userServ->afficherpet($_SESSION['mail']);
+                $data = $userServ->afficherPetitions($_SESSION['mail']);
                 echo json_encode($data);
             }else{
                 $data = array('status' => false);

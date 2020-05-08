@@ -6,16 +6,18 @@ include_once (__DIR__. "/../DAO/PetitionDataAccess.php");
 include_once (__DIR__. "/../DAO/UtilisateurDataAccess.php");  
 
 
-
-class PetitionService  {
+class PetitionService  
+{
     private $dao;
     private $userDAO;
-    public function __construct(){
+    public function __construct()
+    {
         $this->dao = new PetitionDataAccess();
         $this->userDAO = new UtilisateurDataAccess();
     }
 
-    function ajoutPetition($idPet, $mail){
+    function ajoutPetition($idPet, $mail)
+    {
         $data = $this->userDAO->rechercheUtilisateur($mail);
         $pet = new SignaturePetition();
         $pet->setUser($data['id_utilisateur'])
@@ -23,7 +25,8 @@ class PetitionService  {
         $this->dao->ajoutPetition($pet, $idPet);
     }
 
-    function afficherPetitions($mail){
+    function afficherPetitions($mail)
+    {
         return $this->dao->afficherPetitions($mail);
     }
 }
