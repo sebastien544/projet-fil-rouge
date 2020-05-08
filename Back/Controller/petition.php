@@ -113,10 +113,10 @@
     </nav>
     
 
-          <div class="container-fluid">
+      <div class="container">
           <div class="row">
             <div class="col-md-6 offset-md-3 mb-3 mt-5 titre text-center"><h1>THE PETITIONS</h1></div>
-          </div>
+          
             <div class="row mt-5 mb-5">    
                 <!-- Grid column -->
                 <div class="col-lg-4 col-md-6 col-sm-12 carte_petition">
@@ -215,7 +215,7 @@
                           <!--Title-->
                           <h4 class="card-title">Chimpanzee</h4>
                           <!--Text-->
-                          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ducimus provident quaerat dolores repellendus, sequi nisi. Doloribus soluta dignissimos reprehenderit molestias alias, repudiandae libero, tempora perferendis facilis, saepe magni rem?</p>
+                          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ducimus provident quaerat dolores repellendus, sequi nisi. Doloribus soluta dignissimos reprehenderit molestias alias, repudiandae libero, tempora perferendis facilis</p>
                           <div id="disapear3" class="d-flex justify-content-center">
                            <!--<input type="hidden" value="2" name="idPetition">-->
                               <!--<input type="hidden"  name="validation_petition">-->
@@ -231,78 +231,85 @@
 
                 </div>
                 <!-- Grid column -->
-            </div> 
-        </div> 
+          </div>
+          
+          
+          
+        </div>   
+      </div> 
+
+        
 		<!-- Footer -->
-    <footer class="page-footer font-small blue-grey pt-4">
+<footer class="page-footer fixed-bottom font-small blue-grey pt-4">
 
-<!-- Footer Elements -->
-<div class="container">
+    <!-- Footer Elements -->
+    <div class="container">
 
-<ul class="list-unstyled list-inline text-center">
-  <li class="list-inline-item">	
-    <div class="btn-group dropup">
-    <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">Get Involved</button>
-      <div class="dropdown-menu blue-grey">
-        <a class="dropdown-item blue-grey" href="donation-page.php">Make a Donation</a>
-        <a class="dropdown-item blue-grey " href="gorilla.php">Our fights</a>
-        <a class="dropdown-item blue-grey" href="petition.php">Petition</a>
-        <a class="dropdown-item blue-grey" href="shop_01.php">Shop</a>
-      </div>
-    </div>
-  </li>
-
-  
-  <li class="list-inline-item">
-      <div class="btn-group dropup">
+    <ul class="list-unstyled list-inline text-center">
+      <li class="list-inline-item">	
+        <div class="btn-group dropup">
         <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">About Save-Them</button>
-        
-        <div class="dropdown-menu blue-grey">
-          <a class="dropdown-item blue-grey" href="contactus.php">Contact Us</a>
-          <a class="dropdown-item blue-grey " href="#">Need Help</a>
-          <a class="dropdown-item blue-grey" href="#">Joint Save-Them</a>
+            aria-haspopup="true" aria-expanded="false">Get Involved</button>
+          <div class="dropdown-menu blue-grey">
+            <a class="dropdown-item blue-grey" href="donation-page.php">Make a Donation</a>
+            <a class="dropdown-item blue-grey " href="gorilla.php">Our fights</a>
+            <a class="dropdown-item blue-grey" href="petition.php">Petition</a>
+            <a class="dropdown-item blue-grey" href="shop_01.php">Shop</a>
+          </div>
         </div>
-      </div>
-  </li>
-  <li class="list-inline-item">
-  <div class="btn-group dropup">
-        <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">Get Informed</button>
+      </li>
+
       
-      <div class="dropdown-menu blue-grey">
-        <a class="dropdown-item blue-grey" href="#">Newsletter</a>
-        <a class="dropdown-item blue-grey " href="#">Us in the Press</a>
-        <a class="dropdown-item blue-grey" href="#">the Animals in Danger</a>
-      </div>
-    </div>
-  
-  </li>
-  <li class="list-inline-item">
-  <div class="btn-group dropup">
-      <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">Legal</button>
-      <div class="dropdown-menu blue-grey">
-        <a class="dropdown-item blue-grey" href="#">Cookies</a>
-        <a class="dropdown-item blue-grey " href="#">Privacy and Data Protection</a>
-        <a class="dropdown-item blue-grey" href="#">Terms & Conditions</a>
-    
-      </div>
-    </div>
-  </li>
-</ul>
-<!-- Social buttons -->
-
-</div>
-<!-- Footer Elements -->
-        
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2020 Copyright:
-          <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+      <li class="list-inline-item">
+          <div class="btn-group dropup">
+            <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">About Save-Them</button>
+            
+            <div class="dropdown-menu blue-grey">
+              <a class="dropdown-item blue-grey" href="contactus.php">Contact Us</a>
+              <a class="dropdown-item blue-grey " href="#">Need Help</a>
+              <a class="dropdown-item blue-grey" href="#">Joint Save-Them</a>
+            </div>
+          </div>
+      </li>
+      <li class="list-inline-item">
+      <div class="btn-group dropup">
+            <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">Get Informed</button>
+          
+          <div class="dropdown-menu blue-grey">
+            <a class="dropdown-item blue-grey" href="#">Newsletter</a>
+            <a class="dropdown-item blue-grey " href="#">Us in the Press</a>
+            <a class="dropdown-item blue-grey" href="#">the Animals in Danger</a>
+          </div>
         </div>
-        <!-- Copyright -->
-      </footer>  
+      
+      </li>
+      <li class="list-inline-item">
+      <div class="btn-group dropup">
+          <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">Legal</button>
+          <div class="dropdown-menu blue-grey">
+            <a class="dropdown-item blue-grey" href="#">Cookies</a>
+            <a class="dropdown-item blue-grey " href="#">Privacy and Data Protection</a>
+            <a class="dropdown-item blue-grey" href="#">Terms & Conditions</a>
+        
+          </div>
+        </div>
+      </li>
+    </ul>
+    <!-- Social buttons -->
+
+    </div>
+    <!-- Footer Elements -->
+            
+            
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+		<a href="home.php"> Robert Fundation - Save-Them.com</a>
+		</div>
+		<!-- Copyright -->
+</footer>  
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <!-- Bootstrap tooltips -->
         <script type="text/javascript" src="js/popper.min.js"></script>

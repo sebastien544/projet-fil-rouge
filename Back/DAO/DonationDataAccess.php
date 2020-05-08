@@ -31,7 +31,7 @@ class DonationDataAccess extends ConnexionDDB
     function afficherDon(string $mail) : array
     {
         $db = $this->connectDatabase();
-        $rs = $db->query('SELECT d.date, d.montant_don, a.type_animal FROM utilisateur as u  INNER JOIN don as d on u.id_utilisateur = d.id_utilisateur INNER JOIN animal as a on d.id_animal = a.id_animal WHERE u.mail = "'.$mail.'"');
+        $rs = $db->query('SELECT d.date, d.montant, a.type_animal FROM utilisateur as u  INNER JOIN don as d on u.id_utilisateur = d.id_utilisateur INNER JOIN animal as a on d.id_animal = a.id_animal WHERE u.mail = "'.$mail.'"');
         $data = mysqli_fetch_all($rs, MYSQLI_ASSOC);
         $db->close();
         return $data;

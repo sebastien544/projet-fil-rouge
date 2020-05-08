@@ -172,86 +172,170 @@
   <main>
     <div class="container">
       <h1 class="text-center mt-5"> PERSONAL SPACE</h1>
-      <section class="mt-5 wow  fadeIn">
-        <div class="row">
-          <div class="col-md-5 ">
-            <p class="text-center h4 ">Donation history</p>
-            <table class="table table-bordered mb-5">
-              <thead>
-                <tr>
-                  <th scope="col">Number Donation</th>
-                  <th scope="col">Date</th>
-                  <th scope="col">Amount</th>
-                  <th scope="col">Animal</th>
-                </tr>
-              </thead>
-              <tbody>
-                <?php
-                include("../Service/DonationService.php");
-                  $donServ = new DonationService;
-                  $data = $donServ->afficherDon($_SESSION['mail']);
-                  for($i=0; $i < sizeof($data); $i++){
-                    echo '<tr>
-                          <th scope="row">'.($i+1).'</th>
-                          <td>'.$data[$i]['date'].'</td>
-                          <td>'.$data[$i]['montant_don'].'</td>
-                          <td>'.$data[$i]['type_animal'].'</td>
-                          </tr>';
-                  }
-                ?>
-              </tbody>
-            </table>
-            <p class="text-center h4 mt-5">Petition history</p>
-            <table class="table table-bordered mb-5">
-              <thead>
-                <tr>
-                  <th scope="col">Number Petition</th>
-                  <th scope="col">Date</th>
-                  <th scope="col">Animal</th>
-                </tr>
-              </thead>
-              <tbody>
-                <?php
-                  include_once ('../Service/PetitionService.php');
-                  $petServ = new PetitionService;
-                  $data = $petServ->afficherPetitions($_SESSION['mail']);
-                  for($i=0; $i < sizeof($data); $i++){
-                    echo '<tr>
-                          <th scope="row">'.($i+1).'</th>
-                          <td>'.$data[$i]['date_signature'].'</td>
-                          <td>'.$data[$i]['type_animal'].'</td>
-                          </tr>';
-                  }
-                ?>
-              </tbody>
-            </table>
+      <section class="mt-5 wow  fadeIn ">
+        <!-- <div class="row "> -->
+          <div class="text-center">
+          
+            <!-- <p class="text-center h4 ">Donation history</p> -->
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-blue-grey" data-toggle="modal" data-target="#exampleModalCenter">
+            Donation history
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+              aria-hidden="true">
+
+              <!-- Add .modal-dialog-centered to .modal-dialog to vertically center the modal -->
+              <div class="modal-dialog modal-dialog-centered" role="document">
+
+
+              <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Donations</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                <div class="modal-body">
+                  <table class="table table-bordered mb-5">
+                    <thead>
+                      <tr>
+                        <th scope="col">Number Donation</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Animal</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <?php
+                      include("../Service/DonationService.php");
+                        $donServ = new DonationService;
+                        $data = $donServ->afficherDon($_SESSION['mail']);
+                        for($i=0; $i < sizeof($data); $i++){
+                          echo '<tr>
+                                <th scope="row">'.($i+1).'</th>
+                                <td>'.$data[$i]['date'].'</td>
+                                <td>'.$data[$i]['montant'].'</td>
+                                <td>'.$data[$i]['type_animal'].'</td>
+                                </tr>';
+                        }
+                      ?>
+                    </tbody>
+                  </table>
+                </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-blue-grey" data-toggle="modal" data-target="#basicExampleModal">
+          Petition history
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Petitions</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                <table class="table table-bordered mb-5">
+                      <thead>
+                        <tr>
+                          <th scope="col">Number Petition</th>
+                          <th scope="col">Date</th>
+                          <th scope="col">Animal</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <?php
+                          include_once ('../Service/PetitionService.php');
+                          $petServ = new PetitionService;
+                          $data = $petServ->afficherPetitions($_SESSION['mail']);
+                          for($i=0; $i < sizeof($data); $i++){
+                            echo '<tr>
+                                  <th scope="row">'.($i+1).'</th>
+                                  <td>'.$data[$i]['date_signature'].'</td>
+                                  <td>'.$data[$i]['type_animal'].'</td>
+                                  </tr>';
+                          }
+                        ?>
+                      </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-md-5  offset-2 mb-4 ">
-          <?php
-          include_once ('../Service/UtilisateurService.php');
-            $userServ = new UtilisateurService;
-            $data = $userServ->rechercheUser($_SESSION['mail']);
-            echo  '<form class="text-center border border-light p-5" action="#!">
-                    <p class="h4 mb-4">Personal informations</p>
-                    <div class="form-row mb-4">
-                      <div class="col">
-                        <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name" value="'.$data['prenom'].'" disabled="disabled">
-                      </div>
-                    <div class="col">
-                        <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Last name" value="'.$data['nom'].'" disabled="disabled">
-                      </div>
-                    </div>
-                    <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail" value="'.$data['mail'].'" disabled="disabled">
-                    <input type="password" id="defaultRegisterFormPassword" class="form-control mb-4" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
-                    <input type="text" id="defaultRegisterPhonePassword" class="form-control mb-4" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock">
-                    <input type="text" id="defaultRegisterFormLastName" class="form-control mb-1" placeholder="Address">
-                    <input type="text" id="defaultRegisterFormLastName" class="form-control mb-4" placeholder="">
-                    <input type="text" id="defaultRegisterFormLastName" class="form-control mb-4" placeholder="Zip code">
-                    <input type="text" id="defaultRegisterFormLastName" class="form-control " placeholder="Country">
-                    <button class="btn btn-blue-grey my-4 btn-block" style="width: 125px;" type="submit">MODIFY</button>
-                  </form>';
-          ?>
-           </div>
+
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-blue-grey" data-toggle="modal" data-target="#centralModalLg">
+            Personal Informations
+          </button>
+
+          <!-- Central Modal Small -->
+            <div class="modal fade" id="centralModalLg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+              aria-hidden="true">
+
+            <!-- Change class .modal-sm to change the size of the modal -->
+            <div class="modal-dialog modal-lg" role="document">
+
+
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title w-100" id="myModalLabel">Personal informations</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                
+                    <?php
+                    include_once ('../Service/UtilisateurService.php');
+                      $userServ = new UtilisateurService;
+                      $data = $userServ->rechercheUser($_SESSION['mail']);
+                      echo  '<form class="text-center border border-light p-5" action="#!">
+                            
+                              <div class="form-row mb-4">
+                                <div class="col">
+                                  <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name" value="'.$data['prenom'].'" disabled="disabled">
+                                </div>
+                              <div class="col">
+                                  <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Last name" value="'.$data['nom'].'" disabled="disabled">
+                                </div>
+                              </div>
+                              <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail" value="'.$data['mail'].'" disabled="disabled">
+                              <input type="password" id="defaultRegisterFormPassword" class="form-control mb-4" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+                              <input type="text" id="defaultRegisterPhonePassword" class="form-control mb-4" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock">
+                              <input type="text" id="defaultRegisterFormLastName" class="form-control mb-1" placeholder="Address">
+                              <input type="text" id="defaultRegisterFormLastName" class="form-control mb-4" placeholder="">
+                              <input type="text" id="defaultRegisterFormLastName" class="form-control mb-4" placeholder="Zip code">
+                              <input type="text" id="defaultRegisterFormLastName" class="form-control " placeholder="Country">
+                              <button class="btn btn-blue-grey my-4 btn-block" style="width: 125px;" type="submit">MODIFY</button>
+                            </form>';
+                    ?>
+              
+                </div>
+           
+              </div>
+            </div>
+          </div>      
+        </div>
+      </div>
+      <!-- Central Modal Small -->
+
+          
         </div>
       </section>
     </div>
@@ -260,75 +344,75 @@
 		<!-- Footer -->
     <footer class="page-footer font-small blue-grey pt-4">
 
-<!-- Footer Elements -->
-<div class="container">
+	<!-- Footer Elements -->
+	<div class="container">
 
-<ul class="list-unstyled list-inline text-center">
-  <li class="list-inline-item">	
-    <div class="btn-group dropup">
-    <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">Get Involved</button>
-      <div class="dropdown-menu blue-grey">
-        <a class="dropdown-item blue-grey" href="donation-page.php">Make a Donation</a>
-        <a class="dropdown-item blue-grey " href="gorilla.php">Our fights</a>
-        <a class="dropdown-item blue-grey" href="petition.php">Petition</a>
-        <a class="dropdown-item blue-grey" href="shop_01.php">Shop</a>
-      </div>
-    </div>
-  </li>
+	<ul class="list-unstyled list-inline text-center">
+		<li class="list-inline-item">	
+			<div class="btn-group dropup">
+			<button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+				aria-haspopup="true" aria-expanded="false">Get Involved</button>
+				<div class="dropdown-menu blue-grey">
+					<a class="dropdown-item blue-grey" href="donation-page.php">Make a Donation</a>
+					<a class="dropdown-item blue-grey " href="gorilla.php">Our fights</a>
+					<a class="dropdown-item blue-grey" href="petition.php">Petition</a>
+					<a class="dropdown-item blue-grey" href="shop_01.php">Shop</a>
+				</div>
+			</div>
+		</li>
 
-  
-  <li class="list-inline-item">
-      <div class="btn-group dropup">
-        <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">About Save-Them</button>
-        
-        <div class="dropdown-menu blue-grey">
-          <a class="dropdown-item blue-grey" href="contactus.php">Contact Us</a>
-          <a class="dropdown-item blue-grey " href="#">Need Help</a>
-          <a class="dropdown-item blue-grey" href="#">Joint Save-Them</a>
-        </div>
-      </div>
-  </li>
-  <li class="list-inline-item">
-  <div class="btn-group dropup">
-        <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">Get Informed</button>
-      
-      <div class="dropdown-menu blue-grey">
-        <a class="dropdown-item blue-grey" href="#">Newsletter</a>
-        <a class="dropdown-item blue-grey " href="#">Us in the Press</a>
-        <a class="dropdown-item blue-grey" href="#">the Animals in Danger</a>
-      </div>
-    </div>
-  
-  </li>
-  <li class="list-inline-item">
-  <div class="btn-group dropup">
-      <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">Legal</button>
-      <div class="dropdown-menu blue-grey">
-        <a class="dropdown-item blue-grey" href="#">Cookies</a>
-        <a class="dropdown-item blue-grey " href="#">Privacy and Data Protection</a>
-        <a class="dropdown-item blue-grey" href="#">Terms & Conditions</a>
-    
-      </div>
-    </div>
-  </li>
-</ul>
-<!-- Social buttons -->
+		
+		<li class="list-inline-item">
+				<div class="btn-group dropup">
+					<button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">About Save-Them</button>
+					
+					<div class="dropdown-menu blue-grey">
+						<a class="dropdown-item blue-grey" href="contactus.php">Contact Us</a>
+						<a class="dropdown-item blue-grey " href="#">Need Help</a>
+						<a class="dropdown-item blue-grey" href="#">Joint Save-Them</a>
+					</div>
+				</div>
+		</li>
+		<li class="list-inline-item">
+		<div class="btn-group dropup">
+					<button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">Get Informed</button>
+				
+				<div class="dropdown-menu blue-grey">
+					<a class="dropdown-item blue-grey" href="#">Newsletter</a>
+					<a class="dropdown-item blue-grey " href="#">Us in the Press</a>
+					<a class="dropdown-item blue-grey" href="#">the Animals in Danger</a>
+				</div>
+			</div>
+		
+		</li>
+		<li class="list-inline-item">
+		<div class="btn-group dropup">
+				<button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">Legal</button>
+				<div class="dropdown-menu blue-grey">
+					<a class="dropdown-item blue-grey" href="#">Cookies</a>
+					<a class="dropdown-item blue-grey " href="#">Privacy and Data Protection</a>
+					<a class="dropdown-item blue-grey" href="#">Terms & Conditions</a>
+			
+				</div>
+			</div>
+		</li>
+	</ul>
+	<!-- Social buttons -->
 
-</div>
-<!-- Footer Elements -->
-  
-  
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2020 Copyright:
-      <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
-    </div>
-    <!-- Copyright -->
-  </footer>
-  <!--/.Footer-->
+
+
+		<!-- Footer Elements -->
+
+		<!-- Copyright -->
+		<div class="footer-copyright text-center py-3">© 2020 Copyright:
+		<a href="home.php"> Robert Fundation - Save-Them.com</a>
+		</div>
+		<!-- Copyright -->
+
+	</footer>
 
     <!-- SCRIPTS -->
     <!-- JQuery -->

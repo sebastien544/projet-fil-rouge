@@ -186,150 +186,120 @@ session_start();
 			</ul>
 		</div>
 	</nav>
-<!--/.Navbar -->
+	<!--/.Navbar -->
 
 		<!--Section: Contact v.2-->
-		<section class="mb-4">
+	<section class="mb-4">
 
-  		<!--Section heading-->
- 
-  		<!--Section description-->
-		<div class="texte">
-			<h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
-			<p class="text-center w-responsive mx-auto mb-5">We are a fundation in order to help species in danger from Africa, we think that you are able to help them via a petition or a donation.<br> if you have any question please contact us with the form below</p>
-			<p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
-				a matter of hours to help you.</p>
-		</div>
-	<div class="container">	
-		<div class="row justify-content-md-center">
+			<!--Section heading-->
+	
+			<!--Section description-->
+			<div class="texte">
+				<h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+				<p class="text-center w-responsive mx-auto mb-5">We are a fundation in order to help species in danger from Africa, we think that you are able to help them via a petition or a donation.<br> if you have any question please contact us with the form below</p>
+				<p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
+					a matter of hours to help you.</p>
+			</div>
+		<div class="container">	
+			<div class="row justify-content-md-center">
 
-		<!--Grid column-->
-		<div class="col-lg-8 mb-lg-0 col-md-8 mb-md-0 mb-5">
-			<form id="contact-form" name="contact-form" method="POST">
+			<!--Grid column-->
+			<div class="col-lg-8 mb-lg-0 col-md-8 mb-md-0 mb-5">
+				<form id="contact-form" name="contact-form" method="POST">
 
-				<!--Grid row-->
-				<div class="row">
-					<?php if(isset($er_name)){ ?>
-						<div class="alert alert-danger" role="alert"><?php echo $er_name ?></div>
-					<?php } ?>
-					<!--Grid column-->
-					<div class="col-lg-6 col-md-6">
-						<div class="md-form mb-0">
-							<input type="text" id="name" name="name" class="form-control" value="<?php if(isset($name)){ echo $name;} ?>">
-							<label for="name" class="">Your name</label>
-						</div>
-					</div>
-					<!--Grid column-->
-					<?php	if(isset($er_email)){ ?>
-					<div class="alert alert-danger" role="alert"><?php echo $er_email ?></div>
-					<?php	} ?>
-					<!--Grid column-->
-					<div class="col-md-6">
-						<div class="md-form mb-0">
-							<input type="text" id="email" name="email" class="form-control" value="<?php if(isset($email)){ echo $email;} ?>">
-							<label for="email" class="">Your email</label>
-						</div>
-					</div>
-					<!--Grid column-->
-				</div>
-				<!--Grid row-->
-					<?php	if(isset($er_subject)){ ?>
-						<div class="alert alert-danger" role="alert"><?php echo $er_subject ?></div>
-					<?php	}?>
-				<!--Grid row-->
-				<div class="row">
-					<div class="col-md-12">
-						<div class="md-form mb-0">
-							<input type="text" id="subject" name="subject" class="form-control" value="<?php if(isset($subject)){ echo $subject;} ?>">
-							<label for="subject" class="">Subject</label>
-						</div>
-					</div>
-				</div>
-				<!--Grid row-->
-
-				<!--Grid row-->
+					<!--Grid row-->
 					<div class="row">
-						<?php	if(isset($er_message)){ ?>
-							<div class="alert alert-danger" role="alert"><?php echo $er_message ?></div>
-						<?php	}?>
+						<?php if(isset($er_name)){ ?>
+							<div class="alert alert-danger" role="alert"><?php echo $er_name ?></div>
+						<?php } ?>
 						<!--Grid column-->
-						<div class="col-md-12">
-
-							<div class="md-form">
-								<textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" value="<?php if(isset($message)){ echo $message;} ?>"></textarea>
-								<label for="message">Your message</label>
+						<div class="col-lg-6 col-md-6">
+							<div class="md-form mb-0">
+								<input type="text" id="name" name="name" class="form-control" value="<?php if(isset($name)){ echo $name;} ?>">
+								<label for="name" class="">Your name</label>
 							</div>
-
+						</div>
+						<!--Grid column-->
+						<?php	if(isset($er_email)){ ?>
+						<div class="alert alert-danger" role="alert"><?php echo $er_email ?></div>
+						<?php	} ?>
+						<!--Grid column-->
+						<div class="col-md-6">
+							<div class="md-form mb-0">
+								<input type="text" id="email" name="email" class="form-control" value="<?php if(isset($email)){ echo $email;} ?>">
+								<label for="email" class="">Your email</label>
+							</div>
+						</div>
+						<!--Grid column-->
+					</div>
+					<!--Grid row-->
+						<?php	if(isset($er_subject)){ ?>
+							<div class="alert alert-danger" role="alert"><?php echo $er_subject ?></div>
+						<?php	}?>
+					<!--Grid row-->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="md-form mb-0">
+								<input type="text" id="subject" name="subject" class="form-control" value="<?php if(isset($subject)){ echo $subject;} ?>">
+								<label for="subject" class="">Subject</label>
+							</div>
 						</div>
 					</div>
-				<!--Grid row-->
-				<div class="text-center ">
-					<button type="submit" class="btn btn-primary btn btn-blue-grey" name="contact" >Send</button>
-				</div>
-					<div class="status"></div>
-			</form>		  
-		</div>
+					<!--Grid row-->
 
-		<!--Grid column-->
-		<div class="col-md-4 text-center">
-			<ul class="list-unstyled mb-0">
-				<li><i class="fas fa-map-marker-alt fa-2x"></i>
-					<p>Robert Fundation, Roubaix-Kigali </p>
-				</li>
+					<!--Grid row-->
+						<div class="row">
+							<?php	if(isset($er_message)){ ?>
+								<div class="alert alert-danger" role="alert"><?php echo $er_message ?></div>
+							<?php	}?>
+							<!--Grid column-->
+							<div class="col-md-12">
 
-				<li><i class="fas fa-phone mt-4 fa-2x"></i>
-					<p>08 36 65 65 65</p>
-				</li>
+								<div class="md-form">
+									<textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" value="<?php if(isset($message)){ echo $message;} ?>"></textarea>
+									<label for="message">Your message</label>
+								</div>
 
-				<li><i class="fas fa-envelope mt-4 fa-2x"></i>
-					<p>contact@robertfundation.com</p>
-				</li>
-			</ul>
-		</div>
-		<!--Grid column-->
+							</div>
+						</div>
+					<!--Grid row-->
+					<div class="text-center ">
+						<button type="submit" class="btn btn-primary btn btn-blue-grey" name="contact" >Send</button>
+					</div>
+						<div class="status"></div>
+				</form>		  
+			</div>
 
-		</div>
-	</div>	
+			<!--Grid column-->
+			<div class="col-md-4 text-center">
+				<ul class="list-unstyled mb-0">
+					<li><i class="fas fa-map-marker-alt fa-2x"></i>
+						<p>Robert Fundation, Roubaix-Kigali </p>
+					</li>
 
-</section>
+					<li><i class="fas fa-phone mt-4 fa-2x"></i>
+						<p>08 36 65 65 65</p>
+					</li>
 
-</div>
-<div class="container">
-  <div class="row">
-    <div class="col-12"></div>
-  </div>
+					<li><i class="fas fa-envelope mt-4 fa-2x"></i>
+						<p>contact@robertfundation.com</p>
+					</li>
+				</ul>
+			</div>
+			<!--Grid column-->
 
-  <div class="row">
-  	<div class="col-12"></div>
-  </div>
+			</div>
+		</div>	
 
-  <div class="row">
-  	<div class="col-12"></div>
-  </div>
+	</section>
 
-  <div class="row">
-  	<div class="col-12"></div>
-  </div>
 
-  <div class="row">
-  	<div class="col-12"></div>
-  </div>
-  <div class="row">
-    <div class="col-12"></div>
-  </div>
 
-  <div class="row">
-  	<div class="col-12"></div>
-  </div>
-
-  <div class="row">
-  	<div class="col-12"></div>
-  </div>
   </div>
 </div>
 
 		<!-- Footer -->
-<footer class="page-footer font-small blue-grey pt-4">
+	<footer class="page-footer fixed-bottom font-small blue-grey pt-4">
 
 	<!-- Footer Elements -->
 	<div class="container">
@@ -391,11 +361,11 @@ session_start();
 
 
 
-<!-- Footer Elements -->
+		<!-- Footer Elements -->
 
 		<!-- Copyright -->
 		<div class="footer-copyright text-center py-3">© 2020 Copyright:
-			<a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+		<a href="home.php"> Robert Fundation - Save-Them.com</a>
 		</div>
 		<!-- Copyright -->
 
