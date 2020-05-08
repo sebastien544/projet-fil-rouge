@@ -1,25 +1,4 @@
-function signed(){
-    $.ajax({
-        url:'petitionController.php',
-        type:'POST',
-        data: "action=afficherPet",
-        success : function(data){
-            response = JSON.parse(data)
-            if(response.status == false){
-                
-            }else{
-                for(i=0; i<response.length; i++){
-                    $('#'+response[i].id_petition+'').attr('disabled','disabled')
-                    $('#'+response[i].id_petition+'').attr('value','SIGNED')
-                }
-            }
-    
-        },
-        error : function(xhr, message, status){
-            alert("Erreur !!");
-        }
-    });
-}
+
 
 $(document).ready(function()
 {
@@ -27,8 +6,7 @@ $(document).ready(function()
         action:"affichage"
     });
 
-   signed();
-    
+   
 });
 
 $("#deconnection").click(function(){
@@ -48,6 +26,7 @@ $("#deconnection").click(function(){
 
                 $('.signPet').removeAttr('disabled')
                 $('.signPet').attr('value','SIGN')
+                $('#nbreItems').empty()
                 
                 
         },
@@ -65,13 +44,22 @@ $('#loginDiv').on('submit', 'form', function(event){
         data: $( this ).serialize(),
         success : function(data){
             response = JSON.parse(data)
-            if(response.success){
+            if(response.success)
+            {
                 $("#loginDiv").load('Connexion.php',{
                     action:"affichage"
                 });
+                
+                $('#cart').load('shopController.php',{
+                    action:"afficher"
+                });
+
+                nbreItems();
+                
                 $('.close').click();
-                signed();
-            }else{
+                // signed();
+            }else
+            {
                 $('#warning1').attr('class','text-center alert alert-dismissible alert-danger')
                 h = $('<h4>');
                 h.attr('class', 'alert-heading');
@@ -87,7 +75,6 @@ $('#loginDiv').on('submit', 'form', function(event){
                 b.attr('data-dismiss','alert')
                 b.text('X')
                 $('#warning1').append(b);
-
             }
         },
 
@@ -133,8 +120,8 @@ function btn(id){
     });
 }
 
-
-function bouton(idPetition){
+function bouton(idPetition)
+{
     $.ajax({
         url:'formulaire_petition.php',
         type:'POST',
@@ -146,6 +133,4 @@ function bouton(idPetition){
     });
 }
 
-function coucou(){
-    alert("coucou")
-}
+

@@ -1,6 +1,6 @@
 <?php
 include_once ('../Model/Utilisateur.php');
-include_once ('Animal.php');
+
 
 class Donation {
 
@@ -8,12 +8,11 @@ class Donation {
         private $montant;
         private $frequence;
         private $user;
-        private $animal;
+        private $idAnimal;
 
         public function __construct()
         {
                 $this->user = new Utilisateur();
-                $this->animal = new Animal();
         }
 
         /**
@@ -96,22 +95,25 @@ class Donation {
                 return $this;
         }
 
+       
+
+
         /**
-         * Get the value of animal
+         * Get the value of idAnimal
          */ 
-        public function getAnimal()
+        public function getIdAnimal()
         {
-                return $this->animal;
+                return $this->idAnimal;
         }
 
         /**
-         * Set the value of animal
+         * Set the value of idAnimal
          *
          * @return  self
          */ 
-        public function setAnimal($animal)
+        public function setIdAnimal($idAnimal)
         {
-                $this->animal = $animal;
+                $this->idAnimal = $idAnimal;
 
                 return $this;
         }

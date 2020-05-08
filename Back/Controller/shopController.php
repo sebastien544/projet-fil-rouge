@@ -45,6 +45,17 @@ include_once ('../Service/PanierService.php');
          $panierServ->updateQuantity($_POST['id'], $_SESSION['mail'], $quantity);
     }
 
+    if(isset($_SESSION['mail']) && isset($_GET['action']) && $_GET['action'] == 'compter')
+    {
+        $data = $panierServ->afficherPanier($_SESSION['mail']);
+        $total = 0;
+        for($i=0;$i<sizeof($data);$i++)
+        {
+            $total += 1 * $data[$i]['quantity'];
+        }
+        echo $total;
+    }
+
     if(isset($_SESSION['mail'])){
         if(isset($_POST['action']) && ($_POST['action'] == 'afficher' || $_POST['action'] == 'supprimer')){
             $data = $panierServ->afficherPanier($_SESSION['mail']);

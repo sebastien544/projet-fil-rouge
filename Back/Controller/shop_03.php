@@ -50,7 +50,7 @@
         </ul>
       
         <ul class="navbar-nav ml-auto nav-flex-icons">
-        <a class="btn-floating btn-lg" title="Cart"  data-toggle="modal" data-target="#modalCart"><span style="color: white"><i class="fas fa-shopping-cart"></i></span></a>
+        <a class="btn-floating btn-lg" title="Cart"  data-toggle="modal" data-target="#modalCart"><span style="color: white"><span style="font-size:0.6em;" id="nbreItems"></span><i class="fas fa-shopping-cart"></i></span></a>
       <!-- Modal: modalCart -->
       <div class="modal fade" id="modalCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
@@ -93,26 +93,23 @@
             </div>
             </div>
           </div>
-
-            <a class="btn-floating btn-lg " title="Logout" id="deconnection"><span style="color: white"><i class="fas fa-sign-out-alt"></i></span></a>
-                <!--/Dropdown primary-->
-              <li class="nav-item dropdown"  >
-                <a class="nav-link dropdown-toggle" title="Login or register" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">
-                  <i id="test" class="fas fa-user"></i>
-                </a>
-                <div  class="dropdown-menu dropdown-menu-lg-right dropdown-menu-sm-left dropdown-default"  aria-labelledby="navbarDropdownMenuLink-333">
-                <div id="warning1"></div>
-                
-                <div id="loginDiv"></div>
-                </div>
-                
-                </li>
+          <a class="btn-floating btn-lg " title="Logout" id="deconnection"><span style="color: white"><i class="fas fa-sign-out-alt"></i></span></a>
+          <!--/Dropdown primary-->
+          <li class="nav-item dropdown"  >
+            <a class="nav-link dropdown-toggle" title="Login or register" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i id="test" class="fas fa-user"></i>
+            </a>
+            <div  class="dropdown-menu dropdown-menu-lg-right dropdown-menu-sm-left dropdown-default"  aria-labelledby="navbarDropdownMenuLink-333">
+              <div id="warning1"></div>
+              <div id="loginDiv"></div>
+            </div>
+          </li>
         </ul>
         </div>
       </nav>
-  <!--/.Navbar -->
-    <div class="row">
+      <div class="position-fixed" id="success" style="z-index:2;"></div>
+      <div class="row">
 
       <!-- Grid column -->
       <div class="col-lg-4 col-sm-12">
@@ -244,8 +241,7 @@
     
           <!--Card image-->
           <div class="view view-cascade overlay">
-            <img src="https://images.pexels.com/photos/218444/pexels-photo-218444.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img-top"
-              alt="narrower">
+            <img src="https://images.pexels.com/photos/218444/pexels-photo-218444.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img-top" alt="narrower">
             
           </div>
           <!--/.Card image-->
@@ -267,34 +263,33 @@
       </div>
       <!-- Grid column -->
       <div class="col-lg-4 col-sm-12">
-    
-          <!--Card Narrower-->
-          <div class="card card-cascade narrower">
-      
-            <!--Card image-->
-            <div class="view view-cascade overlay">
-              <img src="https://images.pexels.com/photos/3185223/pexels-photo-3185223.jpeg?cs=srgb&dl=femme-brouiller-afficher-shopping-3185223.jpg&fm=jpg" class="card-img-top"
-                alt="narrower">
-              
-            </div>
-            <!--/.Card image-->
-      
-            <!--Card content-->
-            <div class="card-body card-body-cascade">
-              <h5 class="blue-grey-text"><i class="fas fa-hippo"></i> Shop</h5>
-              <!--Title-->
-              <h4 class="card-title">Tote Bags</h4>
-              <!--Text-->
-              <p class="card-text">Our selection of tote bags <br> 9.99 pts</p>
-              <a id="12" class="add btn btn-unique btn btn-blue-grey">Add to Basket</a>
-            </div>
-            <!--/.Card content-->
+        <!--Card Narrower-->
+        <div class="card card-cascade narrower">
+          <!--Card image-->
+          <div class="view view-cascade overlay">
+            <img src="https://images.pexels.com/photos/3185223/pexels-photo-3185223.jpeg?cs=srgb&dl=femme-brouiller-afficher-shopping-3185223.jpg&fm=jpg" class="card-img-top"
+              alt="narrower">
           </div>
-          <!--/.Card Narrower-->
+          <!--/.Card image-->
+          <!--Card content-->
+          <div class="card-body card-body-cascade">
+            <h5 class="blue-grey-text"><i class="fas fa-hippo"></i> Shop</h5>
+            <!--Title-->
+            <h4 class="card-title">Tote Bags</h4>
+            <!--Text-->
+            <p class="card-text">Our selection of tote bags <br> 9.99 pts</p>
+            <a id="12" class="add btn btn-unique btn btn-blue-grey">Add to Basket</a>
+          </div>
+          <!--/.Card content-->
         </div>
-    </div>  
- 		<!-- Footer -->
-     <footer class="page-footer font-small blue-grey pt-4">
+        <!--/.Card Narrower-->
+        </div>
+      </div> 
+      <div class="row"> 
+        <a  class="btn btn-unique btn btn-blue-grey mx-auto">See More<i class="ml-2 fas fa-arrow-down"></i></a>
+      </div>
+ 		  <!-- Footer -->
+      <footer class="page-footer font-small blue-grey pt-4">
 
 <!-- Footer Elements -->
 <div class="container">
@@ -354,7 +349,6 @@
 </ul>
 
 </div>
-<!-- Footer Elements -->
 
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">© 2020 Copyright:

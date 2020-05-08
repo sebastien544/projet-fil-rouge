@@ -70,7 +70,7 @@
 				</ul>
 			
 		<ul class="navbar-nav ml-auto nav-flex-icons">
-				<a class="btn-floating btn-lg" title="Cart"  data-toggle="modal" data-target="#modalCart"><span style="color: white"><i class="fas fa-shopping-cart"></i></span></a>
+				<a class="btn-floating btn-lg" title="Cart"  data-toggle="modal" data-target="#modalCart"><span style="color: white"><span style="font-size:0.6em;" id="nbreItems"></span><i class="fas fa-shopping-cart"></i></span></a>
 			<!-- Modal: modalCart -->
 			<div class="modal fade" id="modalCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
 						aria-hidden="true">
@@ -119,7 +119,7 @@
 							<li class="nav-item dropdown"  >
 								<a class="nav-link dropdown-toggle" title="Login or register" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
 									aria-haspopup="true" aria-expanded="false">
-									<i class="fas fa-user"></i>
+									<i id="test" class="fas fa-user"></i>
 								</a>
 								<div class="dropdown-menu dropdown-menu-lg-right dropdown-menu-sm-left dropdown-default"  aria-labelledby="navbarDropdownMenuLink-333">
 								<div id="warning1"></div>
@@ -132,7 +132,7 @@
 			</div>
 		</nav>
     
-    
+    <div class="position-fixed card" id="success" style="z-index:2;width:400px;"></div>
     <div class="container-fluid" style="background-image: url(img/gorilla.jpeg);background-size: cover; height: 100%;background-position: center;">
       <div class="row">
         <div class="offset-md-2 col-12-sm col-md-4 text-white" style="margin-top: 200px;">
@@ -154,7 +154,7 @@
             <option>Monthly</option>
           </select>
           <h6 class="mt-4">Animal</h6>
-          <select class="form-control mb-4 font-weight-bold" name="animal">
+          <select id="animal" class="form-control mb-4 font-weight-bold" name="animal">
             <option>Gorilla</option>
             <option>Elephant</option>
             <option>Chimpanze</option>
@@ -236,20 +236,11 @@
     <script type="text/javascript" src="js/popper.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/mdb.min.js"></script>
-	
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.js"
-	integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
-	crossorigin="anonymous"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<!-- Your custom scripts (optional) -->
-	 <script type="text/javascript" src="js/script.js"></script>
-  <!-- <script type="text/javascript" src="js/shop.js"></script>  -->
-  <script type="text/javascript" src="js/donation.js"></script>
-
-    <script type="text/javascript">
-   
-    </script>
-  
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.js" integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/shop.js"></script> 
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/donation.js"></script>
+    <script type="text/javascript"></script>
   </body>
- 
 </html>

@@ -2,18 +2,30 @@ function message(){
     $('#test').click()
     $('#warning1').empty();
     div = $('<div>')
-    div.attr('class','text-center alert alert-dismissible alert-success')
+    div.attr('class','alert alert-dismissible alert-info')
     p = $('<p>');
-    p.attr('class', 'mb-0')
+    p.attr('class', 'mb-0 text-center')
     p.text('You must be connected');
     div.append(p);
-    b = $('<button>')
-    b.attr('type','button')
-    b.attr('class','close')
-    b.attr('data-dismiss','alert')
-    b.html('&times;')
-    div.append(b);
     $('#warning1').append(div);
+}
+
+// $(window).click(function (){
+//     $('#waring1').remove
+// })
+
+function messageSuccess()
+{
+    div = $('<div id="alert" class="alert alert-success">')
+    div.html('The product has been succefully added to cart')
+    $('#success').append(div)
+}
+
+function nbreItems()
+{
+    $.get("shopController.php?action=compter", function(data, status){
+        $('#nbreItems').html(data);
+    });
 }
 
 function recuperer(){
@@ -35,6 +47,7 @@ function remove(val){
        action:"supprimer",
        id:val
     });
+    nbreItems();
 }
 
 function updateQuantity(id,idInput,role){
@@ -48,7 +61,8 @@ function updateQuantity(id,idInput,role){
             }else{
                 val = parseInt(idInput.value) - 1
             }
-            $('#'+idInput.id+'').attr('value', val)
+            $('#'+idInput.id+'').attr('value', val);
+            nbreItems();
         },
         error : function(xhr, message, status){
             alert("Erreur !!");
@@ -56,10 +70,19 @@ function updateQuantity(id,idInput,role){
     });
 }
 
-$('#cart').load('shopController.php',{
-    action:"afficher"
+
+
+
+$(document).ready(function(){
+    $('#cart').load('shopController.php',{
+        action:"afficher"
+    });
+    nbreItems();
 });
 
+$(window).mousemove(function (){
+    $('#alert').remove();
+});
 
 
 $('.add').click(function (e){
@@ -67,12 +90,16 @@ $('.add').click(function (e){
         url:'shopController.php',
         type:'POST',
         data: 'id='+$(this).attr('id')+'&action=ajouter',
-        success : function(data){
+        success : function(data)
+        {
             response = JSON.parse(data)
             if(response.status == true){
                 $('#cart').load('shopController.php',{
                     action:"afficher"
                 });
+                nbreItems();
+                messageSuccess();
+
             }else{
                 message();
             }

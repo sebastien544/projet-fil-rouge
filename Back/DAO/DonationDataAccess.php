@@ -15,8 +15,7 @@ class DonationDataAccess extends ConnexionDDB
     function ajoutDon(Donation $don)
     {
         $db = $this->connectDatabase();
-        $db->query('INSERT INTO don VALUES (null,'.$don->getAnimal()->getId().')');
-        $stmt = $db->prepare('INSERT INTO effectuer VALUES ((SELECT MAX(id_don) FROM don),'.$don->getUser()->getId().',"'.$don->getDate().'", ?,"'.$don->getFrequence().'")');
+        $stmt = $db->prepare('INSERT INTO don VALUES (null, ?,"'.$don->getDate().'","'.$don->getFrequence().'",'.$don->getUser()->getId().','.$don->getIdAnimal().')');
         $montant = $don->getMontant();
         $stmt->bind_param("i", $montant);
         $stmt->execute();
@@ -32,9 +31,25 @@ class DonationDataAccess extends ConnexionDDB
     function afficherDon(string $mail) : array
     {
         $db = $this->connectDatabase();
-        $rs = $db->query('SELECT e.date, e.montant_don, a.type_animal FROM utilisateur as u INNER JOIN effectuer as e on u.id_utilisateur = e.id_utilisateur INNER JOIN don as d on e.id_don = d.id_don INNER JOIN animal as a on d.id_animal = a.id_animal WHERE u.mail = "'.$mail.'"');
+        $rs = $db->query('SELECT d.date, d.montant_don, a.type_animal FROM utilisateur as u  INNER JOIN don as d on u.id_utilisateur = d.id_utilisateur INNER JOIN animal as a on d.id_animal = a.id_animal WHERE u.mail = "'.$mail.'"');
         $data = mysqli_fetch_all($rs, MYSQLI_ASSOC);
         $db->close();
+        return $data;
+    }
+
+    /**
+     * Recherche un animal 
+     *
+     * @param string $typeAnimal
+     * @return array
+     */
+    public function findAnimalBy(string $typeAnimal) :  array
+    {
+        $db = $this->connectDatabase();
+        $rs = $db->query('SELECT * FROM animal WHERE type_animal = "'.$typeAnimal.'"');
+        $data = mysqli_fetch_assoc($rs);
+        $db->close();
+        $rs->free();
         return $data;
     }
 }
