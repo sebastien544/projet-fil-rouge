@@ -18,6 +18,7 @@
 	<!-- Your custom styles (optional) -->
 	<link rel="stylesheet" href="css/shop.css">
 	
+	
 	</head>
 	<body>
 	<!--Navbar -->
@@ -111,10 +112,11 @@
 			</div>
 		</nav>
 <!--/.Navbar -->
+<div class="container-fluid">
   <div class="row">
 
     <!-- Grid column -->
-    <div class="col-lg-6 col-sm-12">
+    <div class="col-xl-6 col-md-12 align-self-center">
   
       <!--Card Narrower-->
       <div class="card card-cascade narrower">
@@ -145,7 +147,7 @@
     <!-- Grid column -->
   
     <!-- Grid column -->
-    <div class="col-lg-6 col-sm-12">
+    <div class="col-xl-6  col-md-12 align-self-center">
   
       <!--Card Narrower-->
       <div class="card card-cascade narrower">
@@ -174,14 +176,12 @@
   
     </div>
     <!-- Grid column -->
-  
-  
-  
-  </div>
-  <!-- Grid row -->
 
-			<!-- Footer -->
-			<footer class="page-footer font-small blue-grey pt-4">
+  </div>
+  
+</div>  
+<!-- Footer -->
+<footer class="page-footer font-small blue-grey pt-4">
 
 <!-- Footer Elements -->
 <div class="container">
