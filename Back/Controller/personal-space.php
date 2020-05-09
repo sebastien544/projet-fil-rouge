@@ -194,7 +194,7 @@
                     echo '<tr>
                           <th scope="row">'.($i+1).'</th>
                           <td>'.$data[$i]['date'].'</td>
-                          <td>'.$data[$i]['montant_don'].'</td>
+                          <td>'.$data[$i]['montant'].'</td>
                           <td>'.$data[$i]['type_animal'].'</td>
                           </tr>';
                   }

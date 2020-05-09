@@ -9,6 +9,7 @@ class Donation {
         private $frequence;
         private $user;
         private $idAnimal;
+        private $donationDay;
 
         public function __construct()
         {
@@ -114,6 +115,26 @@ class Donation {
         public function setIdAnimal($idAnimal)
         {
                 $this->idAnimal = $idAnimal;
+
+                return $this;
+        }
+
+        /**
+         * Get the value of donationDay
+         */ 
+        public function getDonationDay()
+        {
+                return $this->donationDay;
+        }
+
+        /**
+         * Set the value of donationDay
+         *
+         * @return  self
+         */ 
+        public function setDonationDay($donationDay)
+        {
+                $this->donationDay = $donationDay;
 
                 return $this;
         }

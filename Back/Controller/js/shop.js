@@ -21,6 +21,9 @@ function messageSuccess()
     $('#success').append(div)
 }
 
+/**
+ * Calcul de nombre d'items dans le panier
+ */
 function nbreItems()
 {
     $.get("shopController.php?action=compter", function(data, status){
@@ -28,7 +31,11 @@ function nbreItems()
     });
 }
 
-function recuperer(){
+/**
+ * Recupère les infos de l'utilisateur
+ */
+function recuperer()
+{
     $.ajax({
        url:'shopController.php',
        type:'POST',
@@ -42,6 +49,10 @@ function recuperer(){
     })
 }
 
+/**
+ * Supprime un item du panier
+ * @param {*} val 
+ */
 function remove(val){
     $('#cart').load('shopController.php',{
        action:"supprimer",
@@ -50,6 +61,12 @@ function remove(val){
     nbreItems();
 }
 
+/**
+ * Met à jour la quantité d'un item dans le panier
+ * @param {*} id 
+ * @param {*} idInput 
+ * @param {*} role 
+ */
 function updateQuantity(id,idInput,role){
     $.ajax({
         url:'shopController.php',
@@ -70,9 +87,9 @@ function updateQuantity(id,idInput,role){
     });
 }
 
-
-
-
+/**
+ * Affiche le panier
+ */
 $(document).ready(function(){
     $('#cart').load('shopController.php',{
         action:"afficher"
@@ -80,11 +97,9 @@ $(document).ready(function(){
     nbreItems();
 });
 
-$(window).mousemove(function (){
-    $('#alert').remove();
-});
-
-
+/**
+ * Ajoute un item dans le panier
+ */
 $('.add').click(function (e){
     $.ajax({
         url:'shopController.php',
@@ -99,6 +114,7 @@ $('.add').click(function (e){
                 });
                 nbreItems();
                 messageSuccess();
+                setTimeout(function (){ $('#alert').remove();}, 3000)
 
             }else{
                 message();
@@ -110,6 +126,9 @@ $('.add').click(function (e){
     });
 });
 
+/**
+ * Applique la réduction correspondante au code promo
+ */
 $('#redeem').click(function(){
     var val = $('#inputCode').val()
     $.ajax({

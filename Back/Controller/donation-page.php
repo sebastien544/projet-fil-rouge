@@ -14,6 +14,7 @@
     <link href="css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
     <link href="css/style.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     <style type="text/css">
       @media (max-width: 740px) {
         html,
@@ -149,10 +150,12 @@
           <button class="btn btn-blue-grey btn-sm" style="width: 70px; height: 40px;" type="button">500</button>
           <input class="form-control font-weight-bold" type=number placeholder="Amount" id="amount" name="amount">
           <h6 class="mt-4">Frequency</h6>
-          <select class="form-control mb-4 font-weight-bold" name="frequency">
-            <option>One time</option>
-            <option>Monthly</option>
-          </select>
+          <div id="div2">
+            <select id="selectAnimal" class="form-control font-weight-bold" name="frequency">
+              <option>One time</option>
+              <option>Monthly</option>
+            </select>
+          </div>
           <h6 class="mt-4">Animal</h6>
           <select id="animal" class="form-control mb-4 font-weight-bold" name="animal">
             <option>Gorilla</option>
@@ -162,9 +165,13 @@
             <option>Tiger</option>
           </select>
           <input id="submit" class=" btn-block btn-blue-grey" type="submit" placeholder="Submit">
+          
         </form>
+        
       </div>
+      
     </div>
+    
     
 
 
@@ -241,6 +248,5 @@
     <script type="text/javascript" src="js/shop.js"></script> 
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/donation.js"></script>
-    <script type="text/javascript"></script>
   </body>
 </html>

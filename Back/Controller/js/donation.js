@@ -7,6 +7,16 @@ $("button").click(function(e){
 //     $("#myModal").show("slow");
 // });
 
+$('#selectAnimal').change(function (){
+    if($('#selectAnimal').val() == 'Monthly'){
+        $('#div2').attr('class', 'd-flex')
+        input = $('<input class="ml-1 form-control" name="donationDay" type="number" min="1" max="15" id="wDay" placeholder="withdrawal day">')
+        $('#div2').append(input)
+    }else{
+        $('#wDay').remove()
+    }
+})
+
 function donSuccess(animal)
 {
     div = $('<div id="thankYou" class="card-body">')

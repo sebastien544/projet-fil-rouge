@@ -55,9 +55,9 @@ $('#loginDiv').on('submit', 'form', function(event){
                 });
 
                 nbreItems();
-                
+
                 $('.close').click();
-                // signed();
+                signed();
             }else
             {
                 $('#warning1').attr('class','text-center alert alert-dismissible alert-danger')
