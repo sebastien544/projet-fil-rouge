@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Material Design for Bootstrap</title>
+  <title>Save-them.com</title>
   <!-- MDB icon -->
   <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
   <!-- Font Awesome -->
@@ -18,9 +18,9 @@
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="css/shop.css">
 </head>
-  <body>
+<body>
     <!--Navbar -->
-    <nav class="mb-1 navbar navbar-expand-lg navbar-dark blue-grey">
+  <nav class="mb-1 navbar navbar-expand-lg navbar-dark blue-grey">
         <a class="navbar-brand" href="gorilla.php">Save-Them.com</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
           aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
@@ -107,7 +107,7 @@
           </li>
         </ul>
         </div>
-      </nav>
+  </nav>
       <div class="position-fixed" id="success" style="z-index:2;"></div>
       <div class="row">
 
@@ -287,16 +287,6 @@
             <!--/.Card content-->
           </div>
           <!--/.Card image-->
-          <!--Card content-->
-          <div class="card-body card-body-cascade">
-            <h5 class="blue-grey-text"><i class="fas fa-hippo"></i> Shop</h5>
-            <!--Title-->
-            <h4 class="card-title">Tote Bags</h4>
-            <!--Text-->
-            <p class="card-text">Our selection of tote bags <br> 9.99 pts</p>
-            <a id="12" class="add btn btn-unique btn btn-blue-grey">Add to Basket</a>
-          </div>
-          <!--/.Card content-->
         </div>
         <!--/.Card Narrower-->
         </div>
@@ -304,75 +294,75 @@
       <div class="row"> 
         <a  class="btn btn-unique btn btn-blue-grey mx-auto">See More<i class="ml-2 fas fa-arrow-down"></i></a>
       </div>
- 		  <!-- Footer -->
-      <footer class="page-footer font-small blue-grey pt-4">
+       <!-- Footer -->
+<footer class="page-footer font-small blue-grey pt-4">
 
-<!-- Footer Elements -->
-<div class="container">
+    <!-- Footer Elements -->
+    <div class="container">
 
-<ul class="list-unstyled list-inline text-center">
-  <li class="list-inline-item">	
-    <div class="btn-group dropup">
-    <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">Get Involved</button>
-      <div class="dropdown-menu blue-grey">
-        <a class="dropdown-item blue-grey" href="donation-page.php">Make a Donation</a>
-        <a class="dropdown-item blue-grey " href="gorilla.php">Our fights</a>
-        <a class="dropdown-item blue-grey" href="petition.php">Petition</a>
-        <a class="dropdown-item blue-grey" href="shop_01.php">Shop</a>
-      </div>
-    </div>
-  </li>
-
-  
-  <li class="list-inline-item">
-      <div class="btn-group dropup">
+    <ul class="list-unstyled list-inline text-center">
+      <li class="list-inline-item">	
+        <div class="btn-group dropup">
         <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">About Save-Them</button>
-        
-        <div class="dropdown-menu blue-grey">
-          <a class="dropdown-item blue-grey" href="contactus.php">Contact Us</a>
-          <a class="dropdown-item blue-grey " href="#">Need Help</a>
-          <a class="dropdown-item blue-grey" href="#">Joint Save-Them</a>
+            aria-haspopup="true" aria-expanded="false">Get Involved</button>
+          <div class="dropdown-menu blue-grey">
+            <a class="dropdown-item blue-grey" href="donation-page.php">Make a Donation</a>
+            <a class="dropdown-item blue-grey " href="gorilla.php">Our fights</a>
+            <a class="dropdown-item blue-grey" href="petition.php">Petition</a>
+            <a class="dropdown-item blue-grey" href="shop_01.php">Shop</a>
+          </div>
         </div>
-      </div>
-  </li>
-  <li class="list-inline-item">
-  <div class="btn-group dropup">
-        <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">Get Informed</button>
+      </li>
+
       
-      <div class="dropdown-menu blue-grey">
-        <a class="dropdown-item blue-grey" href="#">Newsletter</a>
-        <a class="dropdown-item blue-grey " href="#">Us in the Press</a>
-        <a class="dropdown-item blue-grey" href="#">the Animals in Danger</a>
-      </div>
-    </div>
-  
-  </li>
-  <li class="list-inline-item">
-  <div class="btn-group dropup">
-      <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">Legal</button>
-      <div class="dropdown-menu blue-grey">
-        <a class="dropdown-item blue-grey" href="#">Cookies</a>
-        <a class="dropdown-item blue-grey " href="#">Privacy and Data Protection</a>
-        <a class="dropdown-item blue-grey" href="#">Terms & Conditions</a>
-    
-      </div>
-    </div>
-  </li>
-</ul>
+      <li class="list-inline-item">
+          <div class="btn-group dropup">
+            <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">About Save-Them</button>
+            
+            <div class="dropdown-menu blue-grey">
+              <a class="dropdown-item blue-grey" href="contactus.php">Contact Us</a>
+              <a class="dropdown-item blue-grey " href="#">Need Help</a>
+              <a class="dropdown-item blue-grey" href="#">Joint Save-Them</a>
+            </div>
+          </div>
+      </li>
+      <li class="list-inline-item">
+      <div class="btn-group dropup">
+            <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">Get Informed</button>
+          
+          <div class="dropdown-menu blue-grey">
+            <a class="dropdown-item blue-grey" href="#">Newsletter</a>
+            <a class="dropdown-item blue-grey " href="#">Us in the Press</a>
+            <a class="dropdown-item blue-grey" href="#">the Animals in Danger</a>
+          </div>
+        </div>
+      
+      </li>
+      <li class="list-inline-item">
+      <div class="btn-group dropup">
+          <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">Legal</button>
+          <div class="dropdown-menu blue-grey">
+            <a class="dropdown-item blue-grey" href="#">Cookies</a>
+            <a class="dropdown-item blue-grey " href="#">Privacy and Data Protection</a>
+            <a class="dropdown-item blue-grey" href="#">Terms & Conditions</a>
+        
+          </div>
+        </div>
+      </li>
+    </ul>
 
-</div>
-
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2020 Copyright:
-      <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
     </div>
-    <!-- Copyright -->
 
-  </footer>
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+          <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+
+</footer>
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/popper.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -384,5 +374,5 @@
     <!-- Your custom scripts (optional) -->
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/shop.js"></script>
-  </body>
+</body>
 </html>
