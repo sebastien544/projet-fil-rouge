@@ -163,3 +163,49 @@ $("#checkout").on( "submit", function( event ) {
     });
 });
 
+function extractUrlParams(){
+    var t = location.search.substring(1).split('?');
+    var s = t[0].substring().split('&');
+    var f = [];
+    for (var i=0; i<s.length; i++){
+        var x = s[ i ].split('=');
+        f[x[0]]=x[1];
+    }
+    return f;
+}
+
+
+
+$(document).ready(function(){
+    data= extractUrlParams()
+    $("#pagination").load('shopController.php?action=pagination&categorie='+data['categorie']+'')
+});
+
+$(document).ready(function(){
+    afficherProduit();
+});
+
+function afficherProduit(categorie){
+    data= extractUrlParams()
+    
+    $("#produit").load('shopController.php?action=afficherProduit&page='+data['page']+'&categorie='+data['categorie']+'')
+};
+
+
+function passage(){
+    $.get('shopController.php?action=numberPage', function(response){
+        var numberPage = response;
+        data= extractUrlParams();
+        if(parseInt(data['page'])<numberPage){
+            data1= parseInt(data['page'])+1;
+        }
+        
+        if(parseInt(data['page'])>1){
+            data2= parseInt(data['page'])-1;
+        }
+        $('#suivant').attr('href','shop_02.php?page='+data1+'')
+
+        $('#precedent').attr('href','shop_02.php?page='+data2+'')
+    });
+}
+

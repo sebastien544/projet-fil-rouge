@@ -122,7 +122,7 @@
 
                   <!--email-->
                   <div class="md-form mb-5">
-                    <input type="text" name="email" id="email" class="form-control" placeholder="youremail@example.com">
+                    <input type="email" name="email" id="email" class="form-control" placeholder="youremail@example.com">
                     <label for="email" class="">Email (optional)</label>
                   </div>
 
@@ -164,7 +164,7 @@
                         <div class="col-lg-4 col-md-6 mb-4">
 
                           <label for="zip">Post Code</label>
-                          <input name="zip" type="text" class="form-control" id="zip" placeholder="ex: 75000" >
+                          <input name="zip" type="number" class="form-control" id="zip" placeholder="ex: 75000" >
                           <div class="invalid-feedback">
                             Zip code required.
                           </div>

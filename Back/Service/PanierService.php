@@ -48,9 +48,25 @@ include_once ('../Model/Utilisateur.php');
         {
             $this->dao->rechercheCodePromo($codePromo);
         }
+        
+        public function afficherProduit($pageActuelle, $categorie)
+        {
+          $data= $this->dao->afficherProduit($pageActuelle, $categorie);
+          return $data;
 
+        }
+
+        public function afficherNumberPage($categorie)
+        {
+            $data= $this->dao->afficherNumberPage($categorie);
+            $numberPage= ceil($data[0]['count(id_produit)']/6);
+            return $numberPage;
+        }
        
     }
+
+
+
 
 
     

@@ -85,3 +85,68 @@ include_once ('../Service/PanierService.php');
     }else{
         echo "";
     }
+
+    if(isset($_GET['action']) && $_GET['action']== 'afficherProduit'){
+
+        $data = $panierServ->afficherProduit($_GET['page'],$_GET['categorie']);
+        
+            $count2=ceil(sizeof($data)/3);
+              
+            for($j=0; $j<$count2;$j++){
+                echo' <div class="row">';
+                $i=0;
+                 $count=ceil(sizeof($data)/2);
+                
+                
+                    if($j== 1){
+                        $i=3;
+                        $count=6;
+                    }
+                        for($i; $i<$count; $i++){
+                            echo '
+                            <div class="col-xl-4 col-lg-6 col-sm-12">
+                        
+                            
+                                <div class="card card-cascade narrower">
+                                    <div class="view view-cascade overlay">
+                                        <img src="'.$data[$i]['photo'].'" class="card-img-top"
+                                        alt="narrower">    
+                                    </div>
+                                    <div class="card-body card-body-cascade">
+                                        <h5 class="blue-grey-text"><i class="fas fa-hippo"></i> Shop</h5>
+                                    
+                                        <h4 class="card-title">'.$data[$i]['designation'].'</h4>
+                                    
+                                        <p class="card-text">'.$data[$i]['description'].' <br> '.$data[$i]['prix'].' pts</p>
+                                        <a id="3" class="add btn btn-unique btn btn-blue-grey">Add to basket</a>
+                                    </div>
+                            
+                                </div>
+                                
+                            </div>';
+                        }
+                    
+            echo '</div>'; 
+            }
+    }
+
+    if(isset($_GET['action']) && $_GET['action']== 'pagination'){
+       
+        $numberPage= $panierServ->afficherNumberPage($_GET['categorie']);
+       
+        echo'
+        <nav aria-label="Page navigation example">
+            <ul class="pagination pg-blue">
+                <li class="page-item"><a class="page-link" id="precedent" onclick="passage()">Previous</a></li>';
+            for($i=1; $i<=$numberPage; $i++){
+                echo'<li class="page-item"><a class="page-link" href="shop_02.php?page='.$i.'&categorie='.$_GET['categorie'].'">'.$i.'</a></li>';
+            
+            }
+            echo '<li class="page-item"><a id="suivant" onclick="passage()" class="page-link">Next</a></li>
+            </ul>
+        </nav>';
+    }
+
+    if(isset($_GET['action']) && $_GET['action'] == 'numberPage'){
+        echo    $panierServ->afficherNumberPage($_GET['categorie']);
+    }

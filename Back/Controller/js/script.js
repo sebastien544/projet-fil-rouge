@@ -57,7 +57,7 @@ $('#loginDiv').on('submit', 'form', function(event){
                 nbreItems();
                 
                 $('.close').click();
-                // signed();
+                 signed();
             }else
             {
                 $('#warning1').attr('class','text-center alert alert-dismissible alert-danger')
@@ -132,5 +132,14 @@ function bouton(idPetition)
         }
     });
 }
+/* Set the width of the side navigation to 250px */
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+  
+  /* Set the width of the side navigation to 0 */
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
 
 

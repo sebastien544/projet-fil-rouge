@@ -17,12 +17,18 @@
 	<link rel="stylesheet" href="css/mdb.min.css">
 	<!-- Your custom styles (optional) -->
 	<link rel="stylesheet" href="css/shop.css">
-	
-	
 	</head>
-	<body>
+
+	<body  class="fixed-sn white-skin">
+		
+		<header>
+	
 	<!--Navbar -->
 		<nav class="mb-1 navbar navbar-expand-lg navbar-dark blue-grey">
+					
+				
+				
+			
 			<a class="navbar-brand" href="gorilla.php">Save-Them.com</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
 				aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,6 +58,26 @@
 			</ul>
 		
 			<ul class="navbar-nav ml-auto nav-flex-icons">
+			
+				<div id="mySidenav" class="navbar-brand sidenav">
+					<form class="form-inline">
+						<input class="form-control form-control-sm ml-4 w-65" type="text" placeholder="Search"
+							aria-label="Search">
+							<i class="fas fa-search ml-2" aria-hidden="true"></i>	
+					</form>
+					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				
+					<a class="sideBar" href="shop_02.php?page=1&categorie=goodies">Goodies</a>
+					<a class="sideBar" href="shop_02.php?page=1&categorie=stuffed_toys">Stuffed Toys</a>
+					<a class="sideBar" href="shop_02.php?page=1&categorie=clothes">Clothes</a>
+					<a class="sideBar" href="shop_02.php?page=1&categorie=puzzles">Puzzles</a>
+					<a class="sideBar" href="shop_02.php?page=1&categorie=post-card">Post Cards</a>
+				</div>
+					<!-- Use any element to open the sidenav -->
+				<a class="btn-floating btn-lg">
+					<span onclick="openNav()" style="color: white"><i class="fas fa-search"></i></span>
+				</a>
+			
 			<a class="btn-floating btn-lg" title="Cart" data-toggle="modal" data-target="#modalCart"><span style="color: white"><i class="fas fa-shopping-cart"></i></span></a>
 		 	<!-- Modal: modalCart -->
 		 		<div class="modal fade" id="modalCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -98,11 +124,11 @@
 					<a class="btn-floating btn-lg " title="Logout" id="deconnection"><span style="color: white"><i class="fas fa-sign-out-alt"></i></span></a>
 						<!--Dropdown primary-->
 						<li class="nav-item dropdown"  >
-							<a class="nav-link dropdown-toggle" title="Login or register" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+							<a class="btn-floating btn-lg nav-link dropdown-toggle" title="Login or register" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
 								aria-haspopup="true" aria-expanded="false">
 								<i class="fas fa-user"></i>
 							</a>
-							<div class="dropdown-menu dropdown-menu-lg-right dropdown-menu-sm-left dropdown-default"  aria-labelledby="navbarDropdownMenuLink-333">
+							<div class=" dropdown-menu dropdown-menu-lg-right dropdown-menu-sm-left dropdown-default"  aria-labelledby="navbarDropdownMenuLink-333">
 							<div id="warning1"></div>
 							
 							<div id="loginDiv"></div>
@@ -112,7 +138,13 @@
 			</div>
 		</nav>
 <!--/.Navbar -->
+	
+
+
+
+
 <div class="container-fluid">
+	
   <div class="row">
 
     <!-- Grid column -->
@@ -167,7 +199,7 @@
           <h4 class="card-title">Stuffed Toys</h4>
           <!--Text-->
           <p class="card-text">In this area you can a wonderfull selection of stuffed toys, please click on the button bellow.</p>
-          <a class="btn btn-unique btn btn-blue-grey" href="shop_02.php">Go to Shop</a>
+          <a class="btn btn-unique btn btn-blue-grey" href="shop_02.php?page=1">Go to Shop</a>
         </div>
         <!--/.Card content-->
   
@@ -256,9 +288,6 @@
     <script type="text/javascript" src="js/popper.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/mdb.min.js"></script>
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.js"
-	integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
-	crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<!-- Your custom scripts (optional) -->
 	<script type="text/javascript" src="js/script.js"></script>

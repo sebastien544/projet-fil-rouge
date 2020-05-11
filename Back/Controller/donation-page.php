@@ -147,7 +147,7 @@
           <button class="btn btn-blue-grey btn-sm" style="width: 70px; height: 40px;" type="button">50</button>
           <button class="btn btn-blue-grey btn-sm" style="width: 70px; height: 40px;" type="button">150</button>
           <button class="btn btn-blue-grey btn-sm" style="width: 70px; height: 40px;" type="button">500</button>
-          <input class="form-control font-weight-bold" type=number placeholder="Amount" id="amount" name="amount">
+          <input class="form-control font-weight-bold" type="number" placeholder="Amount" id="amount" name="amount">
           <h6 class="mt-4">Frequency</h6>
           <select class="form-control mb-4 font-weight-bold" name="frequency">
             <option>One time</option>

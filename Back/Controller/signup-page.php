@@ -134,11 +134,11 @@
         <form class="col-md-8 offset-md-2 " method="POST" action="authentification.php">
           <h1 class="text-center mb-5" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Sign up</h1>
           <div class="col" >
-          <input type="text" id="defaultRegisterFormFirstName" class="form-control mb-5" placeholder="First name" name="firstName" style="background-color: rgb(233, 232, 231);">
+          <input type="text" min="2" max="30" id="defaultRegisterFormFirstName" class="form-control mb-5" placeholder="First name" name="firstName" style="background-color: rgb(233, 232, 231);">
            
           </div>
           <div class="col">
-          <input type="text" id="defaultRegisterFormLastName" class="form-control mb-5" placeholder="Last name" name="lastName" style="background-color: rgb(233, 232, 231);">
+          <input type="text" min="2" max="30" id="defaultRegisterFormLastName" class="form-control mb-5" placeholder="Last name" name="lastName" style="background-color: rgb(233, 232, 231);">
            
           </div>
           <div class="col">
@@ -147,9 +147,9 @@
           </div>
           <div class="col">
             <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted">
-              At least 8 characters and 1 digit
+              At least 4 characters and 1 digit
             </small>
-            <input type="password" id="defaultRegisterFormPassword" class="form-control mb-5" placeholder="Password" name="password" aria-describedby="defaultRegisterFormPasswordHelpBlock" style="background-color: rgb(233, 232, 231);">
+            <input type="password" min="4" max="30" id="defaultRegisterFormPassword" class="form-control mb-5" placeholder="Password" name="password" aria-describedby="defaultRegisterFormPasswordHelpBlock" style="background-color: rgb(233, 232, 231);">
            
           </div>
 

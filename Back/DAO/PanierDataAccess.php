@@ -97,4 +97,25 @@ include_once ('ConnexionDDB.php');
             }
         }
 
+        public function afficherProduit($pageActuelle, $categorie)
+        {
+            
+            $db = $this->connectDatabase();
+            $decalage = ($pageActuelle-1)*6;    
+
+            $rs = $db->query('SELECT * FROM produit WHERE id_categorie=(SELECT id_categorie FROM categorie where categorie = "'.$categorie.'") LIMIT 6 OFFSET '.$decalage.'');
+            $data = mysqli_fetch_all($rs, MYSQLI_ASSOC);
+            $db->close();
+            return $data;
+        }
+
+        public function afficherNumberPage($categorie)
+        {
+            $db = $this->connectDatabase();
+            $rs = $db->query('SELECT count(id_produit) FROM produit WHERE id_categorie=(SELECT id_categorie FROM categorie where categorie = "'.$categorie.'") ');
+            $data = mysqli_fetch_all($rs, MYSQLI_ASSOC);
+            $db->close();
+            return $data;
+        }
+
     }
