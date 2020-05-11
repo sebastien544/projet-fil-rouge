@@ -5,7 +5,6 @@ mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
 class DonationDataAccess extends ConnexionDDB  
 {
-
     /**
      * Ajoute un don 
      *
@@ -19,6 +18,11 @@ class DonationDataAccess extends ConnexionDDB
         $montant = $don->getMontant();
         $stmt->bind_param("i", $montant);
         $stmt->execute();
+        $db->query("UPDATE compte SET quantite_point = (quantite_point - ".$don->getMontant().") WHERE id_compte = ".$don->getUser()->getId()."");
+        if($don->getFrequence() == 'Monthly')
+        {
+            $db->query("CREATE DEFINER=`root`@`localhost` EVENT `example2` ON SCHEDULE EVERY 1 MONTH STARTS SYSDATE() ON COMPLETION NOT PRESERVE ENABLE DO UPDATE compte SET quantite_point = (quantite_point - ".$don->getMontant().") WHERE id_compte = ".$don->getUser()->getId()."");
+        }
         $db->close();
     }
 

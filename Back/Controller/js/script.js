@@ -55,7 +55,7 @@ $('#loginDiv').on('submit', 'form', function(event){
                 });
 
                 nbreItems();
-                
+
                 $('.close').click();
                  signed();
             }else
