@@ -26,7 +26,7 @@ function messageSuccess()
  */
 function nbreItems()
 {
-    $.get("shopController.php?action=compter", function(data, status){
+    $.get("../Controller/shopController.php?action=compter", function(data, status){
         $('#nbreItems').html(data);
     });
 }
@@ -37,7 +37,7 @@ function nbreItems()
 function recuperer()
 {
     $.ajax({
-       url:'shopController.php',
+       url:'../Controller/shopController.php',
        type:'POST',
        data:'action=recuperer',
        success: function(data){
@@ -54,7 +54,7 @@ function recuperer()
  * @param {*} val 
  */
 function remove(val){
-    $('#cart').load('shopController.php',{
+    $('#cart').load('../Controller/shopController.php',{
        action:"supprimer",
        id:val
     });
@@ -69,7 +69,7 @@ function remove(val){
  */
 function updateQuantity(id,idInput,role){
     $.ajax({
-        url:'shopController.php',
+        url:'../Controller/shopController.php',
         type:'POST',
         data:'id='+id+'&action=majorer&quantity='+idInput.value+'&role='+role+'',
         success : function(){
@@ -91,7 +91,7 @@ function updateQuantity(id,idInput,role){
  * Affiche le panier
  */
 $(document).ready(function(){
-    $('#cart').load('shopController.php',{
+    $('#cart').load('../Controller/shopController.php',{
         action:"afficher"
     });
     nbreItems();
@@ -102,14 +102,14 @@ $(document).ready(function(){
  */
 $('.add').click(function (e){
     $.ajax({
-        url:'shopController.php',
+        url:'../Controller/shopController.php',
         type:'POST',
         data: 'id='+$(this).attr('id')+'&action=ajouter',
         success : function(data)
         {
             response = JSON.parse(data)
             if(response.status == true){
-                $('#cart').load('shopController.php',{
+                $('#cart').load('../Controller/shopController.php',{
                     action:"afficher"
                 });
                 nbreItems();
@@ -132,7 +132,7 @@ $('.add').click(function (e){
 $('#redeem').click(function(){
     var val = $('#inputCode').val()
     $.ajax({
-        url:'shopController.php',
+        url:'../Controller/shopController.php',
         type:'POST',
         data:'promo&codePromo='+val+'',
         success: function(data){
@@ -146,7 +146,7 @@ $('#redeem').click(function(){
 $("#checkout").on( "submit", function( event ) {
     event.preventDefault();
     $.ajax({
-        url:'shopController.php',
+        url:'../Controller/shopController.php',
         type:'POST',
         data:$( this ).serialize(),
         success : function(data){
@@ -197,7 +197,7 @@ function extractUrlParams(){
 
 $(document).ready(function(){
     data= extractUrlParams()
-    $("#pagination").load('shopController.php?action=pagination&categorie='+data['categorie']+'')
+    $("#pagination").load('../Controller/shopController.php?action=pagination&categorie='+data['categorie']+'')
 });
 
 $(document).ready(function(){
@@ -207,12 +207,12 @@ $(document).ready(function(){
 function afficherProduit(categorie){
     data= extractUrlParams()
     
-    $("#produit").load('shopController.php?action=afficherProduit&page='+data['page']+'&categorie='+data['categorie']+'')
+    $("#produit").load('../Controller/shopController.php?action=afficherProduit&page='+data['page']+'&categorie='+data['categorie']+'')
 };
 
 
 function passage(){
-    $.get('shopController.php?action=numberPage', function(response){
+    $.get('../Controller/shopController.php?action=numberPage', function(response){
         var numberPage = response;
         data= extractUrlParams();
         if(parseInt(data['page'])<numberPage){

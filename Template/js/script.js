@@ -2,7 +2,7 @@
 
 $(document).ready(function()
 {
-    $("#loginDiv").load('Connexion.php',{
+    $("#loginDiv").load('../Controller/Connexion.php',{
         action:"affichage"
     });
 
@@ -11,16 +11,16 @@ $(document).ready(function()
 
 $("#deconnection").click(function(){
     $.ajax({
-        url:'Connexion.php',
+        url:'../Controller/Connexion.php',
         type:'POST',
         data: "action=logout",
         success : function(data){
             
-                $("#loginDiv").load('Connexion.php',{
+                $("#loginDiv").load('../Controller/Connexion.php',{
                     action:"affichage"
                 })
 
-                $('#cart').load('shopController.php',{
+                $('#cart').load('../Controller/shopController.php',{
                     action:"afficher"
                 });
 
@@ -39,18 +39,18 @@ $("#deconnection").click(function(){
 $('#loginDiv').on('submit', 'form', function(event){
     event.preventDefault();
     $.ajax({
-        url:'Connexion.php',
+        url:'../Controller/Connexion.php',
         type:'POST',
         data: $( this ).serialize(),
         success : function(data){
             response = JSON.parse(data)
             if(response.success)
             {
-                $("#loginDiv").load('Connexion.php',{
+                $("#loginDiv").load('../Controller/Connexion.php',{
                     action:"affichage"
                 });
                 
-                $('#cart').load('shopController.php',{
+                $('#cart').load('../Controller/shopController.php',{
                     action:"afficher"
                 });
 
@@ -87,7 +87,7 @@ $('#loginDiv').on('submit', 'form', function(event){
 
 function btn(id){
     $.ajax({
-        url:'petitionController.php',
+        url:'../Controller/petitionController.php',
         type:'POST',
         data: 'idPetition='+id+'&action=validation_petition',
         success : function(data){
@@ -123,7 +123,7 @@ function btn(id){
 function bouton(idPetition)
 {
     $.ajax({
-        url:'formulaire_petition.php',
+        url:'../Controller/formulaire_petition.php',
         type:'POST',
         data:'action=searchPet&id='+idPetition+'',
         success : function(data){

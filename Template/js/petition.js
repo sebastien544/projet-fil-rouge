@@ -1,5 +1,5 @@
 $.ajax({
-    url:'petitionController.php',
+    url:'../Controller/petitionController.php',
     type:'POST',
     data: "action=afficherPet",
     success : function(data){

@@ -63,7 +63,7 @@ $("#donationForm").on( "submit", function( event )
     event.preventDefault();
     $.ajax(
     {
-        url:'donationController.php',
+        url:'../Controller/donationController.php',
         type:'POST',
         data:$( this ).serialize(),
         success : function(data)
