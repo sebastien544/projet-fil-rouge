@@ -21,6 +21,7 @@
 <body>
  <!-- navbar -->
  <nav class="mb-1 navbar navbar-expand-lg navbar-dark blue-grey">
+
 			<a class="navbar-brand" href="gorilla.php">Save-Them.com</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
 				aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
@@ -110,7 +111,7 @@
 							</li>
 			</ul>
 			</div>
-		</nav>
+	</nav>
   <!--/.Navbar -->
 
 
@@ -120,8 +121,10 @@
 		<!-- Footer -->
     <footer class="page-footer font-small blue-grey pt-4">
 
-<!-- Footer Elements -->
-<div class="container">
+
+    <!-- Footer Elements -->
+
+    <div class="container">
 
 <ul class="list-unstyled list-inline text-center">
   <li class="list-inline-item">	

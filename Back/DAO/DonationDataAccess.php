@@ -21,7 +21,10 @@ class DonationDataAccess extends ConnexionDDB
         $db->query("UPDATE compte SET quantite_point = (quantite_point - ".$don->getMontant().") WHERE id_compte = ".$don->getUser()->getId()."");
         if($don->getFrequence() == 'Monthly')
         {
-            $db->query("CREATE DEFINER=`root`@`localhost` EVENT `example2` ON SCHEDULE EVERY 1 MONTH STARTS SYSDATE() ON COMPLETION NOT PRESERVE ENABLE DO UPDATE compte SET quantite_point = (quantite_point - ".$don->getMontant().") WHERE id_compte = ".$don->getUser()->getId()."");
+            $db->query("CREATE DEFINER=`root`@`localhost` EVENT `example2` 
+                        ON SCHEDULE EVERY 1 MONTH STARTS SYSDATE() 
+                        ON COMPLETION NOT PRESERVE ENABLE DO UPDATE compte 
+                        SET quantite_point = (quantite_point - ".$don->getMontant().") WHERE id_compte = ".$don->getUser()->getId()."");
         }
         $db->close();
     }
@@ -35,7 +38,11 @@ class DonationDataAccess extends ConnexionDDB
     function afficherDon(string $mail) : array
     {
         $db = $this->connectDatabase();
-        $rs = $db->query('SELECT d.date, d.montant, a.type_animal FROM utilisateur as u  INNER JOIN don as d on u.id_utilisateur = d.id_utilisateur INNER JOIN animal as a on d.id_animal = a.id_animal WHERE u.mail = "'.$mail.'"');
+        $rs = $db->query('SELECT COUNT(id_don) FROM don');
+        $data = mysqli_fetch_assoc($rs);
+        $nbreDons = $data['COUNT(id_don)'];
+        $nbrePage = ceil($nbreDons/5);
+        $rs = $db->query('SELECT d.date, d.montant, a.type_animal FROM utilisateur as u  INNER JOIN don as d on u.id_utilisateur = d.id_utilisateur INNER JOIN animal as a on d.id_animal = a.id_animal WHERE u.mail = "'.$mail.'" LIMIT 5 ');
         $data = mysqli_fetch_all($rs, MYSQLI_ASSOC);
         $db->close();
         return $data;

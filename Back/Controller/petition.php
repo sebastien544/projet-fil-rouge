@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -17,11 +17,11 @@
     <link rel="stylesheet" href="css/mdb.min.css">
     <!-- Your custom styles (optional) -->
     <link rel="stylesheet" href="css/style_page_petition.css">
-    </head>
+  </head>
 
-    <body>
-         <!--Navbar -->
-      <nav class="mb-1 navbar navbar-expand-lg navbar-dark blue-grey">
+  <body>
+    <!--Navbar -->
+    <nav class="mb-1 navbar navbar-expand-lg navbar-dark blue-grey">
         <a class="navbar-brand" href="gorilla.php">Save-Them.com</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
           aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
@@ -111,220 +111,220 @@
         </ul>
         </div>
     </nav>
-    
+  
 
-      <div class="container">
-          <div class="row">
-            <div class="col-md-6 offset-md-3 mb-3 mt-5 titre text-center"><h1>THE PETITIONS</h1></div>
-          
-            <div class="row mt-5 mb-5">    
-                <!-- Grid column -->
-                <div class="col-lg-4 col-md-6 col-sm-12 carte_petition">
-
-                    <!--Card Narrower-->
-                    <div class="card card-cascade narrower">
-
-                    <!--Card image-->
-                    <div class="view view-cascade overlay">
-                        <img src="img/gorilla.jpg" class="card-img-top"
-                        alt="narrower">
-                        <a>
-                        <div class="mask rgba-white-slight"></div>
-                        </a>
-                    </div>
-                    <!--/.Card image-->
-
-                    <!--Card content-->
-                    <form action="" method="POST">
-                      <div class="card-body card-body-cascade">
-                        <!--Title-->
-                        <h4 class="card-title">Gorilla</h4>
-                        <!--Text-->
-                        <p class="card-text" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quos voluptas fugit ratione officia, error ipsam nobis delectus reiciendis, quisquam cumque aperiam eius in cum dignissimos assumenda quia aut voluptate!</p>
-                        <div id="disapear1" class="d-flex justify-content-center">
-                          <!--<input type="hidden" value="2" name="idPetition">-->
-                              <!--<input type="hidden"  name="validation_petition">-->
-                              <input  onclick="btn(1)" id="1"  value="SIGN"  class="btn btn-unique btn btn-blue-grey signPet" >
-                            </div>
-                             <p id="answers1" class="card-text"></p>
-                      </div>
-                    </form>
-                    <!--/.Card content-->
-
-                    </div>
-                    <!--/.Card Narrower-->
-
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 carte_petition">
-
-                    <!--Card Narrower-->
-                    <div class="card card-cascade narrower">
-
-                    <!--Card image-->
-                    <div class="view view-cascade overlay">
-                        <img src="img/giraffe_card.jpg" class="card-img-top"
-                        alt="narrower">
-                        <a>
-                        <div class="mask rgba-white-slight"></div>
-                        </a>
-                    </div>
-                    <!--/.Card image-->
-
-                    <!--Card content-->
-                    <form action="" >
-                      <div class="card-body card-body-cascade">
-                          <!--Title-->
-                          <h4 class="card-title">Giraffe</h4>
-                          <!--Text-->
-                          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae nemo est expedita, vitae doloremque optio quos voluptates placeat fugit quisquam labore ea! Ut necessitatibus explicabo facere error nesciunt, quod quas.</p>
-                            <div id="disapear2" class="d-flex justify-content-center">
-                              <!--<input type="hidden" value="2" name="idPetition">-->
-                              <!--<input type="hidden"  name="validation_petition">-->
-                              <input  onclick="btn(2)" id="2"  value="SIGN"  class="btn btn-unique btn btn-blue-grey mx-auto signPet" >
-                            </div>
-                             <p id="answers2" class="card-text"></p>
-                          
-                      </div>
-                    </form>
-                    <!--/.Card content-->
-
-                    </div>
-                    <!--/.Card Narrower-->
-
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 carte_petition">
-
-                    <!--Card Narrower-->
-                    <div class="card card-cascade narrower">
-
-                    <!--Card image-->
-                    <div class="view view-cascade overlay">
-                        <img src="img/chimpanzee.jpg" class="card-img-top"
-                        alt="narrower">
-                        <a>
-                        <div class="mask rgba-white-slight"></div>
-                        </a>
-                    </div>
-                    <!--/.Card image-->
-
-                    <!--Card content-->
-                    <form action="" >
-                      <div class="card-body card-body-cascade">
-                          <!--Title-->
-                          <h4 class="card-title">Chimpanzee</h4>
-                          <!--Text-->
-                          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ducimus provident quaerat dolores repellendus, sequi nisi. Doloribus soluta dignissimos reprehenderit molestias alias, repudiandae libero, tempora perferendis facilis</p>
-                          <div id="disapear3" class="d-flex justify-content-center">
-                           <!--<input type="hidden" value="2" name="idPetition">-->
-                              <!--<input type="hidden"  name="validation_petition">-->
-                              <input  onclick="btn(3)" id="3"  value="SIGN"  class="btn btn-unique btn btn-blue-grey signPet" >
-                            </div>
-                             <p id="answers3" class="card-text"></p>
-                      </div>
-                    </form>
-                    <!--/.Card content-->
-
-                    </div>
-                    <!--/.Card Narrower-->
-
-                </div>
-                <!-- Grid column -->
-          </div>
-          
-          
-          
-        </div>   
-      </div> 
-
-        
-		<!-- Footer -->
-<footer class="page-footer  font-small blue-grey pt-4">
-
-    <!-- Footer Elements -->
     <div class="container">
-
-    <ul class="list-unstyled list-inline text-center">
-      <li class="list-inline-item">	
-        <div class="btn-group dropup">
-        <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">Get Involved</button>
-          <div class="dropdown-menu blue-grey">
-            <a class="dropdown-item blue-grey" href="donation-page.php">Make a Donation</a>
-            <a class="dropdown-item blue-grey " href="gorilla.php">Our fights</a>
-            <a class="dropdown-item blue-grey" href="petition.php">Petition</a>
-            <a class="dropdown-item blue-grey" href="shop_01.php">Shop</a>
-          </div>
-        </div>
-      </li>
-
-      
-      <li class="list-inline-item">
-          <div class="btn-group dropup">
-            <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">About Save-Them</button>
-            
-            <div class="dropdown-menu blue-grey">
-              <a class="dropdown-item blue-grey" href="contactus.php">Contact Us</a>
-              <a class="dropdown-item blue-grey " href="#">Need Help</a>
-              <a class="dropdown-item blue-grey" href="#">Joint Save-Them</a>
-            </div>
-          </div>
-      </li>
-      <li class="list-inline-item">
-      <div class="btn-group dropup">
-            <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">Get Informed</button>
-          
-          <div class="dropdown-menu blue-grey">
-            <a class="dropdown-item blue-grey" href="#">Newsletter</a>
-            <a class="dropdown-item blue-grey " href="#">Us in the Press</a>
-            <a class="dropdown-item blue-grey" href="#">the Animals in Danger</a>
-          </div>
-        </div>
-      
-      </li>
-      <li class="list-inline-item">
-      <div class="btn-group dropup">
-          <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">Legal</button>
-          <div class="dropdown-menu blue-grey">
-            <a class="dropdown-item blue-grey" href="#">Cookies</a>
-            <a class="dropdown-item blue-grey " href="#">Privacy and Data Protection</a>
-            <a class="dropdown-item blue-grey" href="#">Terms & Conditions</a>
+        <div class="row">
+          <div class="col-md-6 offset-md-3 mb-3 mt-5 titre text-center"><h1>THE PETITIONS</h1></div>
         
-          </div>
-        </div>
-      </li>
-    </ul>
-    <!-- Social buttons -->
+          <div class="row mt-5 mb-5">    
+              <!-- Grid column -->
+              <div class="col-lg-4 col-md-6 col-sm-12 carte_petition">
 
-    </div>
-    <!-- Footer Elements -->
+                  <!--Card Narrower-->
+                  <div class="card card-cascade narrower">
+
+                  <!--Card image-->
+                  <div class="view view-cascade overlay">
+                      <img src="img/gorilla.jpg" class="card-img-top"
+                      alt="narrower">
+                      <a>
+                      <div class="mask rgba-white-slight"></div>
+                      </a>
+                  </div>
+                  <!--/.Card image-->
+
+                  <!--Card content-->
+                  <form action="" method="POST">
+                    <div class="card-body card-body-cascade">
+                      <!--Title-->
+                      <h4 class="card-title">Gorilla</h4>
+                      <!--Text-->
+                      <p class="card-text" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quos voluptas fugit ratione officia, error ipsam nobis delectus reiciendis, quisquam cumque aperiam eius in cum dignissimos assumenda quia aut voluptate!</p>
+                      <div id="disapear1" class="d-flex justify-content-center">
+                        <!--<input type="hidden" value="2" name="idPetition">-->
+                            <!--<input type="hidden"  name="validation_petition">-->
+                            <input  onclick="btn(1)" id="1"  value="SIGN"  class="btn btn-unique btn btn-blue-grey signPet" >
+                          </div>
+                            <p id="answers1" class="card-text"></p>
+                    </div>
+                  </form>
+                  <!--/.Card content-->
+
+                  </div>
+                  <!--/.Card Narrower-->
+
+              </div>
+
+              <div class="col-lg-4 col-md-6 col-sm-12 carte_petition">
+
+                  <!--Card Narrower-->
+                  <div class="card card-cascade narrower">
+
+                  <!--Card image-->
+                  <div class="view view-cascade overlay">
+                      <img src="img/giraffe_card.jpg" class="card-img-top"
+                      alt="narrower">
+                      <a>
+                      <div class="mask rgba-white-slight"></div>
+                      </a>
+                  </div>
+                  <!--/.Card image-->
+
+                  <!--Card content-->
+                  <form action="" >
+                    <div class="card-body card-body-cascade">
+                        <!--Title-->
+                        <h4 class="card-title">Giraffe</h4>
+                        <!--Text-->
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae nemo est expedita, vitae doloremque optio quos voluptates placeat fugit quisquam labore ea! Ut necessitatibus explicabo facere error nesciunt, quod quas.</p>
+                          <div id="disapear2" class="d-flex justify-content-center">
+                            <!--<input type="hidden" value="2" name="idPetition">-->
+                            <!--<input type="hidden"  name="validation_petition">-->
+                            <input  onclick="btn(2)" id="2"  value="SIGN"  class="btn btn-unique btn btn-blue-grey mx-auto signPet" >
+                          </div>
+                            <p id="answers2" class="card-text"></p>
+                        
+                    </div>
+                  </form>
+                  <!--/.Card content-->
+
+                  </div>
+                  <!--/.Card Narrower-->
+
+              </div>
+
+              <div class="col-lg-4 col-md-6 col-sm-12 carte_petition">
+
+                  <!--Card Narrower-->
+                  <div class="card card-cascade narrower">
+
+                  <!--Card image-->
+                  <div class="view view-cascade overlay">
+                      <img src="img/chimpanzee.jpg" class="card-img-top"
+                      alt="narrower">
+                      <a>
+                      <div class="mask rgba-white-slight"></div>
+                      </a>
+                  </div>
+                  <!--/.Card image-->
+
+                  <!--Card content-->
+                  <form action="" >
+                    <div class="card-body card-body-cascade">
+                        <!--Title-->
+                        <h4 class="card-title">Chimpanzee</h4>
+                        <!--Text-->
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ducimus provident quaerat dolores repellendus, sequi nisi. Doloribus soluta dignissimos reprehenderit molestias alias, repudiandae libero, tempora perferendis facilis</p>
+                        <div id="disapear3" class="d-flex justify-content-center">
+                          <!--<input type="hidden" value="2" name="idPetition">-->
+                            <!--<input type="hidden"  name="validation_petition">-->
+                            <input  onclick="btn(3)" id="3"  value="SIGN"  class="btn btn-unique btn btn-blue-grey signPet" >
+                          </div>
+                            <p id="answers3" class="card-text"></p>
+                    </div>
+                  </form>
+                  <!--/.Card content-->
+
+                  </div>
+                  <!--/.Card Narrower-->
+
+              </div>
+              <!-- Grid column -->
+        </div>
+        
+        
+        
+      </div>   
+    </div> 
+
+      
+    <!-- Footer -->
+    <footer class="page-footer font-small blue-grey pt-4">
+
+        <!-- Footer Elements -->
+        <div class="container">
+
+        <ul class="list-unstyled list-inline text-center">
+          <li class="list-inline-item">	
+            <div class="btn-group dropup">
+            <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Get Involved</button>
+              <div class="dropdown-menu blue-grey">
+                <a class="dropdown-item blue-grey" href="donation-page.php">Make a Donation</a>
+                <a class="dropdown-item blue-grey " href="gorilla.php">Our fights</a>
+                <a class="dropdown-item blue-grey" href="petition.php">Petition</a>
+                <a class="dropdown-item blue-grey" href="shop_01.php">Shop</a>
+              </div>
+            </div>
+          </li>
+
+          
+          <li class="list-inline-item">
+              <div class="btn-group dropup">
+                <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">About Save-Them</button>
+                
+                <div class="dropdown-menu blue-grey">
+                  <a class="dropdown-item blue-grey" href="contactus.php">Contact Us</a>
+                  <a class="dropdown-item blue-grey " href="#">Need Help</a>
+                  <a class="dropdown-item blue-grey" href="#">Joint Save-Them</a>
+                </div>
+              </div>
+          </li>
+          <li class="list-inline-item">
+          <div class="btn-group dropup">
+                <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">Get Informed</button>
+              
+              <div class="dropdown-menu blue-grey">
+                <a class="dropdown-item blue-grey" href="#">Newsletter</a>
+                <a class="dropdown-item blue-grey " href="#">Us in the Press</a>
+                <a class="dropdown-item blue-grey" href="#">the Animals in Danger</a>
+              </div>
+            </div>
+          
+          </li>
+          <li class="list-inline-item">
+          <div class="btn-group dropup">
+              <button class="btn btn-blue-grey dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">Legal</button>
+              <div class="dropdown-menu blue-grey">
+                <a class="dropdown-item blue-grey" href="#">Cookies</a>
+                <a class="dropdown-item blue-grey " href="#">Privacy and Data Protection</a>
+                <a class="dropdown-item blue-grey" href="#">Terms & Conditions</a>
             
-            
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright:
-		<a href="home.php"> Robert Fundation - Save-Them.com</a>
-		</div>
-		<!-- Copyright -->
-</footer>  
-        <script type="text/javascript" src="js/jquery.min.js"></script>
-        <!-- Bootstrap tooltips -->
-        <script type="text/javascript" src="js/popper.min.js"></script>
-        <!-- Bootstrap core JavaScript -->
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        <!-- MDB core JavaScript -->
-        <script type="text/javascript" src="js/mdb.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.js"
-	        integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
-          crossorigin="anonymous"></script>
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <!-- Your custom scripts (optional) -->
-        <script type="text/javascript" src="js/petition.js"></script>
-        <script type="text/javascript" src="js/script.js"></script>
-        <script type="text/javascript" src="js/shop.js"></script>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <!-- Social buttons -->
+
+        </div>
+        <!-- Footer Elements -->
+                
+                
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="home.php"> Robert Fundation - Save-Them.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>  
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.js"
+      integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
+      crossorigin="anonymous"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Your custom scripts (optional) -->
+    <script type="text/javascript" src="js/petition.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/shop.js"></script>
     
-    </body>   
+  </body>   
 </html>    
